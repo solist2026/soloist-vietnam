@@ -53,7 +53,7 @@ export default function VisaPage() {
               { label: "כניסה אחת", value: "$25" },
               { label: "כניסות מרובות", value: "$50" },
               { label: "תוקף", value: "90 יום" },
-              { label: "זמן עיבוד", value: "כמה ימי עסקים" },
+              { label: "זמן עיבוד", value: "4-5 ימי עסקים" },
             ].map((item) => (
               <div key={item.label} className="bg-[#0f1923] rounded-xl p-5 text-center border border-[#c9a84c]/10">
                 <div className="text-3xl font-bold text-[#c9a84c]">{item.value}</div>
@@ -103,12 +103,16 @@ export default function VisaPage() {
           </div>
 
           <div className="bg-amber-900/20 border border-amber-600/40 rounded-xl p-5">
-            <h4 className="font-bold text-amber-400 mb-2">⚠️ שימו לב</h4>
+            <h4 className="font-bold text-amber-400 mb-2">⚠️ שימו לב — טיפים מהשטח</h4>
             <ul className="flex flex-col gap-2 text-sm text-[#f5f0e8]/70">
-              <li>• הגישו לפחות שבוע לפני הטיסה</li>
+              <li>• הגישו לפחות שבוע לפני הטיסה — זמן עיבוד ממוצע 4-5 ימי עסקים</li>
               <li>• ודאו שהתאריכים תואמים לטיסות שלכם</li>
               <li>• Single Entry — אם יוצאים לקמבודיה/תאילנד וחוזרים, צריך ויזה חדשה. קחו Multiple Entry ($50) מראש</li>
+              <li>• אם תשלום נכשל — לא ניתן לנסות שוב על אותה בקשה. צריך לפתוח בקשה חדשה</li>
+              <li>• כתובת מלון בטופס: ניתן להכניס כתובת חב"ד — מאושר על ידי מטיילים</li>
+              <li>• לא מומלץ לעבור דרך סין עם דרכון ישראלי או דרכון זר שרשום ישראל כמקום לידה</li>
               <li>• אתרי תיווך גובים $50-100 — אין בהם צורך, האתר הרשמי פשוט</li>
+              <li>• רוצים לשנות תאריך/נמל כניסה לאחר הגשה? חייבים לפתוח בקשה חדשה לחלוטין</li>
             </ul>
           </div>
         </div>
