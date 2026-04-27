@@ -8,36 +8,36 @@ export default function VisaPage() {
         <p className="text-[#c9a84c] text-sm font-semibold tracking-widest mb-3 uppercase">מידע רשמי</p>
         <h1 className="text-5xl font-bold mb-4">ויזה לוייטנאם</h1>
         <p className="text-[#f5f0e8]/60 text-lg max-w-2xl mx-auto">
-          כל מה שצריך לדעת על כניסה לוייטנאם — עדכני ל-2025
+          כל מה שצריך לדעת על כניסה לוייטנאם — עדכני ל-2026
         </p>
       </div>
 
       <div className="max-w-5xl mx-auto px-4 py-16 flex flex-col gap-10">
 
-        {/* ללא ויזה */}
-        <div className="bg-emerald-900/20 border border-emerald-600/40 rounded-3xl p-8">
+        {/* ישראלים צריכים ויזה */}
+        <div className="bg-amber-900/20 border border-amber-600/40 rounded-3xl p-8">
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-4xl">✅</span>
-            <h2 className="text-3xl font-bold text-emerald-400">כניסה ללא ויזה — ישראלים</h2>
+            <span className="text-4xl">⚠️</span>
+            <h2 className="text-3xl font-bold text-amber-400">ישראלים חייבים ויזה לוייטנאם</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            {[
-              { label: "ימי שהייה", value: "45 יום" },
-              { label: "עלות", value: "חינם" },
-              { label: "חידוש", value: "יציאה ממדינה" },
-            ].map((item) => (
-              <div key={item.label} className="bg-[#0f1923] rounded-xl p-5 text-center">
-                <div className="text-4xl font-bold text-emerald-400">{item.value}</div>
-                <div className="text-sm text-[#f5f0e8]/50 mt-1">{item.label}</div>
-              </div>
-            ))}
-          </div>
-          <div className="bg-[#0f1923] rounded-xl p-5">
+          <div className="bg-[#0f1923] rounded-xl p-5 mb-6">
             <p className="text-[#f5f0e8]/80 leading-relaxed">
-              אזרחי ישראל יכולים להיכנס לוייטנאם <strong className="text-emerald-400">עד 45 יום ללא ויזה</strong> עם דרכון ישראלי בתוקף.
-              הפאסספורט חייב להיות בתוקף לפחות 6 חודשים מיום הכניסה.
-              לאחר 45 יום — יש לצאת מהמדינה ולחזור, או להגיש E-Visa.
+              ישראל <strong className="text-amber-400">אינה</strong> ברשימת המדינות הפטורות מויזה לוייטנאם.
+              הפתרון הקל והמומלץ הוא <strong className="text-[#c9a84c]">E-Visa אלקטרונית</strong> — מגישים אונליין לפני הטיסה, ללא סוכנים ותוך ימים ספורים.
+              הדרכון חייב להיות בתוקף לפחות 6 חודשים מיום הכניסה.
             </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-[#0f1923] rounded-xl p-5 text-center border border-[#c9a84c]/20">
+              <div className="text-3xl font-bold text-[#c9a84c]">$25</div>
+              <div className="text-sm font-bold text-[#f5f0e8]/80 mt-1">כניסה אחת (Single Entry)</div>
+              <div className="text-xs text-[#f5f0e8]/40 mt-1">מומלץ אם לא יוצאים מוייטנאם</div>
+            </div>
+            <div className="bg-[#0f1923] rounded-xl p-5 text-center border border-[#c9a84c]/20">
+              <div className="text-3xl font-bold text-[#c9a84c]">$50</div>
+              <div className="text-sm font-bold text-[#f5f0e8]/80 mt-1">כניסות מרובות (Multiple Entry)</div>
+              <div className="text-xs text-[#f5f0e8]/40 mt-1">מומלץ אם יוצאים לקמבודיה/תאילנד וחוזרים</div>
+            </div>
           </div>
         </div>
 
@@ -50,14 +50,32 @@ export default function VisaPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {[
-              { label: "עלות", value: "$25" },
+              { label: "כניסה אחת", value: "$25" },
+              { label: "כניסות מרובות", value: "$50" },
               { label: "תוקף", value: "90 יום" },
-              { label: "זמן עיבוד", value: "3 ימי עסקים" },
-              { label: "כניסות", value: "כניסה אחת" },
+              { label: "זמן עיבוד", value: "כמה ימי עסקים" },
             ].map((item) => (
               <div key={item.label} className="bg-[#0f1923] rounded-xl p-5 text-center border border-[#c9a84c]/10">
                 <div className="text-3xl font-bold text-[#c9a84c]">{item.value}</div>
                 <div className="text-sm text-[#f5f0e8]/50 mt-1">{item.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="text-xl font-bold mb-4 text-[#c9a84c]">מה צריך להכין לפני הגשה</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+            {[
+              "דרכון ישראלי בתוקף — לפחות 6 חודשים קדימה",
+              "צילום עמוד הדרכון (ברור, ללא חתכים)",
+              "תמונת פספורט דיגיטלית על רקע לבן",
+              "תאריך כניסה ותאריך יציאה מתואמים לטיסות",
+              "נקודת כניסה לוייטנאם (שדה תעופה / מעבר גבול)",
+              "כתובת ראשונה בוייטנאם (מלון או הוסטל)",
+              "כרטיס אשראי לתשלום",
+            ].map((item) => (
+              <div key={item} className="bg-[#0f1923] rounded-xl px-5 py-3 flex items-center gap-3 text-sm text-[#f5f0e8]/70">
+                <span className="text-[#c9a84c] font-bold flex-shrink-0">✓</span>
+                {item}
               </div>
             ))}
           </div>
@@ -68,7 +86,7 @@ export default function VisaPage() {
               { step: "1", title: "כנסו לאתר הרשמי", desc: "evisa.xuatnhapcanh.gov.vn — זה האתר הממשלתי הרשמי בלבד. אל תשתמשו באתרים אחרים." },
               { step: "2", title: "מלאו את הטופס", desc: "שם, דרכון, מדינת מוצא, תאריכי כניסה ויציאה, מטרת הביקור (tourism)." },
               { step: "3", title: "העלאת מסמכים", desc: "תמונת דרכון ברורה + תמונת פספורט לבן על רקע לבן." },
-              { step: "4", title: "תשלום", desc: "$25 בכרטיס אשראי. שמרו את אישור התשלום." },
+              { step: "4", title: "תשלום", desc: "$25 לכניסה אחת או $50 לכניסות מרובות — בכרטיס אשראי. שמרו את אישור התשלום." },
               { step: "5", title: "המתנה", desc: "3 ימי עסקים לרוב. קבלו את הויזה במייל." },
               { step: "6", title: "הדפסה", desc: "הדפיסו את הויזה — חייבים עותק מודפס בגבול." },
             ].map((item) => (
@@ -89,7 +107,7 @@ export default function VisaPage() {
             <ul className="flex flex-col gap-2 text-sm text-[#f5f0e8]/70">
               <li>• הגישו לפחות שבוע לפני הטיסה</li>
               <li>• ודאו שהתאריכים תואמים לטיסות שלכם</li>
-              <li>• E-Visa לכניסה אחת — אם יוצאים לקמבודיה וחוזרים, צריך ויזה חדשה</li>
+              <li>• Single Entry — אם יוצאים לקמבודיה/תאילנד וחוזרים, צריך ויזה חדשה. קחו Multiple Entry ($50) מראש</li>
               <li>• אתרי תיווך גובים $50-100 — אין בהם צורך, האתר הרשמי פשוט</li>
             </ul>
           </div>
@@ -135,7 +153,7 @@ export default function VisaPage() {
             <div>
               <h3 className="text-xl font-bold mb-4 text-[#c9a84c]">Visa Extension</h3>
               <p className="text-[#f5f0e8]/70 leading-relaxed text-sm">
-                ניתן להאריך E-Visa בוייטנאם עצמה דרך משרד ההגירה. עלות של כ-$25 ועוד ממתינים. פחות מומלץ — E-Visa חדשה פשוטה יותר.
+                הארכת E-Visa בתוך וייטנאם מצריכה ערבות מגורם מוסמך — מסובך. הפתרון הפשוט יותר: לצאת מהמדינה ולהגיש E-Visa חדשה אונליין לפני החזרה.
               </p>
             </div>
             <div>
