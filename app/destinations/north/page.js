@@ -1,247 +1,66 @@
-import Link from "next/link";
+import Link from 'next/link';
+import VietnamMap from '../../components/VietnamMap';
 
 const destinations = [
   {
-    id: "ha-giang",
-    name: "לופ הא גיאנג",
-    subtitle: "החוויה האולטימטיבית בצפון",
-    emoji: "🏍️",
-    image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
-    chabad: false,
-    description: "הא גיאנג הוא מסע האופנועים המפורסם ביותר בוייטנאם — נופים הרריים מדהימים, כפרים שבטיים וכבישים מפותלים מעל העננים. הלופ נמשך 3-5 ימים ונחשב לאחת מחוויות הטיול הטובות בדרום-מזרח אסיה. מאוד פופולרי בקרב ישראלים.",
-    areas: [
-      { name: "הא גיאנג (עיר מוצא)", desc: "עיר הבסיס לפני הלופ — הוסטלים, השכרת אופנועים ותיאום טיולים. שינה כאן לפני יציאה.", recommended: true },
-      { name: "Dong Van", desc: "שוק הבוקר של שבטי ה-Hmong — עוצר נשימה. עיירה עתיקה אבן.", recommended: true },
-      { name: "Meo Vac", desc: "הנקודה הנמוכה ביותר בלופ — נוף ל-Ma Pi Leng, אחד הכבישים היפים בעולם.", recommended: true },
-    ],
-    attractions: [
-      { name: "Ma Pi Leng Pass", desc: "הרכס הנופי הדרמטי ביותר בוייטנאם — נוף מהפנט על עמק הנהר." },
-      { name: "Dong Van Old Quarter", desc: "עיר עתיקה עם בנייה פרנקו-סינית ייחודית ושוק שבטי." },
-      { name: "Lung Cu Flag Tower", desc: "דגל הנקודה הצפונית ביותר של וייטנאם — ניתן לראות את סין." },
-      { name: "כפרי שבטים", desc: "כפרי Black Hmong, Flower Hmong ו-Lo Lo — תרבות אמיתית ואותנטית." },
-      { name: "Cao Bang (לופ משולב)", desc: "ניתן לשלב את הלופ של קאו בנג' — 5 ימים סה\"כ לחוויה מושלמת." },
-    ],
-    food: [
-      { name: "מנות מקומיות בדוכנים", desc: "אורז, ירקות ובשר מבושל — פשוט ומשביע. ארוחה כחלק מהלופ." },
-      { name: "Top of the Loop", desc: "מסעדה מומלצת בהא גיאנג העיר לפני הלופ." },
-      { name: "ארוחות בהומסטיי", desc: "האוכל כלול בלופ — ארוחות מרובות מגוונות בכל לינה." },
-    ],
-    accommodation: [
-      { type: "לופ 3 ימים (Happy/Kai)", price: "~4.5M VND", desc: "הכל כלול — נהג, לינה, ארוחות. טיפ לנהג: 500K VND." },
-      { type: "לופ 5 ימים (משולב)", price: "~7-8M VND", desc: "הא גיאנג + קאו בנג' יחד. חוויה מושלמת." },
-      { type: "לופ עצמאי (אופנוע)", price: "~$5-8/יום", desc: "השכרת אופנוע + לינה בנפרד. חייב רישיון בינלאומי." },
-    ],
-    travel_times: [
-      { from: "מהאנוי", time: "6-7 שעות", method: "אוטובוס לילה (Vexere)" },
-      { from: "מסאפה", time: "8-9 שעות", method: "אוטובוס/מיניבוס" },
-    ],
-    tips: [
-      "ספקי הלופ המומלצים על ידי ישראלים: Happy (האפי) ו-Kai (קאי) — הזמינו שבוע מראש",
-      "Happy לא מקבלים כרטיס אשראי — קחו מזומן VND או דולרים",
-      "תקציב כולל ל-3 ימים: ~6 מיליון VND (כולל טיפ לנהג ואוכל)",
-      "Bean ב-Ha Giang Loop Hostel ממליץ על נהג ג'יפ פרטי — אפשרות טובה לקבוצות",
-      "ברידינג עצמאי (ללא מדריך): תוודאו שיש לכם רישיון בינלאומי — יש מחסומי משטרה",
-      "אפריל: חם מאוד ביום, ג'קט דק בלבד בערב",
-      "הזמינו אוטובוס לילה מהאנוי דרך אתר Vexere",
-    ],
-  },
-  {
-    id: "hanoi",
-    name: "האנוי",
-    subtitle: "עיר הבירה המסתורית",
-    emoji: "🏛️",
-    image: "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=800&q=80",
+    id: 'hanoi',
+    name: 'האנוי',
+    subtitle: 'עיר הבירה המסתורית',
+    emoji: '🏛️',
+    image: 'https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=600&q=80',
+    tags: ['עיר', 'תרבות', 'אוכל'],
+    days: '2-3 ימים',
     chabad: true,
-    chabadNote: "בית חב\"ד פעיל — WhatsApp: +84-83-872-8225 | jewishhanoi.com",
-    description: "האנוי, עיר הבירה של וייטנאם, היא עיר עתיקה ומסתורית עם אגם חרב ממוקדם, מקדשים עתיקים ורחובות צרים מלאי חיים. העיר מציעה את ניגוד המתח המושלם בין העתיק לחדיש.",
-    areas: [
-      {
-        name: "Old Quarter (העיר העתיקה)",
-        desc: "האזור הכי פופולרי בקרב תיירים. רחובות צרים, בתי אוכל, ברים ואטמוספרה ייחודית. רוב הישראלים ישנים כאן.",
-        recommended: true,
-      },
-      {
-        name: "Hoan Kiem (אזור אגם חרב)",
-        desc: "שקט יותר מה-Old Quarter, קרוב לאגם המפורסם. מחירים קצת יותר גבוהים אבל נוח יותר.",
-        recommended: false,
-      },
-      {
-        name: "Ba Dinh",
-        desc: "האזור ההיסטורי עם המוזיאונים הממשלתיים. לא מומלץ ללינה אבל כדאי לביקור.",
-        recommended: false,
-      },
-    ],
-    attractions: [
-      { name: "אגם חרב (Hoan Kiem)", desc: "לב האנוי — האגם האגדי עם המקדש הקסום באמצעו. חובה לבקר בשעות הבוקר המוקדמות." },
-      { name: "Old Quarter", desc: "36 רחובות עתיקים, כל רחוב עם מקצוע משלו. מושלם לטיול רגלי." },
-      { name: "מקדש הספרות", desc: "המקדש העתיק הראשון בוייטנאם מ-1070. מרשים ומרגש." },
-      { name: "מוזיאון הו צ'י מין", desc: "להבין את ההיסטוריה של וייטנאם דרך הדמות המרכזית שלה." },
-      { name: "הו טאי (אגם המערב)", desc: "האגם הגדול של האנוי — שאנטי, מסעדות דגים ותחושת מנוחה." },
-      { name: "שוק Dong Xuan", desc: "השוק הגדול והעתיק ביותר באנוי — הכל במחירים שוק." },
-    ],
-    food: [
-      { name: "פו (Pho)", desc: "מרק האטריות הוייטנאמי המפורסם. האנוי היא מקומו המקורי." },
-      { name: "Bun Cha", desc: "המנה האנואית המובהקת — צלעות חזיר על גריל עם אטריות ועשבים. Bun Bo Nam Bo — גרסה מומלצת." },
-      { name: "Banh Mi", desc: "כריך הבאגט הוייטנאמי — שילוב מושלם של תרבויות." },
-      { name: "Egg Coffee (קפה ביצה)", desc: "קפה מיוחד עם קצפת ביצה — המצאה האנואית ייחודית." },
-      { name: "Sushi Ichi", desc: "\"מטורף\" — המסעדה היפנית הכי טובה בהאנוי לפי מטיילים ישראלים." },
-      { name: "סמודי בול", desc: "בולות סמודי טעימות מאוד — מומלצת ל-vegan. מרכוז בהאנוי." },
-    ],
-    accommodation: [
-      { type: "תקציב נמוך", price: "500K VND/לילה", desc: "The Charming Hostel — \"חדר סבבה לגמרי\". Awesome Hostel — \"אחלה דורמס\"." },
-      { type: "תקציב בינוני", price: "$25-50/לילה", desc: "מלונות בוטיק ב-Old Quarter. La Ava's Home — מומלץ." },
-      { type: "תקציב גבוה", price: "$80+/לילה", desc: "The Oriental Jade & Spa — יוקרה ב-Old Quarter." },
-    ],
-    travel_times: [
-      { from: "מהלונג ביי", time: "3.5 שעות", method: "אוטובוס/מיניבוס" },
-      { from: "מסאפה", time: "5-6 שעות", method: "אוטובוס לילה / רכבת" },
-      { from: "מדה נאנג", time: "1:15 שעות", method: "טיסה פנימית" },
-      { from: "מהו צ'י מין", time: "2 שעות", method: "טיסה פנימית" },
-    ],
-    tips: [
-      "חצו כבישים לאט ובקצב קבוע — הרכבים יעקפו אתכם",
-      "Grab בלבד מהשדה תעופה — עולה ~250,000 VND לעיר. אל תיכנסו למונית רגילה",
-      "החלפת כסף: חנות זהב ב-130 Hang Bac Street — שערים טובים מהבנק",
-      "3 ימים מספיקים להאנוי לפי מטיילים ישראלים",
-      "בית חב\"ד ב-Old Quarter — WhatsApp: +84-83-872-8225 | jewishhanoi.com",
-    ],
   },
   {
-    id: "halong",
-    name: "הלונג ביי",
-    subtitle: "פלא הטבע של וייטנאם",
-    emoji: "⛵",
-    image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
+    id: 'ha-giang',
+    name: 'לופ הא גיאנג',
+    subtitle: 'החוויה האולטימטיבית בצפון',
+    emoji: '🏍️',
+    image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
+    tags: ['הרים', 'אופנועים', 'הרפתקה'],
+    days: '3-5 ימים',
     chabad: false,
-    description: "הלונג ביי היא אחת מפלאי הטבע של העולם — אלפי אי גיר זקופים מתוך מים ירוקים-כחולים. הדרך הטובה ביותר לחוות אותה היא טיול שייט של לילה אחד עד שלושה.",
-    areas: [
-      {
-        name: "Ha Long City",
-        desc: "העיר הקרובה לנמל. רוב הסיורים יוצאים מכאן. לינה כאן פחות מומלצת — רוב האנשים ישנים על הספינה.",
-        recommended: false,
-      },
-      {
-        name: "Bai Chay",
-        desc: "האזור התיירותי הראשי. יש כאן מלונות, מסעדות ואפשר לארגן סיורים.",
-        recommended: true,
-      },
-    ],
-    attractions: [
-      { name: "שייט בין האיים", desc: "חוויה מרכזית — שייט בסיריקים בין האי הקיר הגיריים. מרהיב." },
-      { name: "מערת Sung Sot", desc: "המערה הגדולה והמרשימה ביותר בהלונג ביי." },
-      { name: "Ti Top Island", desc: "אי קטן עם חוף חול לבן ונקודת תצפית מעולה." },
-      { name: "קאיאקינג", desc: "הדרך הטובה ביותר להגיע לפינות מוסתרות בין האיים." },
-      { name: "כפרי דייגים צפים", desc: "ביקור בקהילות שחיות על הים — חוויה ייחודית." },
-    ],
-    food: [
-      { name: "פירות ים טריים", desc: "הלונג ביי מפורסמת בשרימפס, סרטנים ודגים טריים." },
-      { name: "ארוחות על הספינה", desc: "רוב סיורי השייט כוללים ארוחות מפוארות על הסיפון." },
-    ],
-    accommodation: [
-      { type: "סיור לילה אחד", price: "$60-100/אדם", desc: "ספינה בינונית עם ארוחות. מספיק לרוב האנשים." },
-      { type: "סיור שני לילות", price: "$120-200/אדם", desc: "מומלץ יותר — רואים אזורים מרוחקים ושקטים יותר." },
-      { type: "ספינה מפוארת", price: "$250+/אדם", desc: "Luxury cruise עם חדרים ענקיים ושירות מעולה." },
-    ],
-    travel_times: [
-      { from: "מהאנוי", time: "3.5 שעות", method: "אוטובוס/מיניבוס" },
-      { from: "מניין בינה", time: "4 שעות", method: "אוטובוס" },
-    ],
-    tips: [
-      "הזמינו סיור דרך ההוסטל או סוכנות מהימנה באנוי",
-      "ספינת 2 לילות עדיפה בהרבה על 1 לילה",
-      "הימנעו מסיורים זולים מאוד — איכות הספינה חשובה",
-      "קחו תרופות לסחרחורת אם אתם רגישים לים",
-      "Cat Ba Island היא חלופה שקטה יותר להלונג",
-    ],
   },
   {
-    id: "sapa",
-    name: "סאפה",
-    subtitle: "הרים, ערפל ושדות אורז",
-    emoji: "🌾",
-    image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
+    id: 'halong',
+    name: 'הלונג ביי',
+    subtitle: 'פלא הטבע של וייטנאם',
+    emoji: '⛵',
+    image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
+    tags: ['טבע', 'שייט', 'אי'],
+    days: '1-2 לילות שייט',
+    chabad: false,
+  },
+  {
+    id: 'catba',
+    name: 'קאט בה',
+    subtitle: 'האי הגדול של הלונג ביי',
+    emoji: '🏝️',
+    image: 'https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=600&q=80',
+    tags: ['אי', 'טבע', 'שקט'],
+    days: '1-2 ימים',
+    chabad: false,
+  },
+  {
+    id: 'sapa',
+    name: 'סאפה',
+    subtitle: 'הרים, ערפל ושדות אורז',
+    emoji: '🌾',
+    image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
+    tags: ['הרים', 'שבטים', 'טרקים'],
+    days: '2-3 ימים',
     chabad: true,
-    chabadNote: "יש בית חב\"ד בסאפה — ארוחות שישי ושבת",
-    description: "סאפה היא עיירה הררית בצפון וייטנאם הגובלת בסין, מפורסמת בשדות האורז המדורגים המדהימים שלה, בשבטים המקומיים הצבעוניים ובנופים שיוצאים מהדעת.",
-    areas: [
-      {
-        name: "מרכז סאפה",
-        desc: "העיירה עצמה — מלונות, מסעדות ושוק. רוב המטיילים ישנים כאן.",
-        recommended: true,
-      },
-      {
-        name: "Cat Cat Village",
-        desc: "כפר של שבט ה-Black Hmong — 20 דקות הליכה ממרכז סאפה.",
-        recommended: false,
-      },
-    ],
-    attractions: [
-      { name: "שדות אורז מדורגים", desc: "הנוף האייקוני של סאפה — פסגות האורז הירוקות שנמשכות לאינסוף." },
-      { name: "Fansipan", desc: "הר הפסגה הגבוה ביותר בוייטנאם (3,143 מ') — טיפוס או רכבל." },
-      { name: "טיולי כפרים", desc: "ביקור בכפרי שבטים — Black Hmong, Red Dao ו-Tay." },
-      { name: "שוק סאפה", desc: "שוק צבעוני עם בגדי שבטים, תכשיטים ומוצרים מקומיים." },
-      { name: "Muong Hoa Valley", desc: "עמק מרהיב עם מסלולי טיול בין כפרים." },
-    ],
-    food: [
-      { name: "Thang Co", desc: "מרק מסורתי של שבטי ה-Hmong עם בשר סוס — לנועזים." },
-      { name: "ירקות הרריים", desc: "ירקות טריים שגדלים בגובה — טעם שלא תמצאו במישור." },
-      { name: "Salmon", desc: "דגי סלמון מגידול מקומי — מיוחד לאזור סאפה." },
-    ],
-    accommodation: [
-      { type: "תקציב נמוך", price: "$10-20/לילה", desc: "הוסטלים ובתי הארחה פשוטים." },
-      { type: "תקציב בינוני", price: "$30-70/לילה", desc: "מלונות עם נוף לשדות האורז — שווה כל שקל." },
-      { type: "תקציב גבוה", price: "$100+/לילה", desc: "ריזורטים יוקרתיים עם בריכה ונוף פנורמי." },
-    ],
-    travel_times: [
-      { from: "מהאנוי", time: "5-6 שעות", method: "אוטובוס שינה / רכבת לילה" },
-      { from: "מהאנוי", time: "1:30 שעות", method: "מיניבוס מהיר" },
-    ],
-    tips: [
-      "קחו מדריך מקומי לטיולים בין הכפרים — שווה כל שקל",
-      "מזג אוויר קר! קחו שכבות גם בקיץ",
-      "ינואר-פברואר קר מאוד — עד 0 מעלות",
-      "ספטמבר-אוקטובר — שדות האורז ירוקים ביותר",
-      "הרכבת הלילה מהאנוי היא חוויה בפני עצמה",
-      "מאמה מוואן (Mama Van) — ממולצת חם על ידי ישראלים לטיולי הומסטיי",
-      "אזהרה: Mama Shusha — הומסטיי לא מומלץ, דווחו על בעיות בטיחות ותגובות קיצוניות",
-      "השכרת אופנוע: ניתן למצוא ליד Firona Fly Hotel",
-    ],
   },
   {
-    id: "ninh-binh",
-    name: "ניין בינה",
+    id: 'ninh-binh',
+    name: 'ניין בינה',
     subtitle: "הלונג ביי של היבשה",
-    emoji: "🗻",
-    image: "https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=800&q=80",
+    emoji: '🗻',
+    image: 'https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=600&q=80',
+    tags: ['טבע', 'שייט', 'נופים'],
+    days: '1-2 ימים',
     chabad: false,
-    description: "ניין בינה מכונה 'הלונג ביי של היבשה' — נופים מרהיבים של הרי גיר הזוקפים מתוך שדות אורז ירוקים, ביניהם נהרות שקטים. פחות תיירותי מהלונג ביי אבל לא פחות יפה.",
-    areas: [
-      { name: "Tam Coc", desc: "האזור הפופולרי ביותר — שייט בסירה בין הרי הגיר.", recommended: true },
-      { name: "Trang An", desc: "שמורת טבע ענקית עם מסלולי שייט ומערות. יותר שקט.", recommended: true },
-    ],
-    attractions: [
-      { name: "שייט Tam Coc", desc: "שייט בסירה שחותרת לה לאורך נהר בין הרי גיר ושדות אורז. קסום." },
-      { name: "Trang An", desc: "אתר יונסקו — שייט בין מערות ונופים עוצרי נשימה." },
-      { name: "Bich Dong Pagoda", desc: "מקדש בתוך מערה — ייחודי ומרשים." },
-      { name: "Mua Cave", desc: "נקודת תצפית עם 500 מדרגות — הנוף מלמעלה מדהים." },
-    ],
-    food: [
-      { name: "עז צלויה", desc: "ניין בינה מפורסמת בעז המקומית — מנה חובה." },
-      { name: "אורז שרוף", desc: "Com Chay — מאכל מקומי ייחודי לאזור." },
-    ],
-    accommodation: [
-      { type: "תקציב", price: "$15-35/לילה", desc: "גסטהאוסים ומלונות קטנים באזור Tam Coc." },
-      { type: "ריזורט", price: "$80-150/לילה", desc: "ריזורטים עם נוף לשדות האורז." },
-    ],
-    travel_times: [
-      { from: "מהאנוי", time: "2 שעות", method: "אוטובוס / מוניות" },
-      { from: "מהלונג ביי", time: "4 שעות", method: "אוטובוס" },
-    ],
-    tips: [
-      "שילוב ניין בינה עם הלונג ביי הוא מסלול מנצח",
-      "שכרו אופניים לסיור עצמאי באזור — 1-2$",
-      "בוקר מוקדם = פחות תיירים בשייט",
-    ],
   },
 ];
 
@@ -249,144 +68,79 @@ export default function NorthVietnamPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Header */}
-      <div className="relative py-20 bg-gradient-to-b from-emerald-900/50 to-[#0f1923] text-center">
-        <h1 className="text-5xl font-bold mb-4">🏔️ צפון וייטנאם</h1>
+      <div className="relative py-16 bg-gradient-to-b from-emerald-900/50 to-[#0f1923] text-center">
+        <Link href="/destinations" className="text-[#c9a84c]/70 hover:text-[#c9a84c] text-sm mb-4 inline-block">
+          ← כל האזורים
+        </Link>
+        <h1 className="text-5xl font-bold mb-3">🏔️ צפון וייטנאם</h1>
         <p className="text-[#f5f0e8]/60 text-lg max-w-2xl mx-auto">
-          הרים, ערפל, שדות אורז ואחד מפלאי הטבע של העולם
+          הרים מרהיבים, שדות אורז מדורגים, עיר הבירה ופלאי הטבע
         </p>
+        <div className="flex justify-center gap-6 mt-6 text-sm text-[#f5f0e8]/50">
+          <span>🗓️ עונה מומלצת: אוקטובר–אפריל</span>
+          <span>⏱️ זמן מומלץ: 7–14 יום</span>
+        </div>
       </div>
 
-      {/* Destinations */}
-      <div className="max-w-7xl mx-auto px-4 py-12 flex flex-col gap-16">
-        {destinations.map((dest) => (
-          <div key={dest.id} id={dest.id} className="bg-[#1a2535] rounded-3xl overflow-hidden border border-[#c9a84c]/10">
-            {/* Destination Header */}
-            <div className="relative h-72">
-              <img src={dest.image} alt={dest.name} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a2535] via-[#1a2535]/50 to-transparent" />
-              <div className="absolute bottom-6 right-6">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="text-4xl">{dest.emoji}</span>
-                  <div>
-                    <h2 className="text-4xl font-bold">{dest.name}</h2>
-                    <p className="text-[#c9a84c]">{dest.subtitle}</p>
+      {/* Map + Destination List */}
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+
+          {/* Map */}
+          <div className="lg:col-span-1 bg-[#1a2535] rounded-3xl p-6 border border-emerald-700/30">
+            <h2 className="text-lg font-bold text-[#c9a84c] mb-4 text-center">מפת היעדים</h2>
+            <VietnamMap activeRegion="north" baseHref="/destinations/north" />
+            <p className="text-xs text-[#f5f0e8]/40 text-center mt-4">לחצו על שם יעד לעמוד המלא</p>
+          </div>
+
+          {/* Destinations Grid */}
+          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {destinations.map((dest) => (
+              <Link
+                key={dest.id}
+                href={`/destinations/north/${dest.id}`}
+                className="group bg-[#1a2535] rounded-2xl overflow-hidden border border-[#c9a84c]/10 hover:border-[#c9a84c]/40 transition-all"
+              >
+                <div className="relative h-44">
+                  <img
+                    src={dest.image}
+                    alt={dest.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a2535] via-transparent to-transparent" />
+                  <div className="absolute top-3 right-3 flex gap-2">
+                    {dest.chabad && (
+                      <span className="bg-blue-600/90 text-white text-xs px-2 py-0.5 rounded-full">✡️</span>
+                    )}
+                  </div>
+                  <div className="absolute bottom-3 right-3">
+                    <span className="text-3xl">{dest.emoji}</span>
                   </div>
                 </div>
-                {dest.chabad && (
-                  <span className="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
-                    ✡️ יש בית חב"ד
-                  </span>
-                )}
-              </div>
-            </div>
-
-            <div className="p-8">
-              <p className="text-[#f5f0e8]/70 leading-relaxed mb-8 text-lg">{dest.description}</p>
-
-              {dest.chabad && (
-                <div className="bg-blue-900/30 border border-blue-700/50 rounded-xl p-4 mb-8">
-                  <p className="text-blue-300 text-sm">✡️ <strong>בית חב"ד:</strong> {dest.chabadNote}</p>
-                </div>
-              )}
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Attractions */}
-                <div>
-                  <h3 className="text-xl font-bold mb-4 text-[#c9a84c]">🎯 אטרקציות</h3>
-                  <div className="flex flex-col gap-3">
-                    {dest.attractions.map((attr) => (
-                      <div key={attr.name} className="bg-[#0f1923] rounded-xl p-4">
-                        <div className="font-semibold mb-1">{attr.name}</div>
-                        <div className="text-sm text-[#f5f0e8]/60">{attr.desc}</div>
-                      </div>
+                <div className="p-4">
+                  <h3 className="text-xl font-bold group-hover:text-[#c9a84c] transition-colors">{dest.name}</h3>
+                  <p className="text-[#f5f0e8]/50 text-sm mt-0.5">{dest.subtitle}</p>
+                  <div className="flex flex-wrap gap-1.5 mt-3">
+                    {dest.tags.map((tag) => (
+                      <span key={tag} className="text-xs bg-[#c9a84c]/10 text-[#c9a84c] px-2 py-0.5 rounded-full">
+                        {tag}
+                      </span>
                     ))}
                   </div>
-                </div>
-
-                <div className="flex flex-col gap-8">
-                  {/* Food */}
-                  <div>
-                    <h3 className="text-xl font-bold mb-4 text-[#c9a84c]">🍜 אוכל</h3>
-                    <div className="flex flex-col gap-3">
-                      {dest.food.map((f) => (
-                        <div key={f.name} className="bg-[#0f1923] rounded-xl p-4">
-                          <div className="font-semibold mb-1">{f.name}</div>
-                          <div className="text-sm text-[#f5f0e8]/60">{f.desc}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Accommodation */}
-                  <div>
-                    <h3 className="text-xl font-bold mb-4 text-[#c9a84c]">🛏️ לינה</h3>
-                    <div className="flex flex-col gap-3">
-                      {dest.accommodation.map((acc) => (
-                        <div key={acc.type} className="bg-[#0f1923] rounded-xl p-4 flex justify-between items-start">
-                          <div>
-                            <div className="font-semibold mb-1">{acc.type}</div>
-                            <div className="text-sm text-[#f5f0e8]/60">{acc.desc}</div>
-                          </div>
-                          <span className="text-[#c9a84c] font-bold text-sm whitespace-nowrap mr-4">{acc.price}</span>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-[#c9a84c]/10">
+                    <span className="text-xs text-[#f5f0e8]/40">⏱️ {dest.days}</span>
+                    <span className="text-xs text-[#c9a84c] font-semibold group-hover:underline">פרטים מלאים ←</span>
                   </div>
                 </div>
-              </div>
-
-              {/* Areas */}
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4 text-[#c9a84c]">📍 אזורי לינה מומלצים</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {dest.areas.map((area) => (
-                    <div key={area.name} className={`bg-[#0f1923] rounded-xl p-4 border ${area.recommended ? "border-[#c9a84c]/40" : "border-transparent"}`}>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="font-semibold">{area.name}</span>
-                        {area.recommended && <span className="text-xs bg-[#c9a84c]/20 text-[#c9a84c] px-2 py-0.5 rounded-full">מומלץ</span>}
-                      </div>
-                      <div className="text-sm text-[#f5f0e8]/60">{area.desc}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Travel Times */}
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4 text-[#c9a84c]">🚌 זמני הגעה</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {dest.travel_times.map((t) => (
-                    <div key={t.from} className="bg-[#0f1923] rounded-xl p-4 flex justify-between">
-                      <span className="text-[#f5f0e8]/70">{t.from}</span>
-                      <div className="text-right">
-                        <div className="font-bold text-[#c9a84c]">{t.time}</div>
-                        <div className="text-xs text-[#f5f0e8]/40">{t.method}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Tips */}
-              <div className="mt-8 bg-[#0f1923] rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4 text-[#c9a84c]">💡 טיפים חשובים</h3>
-                <ul className="flex flex-col gap-2">
-                  {dest.tips.map((tip, i) => (
-                    <li key={i} className="text-sm text-[#f5f0e8]/70 flex gap-2">
-                      <span className="text-[#c9a84c]">•</span>
-                      {tip}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+              </Link>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
       {/* Navigation */}
-      <div className="max-w-7xl mx-auto px-4 pb-16 flex justify-between">
-        <Link href="/destinations" className="text-[#c9a84c] hover:underline">← חזרה לכל היעדים</Link>
+      <div className="max-w-7xl mx-auto px-4 pb-12 flex justify-between text-sm">
+        <Link href="/destinations" className="text-[#c9a84c] hover:underline">← כל האזורים</Link>
         <Link href="/destinations/center" className="text-[#c9a84c] hover:underline">מרכז וייטנאם ←</Link>
       </div>
     </div>
