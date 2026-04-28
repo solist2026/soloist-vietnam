@@ -5,7 +5,7 @@ const destinations = [
     region: "צפון",
     color: "from-emerald-900 to-emerald-700",
     icon: "🏔️",
-    places: ["האנוי", "סאפה", "הלונג ביי", "ניין בינה", "מאי צ'או"],
+    places: ["האנוי", "סאפה", "הלונג ביי", "הא גיאנג לופ", "ניין בינה"],
     description: "הרים מרהיבים, שדות אורז מדורגים, ועיר הבירה המסתורית",
     href: "/destinations/north",
   },
@@ -13,7 +13,7 @@ const destinations = [
     region: "מרכז",
     color: "from-amber-900 to-amber-700",
     icon: "🏯",
-    places: ["הוי אן", "דה נאנג", "הואה", "הוי אן"],
+    places: ["הוי אן", "דה נאנג", "הואה", "Ba Na Hills"],
     description: "עיירות עתיקות, חופים עוצרי נשימה ואוכל מהמשובח בוייטנאם",
     href: "/destinations/center",
   },
@@ -29,7 +29,7 @@ const destinations = [
 
 const quickTips = [
   { icon: "💳", title: "כסף", text: "דונג וייטנאמי (VND). כספומטים בכל מקום. קחו מזומן ליעדים קטנים." },
-  { icon: "📱", title: "SIM", text: "קנו SIM בשדה התעופה — Viettel או Mobifone. גלישה מהירה ב-5$ לחודש." },
+  { icon: "📱", title: "SIM", text: "קנו SIM בחנות Viettel בעיר (לא בשדה התעופה — יקר ולעיתים הונאה). Viettel היא הרשת הטובה ביותר בפער." },
   { icon: "🛵", title: "תחבורה", text: "גראב (אובר מקומי) לנסיעות בעיר. אוטובוסי לילה בין ערים." },
   { icon: "🍜", title: "אוכל", text: "פו, באן מי ובינה צ'ה — חובה לנסות. הימנעו ממסעדות עם תפריט באנגלית בלבד." },
 ];
@@ -172,9 +172,12 @@ export default function Home() {
       <section className="bg-[#1a2535] py-16">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
+            <div className="inline-block bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-bold px-3 py-1 rounded-full mb-4">
+              ⚠️ ישראלים חייבים ויזה
+            </div>
             <h2 className="text-3xl font-bold mb-4">ויזה לוייטנאם</h2>
             <p className="text-[#f5f0e8]/70 leading-relaxed mb-6">
-              אזרחי ישראל יכולים להיכנס לוייטנאם עד 45 יום ללא ויזה. לתקופה ארוכה יותר — E-Visa אונליין בתהליך פשוט.
+              ישראל <strong className="text-amber-400">אינה</strong> ברשימת המדינות הפטורות מויזה. חייבים להגיש E-Visa אונליין לפני הטיסה — תהליך פשוט שלוקח כמה דקות. עלות $25 לכניסה אחת.
             </p>
             <Link
               href="/visa"
@@ -185,9 +188,9 @@ export default function Home() {
           </div>
           <div className="flex-1 grid grid-cols-2 gap-4 text-center">
             {[
-              { label: "ימי שהייה חינמיים", value: "45" },
-              { label: "עלות E-Visa", value: "$25" },
-              { label: "ימי עיבוד", value: "3" },
+              { label: "עלות E-Visa (כניסה אחת)", value: "$25" },
+              { label: "עלות E-Visa (כניסות מרובות)", value: "$50" },
+              { label: "זמן עיבוד", value: "4-5 ימים" },
               { label: "תוקף E-Visa", value: "90 יום" },
             ].map((item) => (
               <div key={item.label} className="bg-[#0f1923] rounded-xl p-5 border border-[#c9a84c]/10">
