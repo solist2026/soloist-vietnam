@@ -8,7 +8,14 @@ const regions = [
     color: "from-emerald-800 to-teal-600",
     border: "border-emerald-700",
     description: "הרים מרהיבים, שדות אורז מדורגים, עיר הבירה האנוי והנס הטבעי הלונג ביי",
-    highlights: ["האנוי", "הלונג ביי", "סאפה", "ניין בינה", "מאי צ'או", "האה גיאנג"],
+    highlights: [
+      { name: "האנוי",      href: "/destinations/north/hanoi" },
+      { name: "הלונג ביי",  href: "/destinations/north/halong" },
+      { name: "סאפה",        href: "/destinations/north/sapa" },
+      { name: "ניין בינה",   href: "/destinations/north/ninh-binh" },
+      { name: "מאי צ'או",    href: "/destinations/north/mai-chau" },
+      { name: "הא גיאנג",   href: "/destinations/north/ha-giang" },
+    ],
     duration: "7-14 ימים מומלץ",
     best_time: "אוקטובר — אפריל",
     image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
@@ -20,7 +27,13 @@ const regions = [
     color: "from-amber-800 to-yellow-600",
     border: "border-amber-700",
     description: "עיירות עתיקות, ארמונות מלכותיים, חופים עוצרי נשימה ואוכל מהטעים בוייטנאם",
-    highlights: ["הוי אן", "דה נאנג", "הואה", "מי שון", "הוי אן", "קוי נהון"],
+    highlights: [
+      { name: "הוי אן",   href: "/destinations/center/hoi-an" },
+      { name: "דה נאנג",  href: "/destinations/center/danang" },
+      { name: "הואה",      href: "/destinations/center/hue" },
+      { name: "מי שון",    href: "/destinations/center/my-son" },
+      { name: "קוי נהון",  href: "/destinations/center/quy-nhon" },
+    ],
     duration: "4-7 ימים מומלץ",
     best_time: "פברואר — אוגוסט",
     image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&q=80",
@@ -32,7 +45,14 @@ const regions = [
     color: "from-red-800 to-orange-600",
     border: "border-red-700",
     description: "עיר תוססת ועצומה, דלתת מקונג מופלאה ואיים טרופיים עם חופים בתוליים",
-    highlights: ["הו צ'י מין", "דלתת מקונג", "פו קווק", "מוי נה", "וונג טאו", "קון דאו"],
+    highlights: [
+      { name: "הו צ'י מין",   href: "/destinations/south/hcmc" },
+      { name: "דלתת מקונג",   href: "/destinations/south/mekong" },
+      { name: "פו קווק",       href: "/destinations/south/phu-quoc" },
+      { name: "מוי נה",        href: "/destinations/south/mui-ne" },
+      { name: "וונג טאו",      href: "/destinations/south/vung-tau" },
+      { name: "קון דאו",       href: "/destinations/south/con-dao" },
+    ],
     duration: "5-10 ימים מומלץ",
     best_time: "נובמבר — אפריל",
     image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
@@ -66,7 +86,7 @@ export default function DestinationsPage() {
                   alt={region.name}
                   className="w-full h-full object-cover"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-l from-[#1a2535] via-transparent to-transparent`} />
+                <div className="absolute inset-0 bg-gradient-to-l from-[#1a2535] via-transparent to-transparent" />
               </div>
 
               {/* Content */}
@@ -80,9 +100,13 @@ export default function DestinationsPage() {
 
                   <div className="flex flex-wrap gap-2 mb-6">
                     {region.highlights.map((place) => (
-                      <span key={place} className="text-sm bg-[#c9a84c]/10 text-[#c9a84c] px-3 py-1 rounded-full">
-                        {place}
-                      </span>
+                      <Link
+                        key={place.name}
+                        href={place.href}
+                        className="text-sm bg-[#c9a84c]/10 text-[#c9a84c] px-3 py-1 rounded-full hover:bg-[#c9a84c]/25 hover:text-white transition-colors"
+                      >
+                        {place.name}
+                      </Link>
                     ))}
                   </div>
 
