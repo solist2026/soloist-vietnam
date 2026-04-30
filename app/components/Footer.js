@@ -5,7 +5,11 @@ export default function Footer() {
     <footer className="bg-[#080f16] border-t border-[#c9a84c]/20 py-12 mt-16">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-[#c9a84c] text-xl font-bold mb-3">סוליסט ויאטנם</h3>
+          <Link href="/" className="inline-block mb-4">
+            <div className="bg-white rounded-2xl px-3 py-2">
+              <img src="/logo.png" alt="סוליסט וייטנאם" className="h-16 w-auto" />
+            </div>
+          </Link>
           <p className="text-[#f5f0e8]/60 text-sm leading-relaxed">
             המדריך המלא למטייל הישראלי העצמאי בוייטנאם. כל מה שצריך לדעת — במקום אחד.
           </p>

@@ -7,9 +7,11 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#0f1923]/90 backdrop-blur-md border-b border-[#c9a84c]/20">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-[#c9a84c] tracking-wide">
-          סוליסט ויאטנם
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <Link href="/" className="inline-block">
+          <div className="bg-white rounded-2xl px-2 py-1">
+            <img src="/logo.png" alt="סוליסט וייטנאם" className="h-11 w-auto" />
+          </div>
         </Link>
 
         {/* Desktop Menu */}

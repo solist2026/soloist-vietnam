@@ -3,8 +3,17 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata = {
-  title: "סוליסט ויאטנם | המדריך המלא למטייל הישראלי",
+  title: "סוליסט וייטנאם | המדריך המלא למטייל הישראלי",
   description: "כל המידע שצריך המטייל הישראלי לוייטנאם — יעדים, מסלולים, טיפים, לינה, ויזות וקהילה",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
+  openGraph: {
+    title: "סוליסט וייטנאם | המדריך המלא למטייל הישראלי",
+    description: "כל המידע שצריך המטייל הישראלי לוייטנאם — יעדים, מסלולים, טיפים, לינה, ויזות וקהילה",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
