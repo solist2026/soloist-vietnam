@@ -7,10 +7,18 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#0f1923]/90 backdrop-blur-md border-b border-[#c9a84c]/20">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="inline-block">
-          <div className="bg-white rounded-2xl px-2 py-1">
-            <img src="/logo.png" alt="סוליסט וייטנאם" className="h-11 w-auto" />
+      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+          <div className="bg-white rounded-xl p-1.5 shadow-lg shadow-black/30">
+            <img src="/logo.png" alt="סוליסט וייטנאם" className="h-14 w-auto" />
+          </div>
+          <div className="flex flex-col leading-none gap-1">
+            <span className="text-[1.65rem] font-black italic text-white tracking-tighter leading-none" style={{textShadow:'0 1px 8px rgba(0,0,0,0.5)'}}>סוליסט</span>
+            <div className="flex items-center gap-1.5">
+              <span className="h-px w-4 bg-[#c9a84c]" />
+              <span className="text-[0.6rem] font-bold text-[#c9a84c] tracking-[0.25em]">וייטנאם</span>
+              <span className="h-px w-4 bg-[#c9a84c]" />
+            </div>
           </div>
         </Link>
 

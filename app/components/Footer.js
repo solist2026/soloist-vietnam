@@ -5,9 +5,17 @@ export default function Footer() {
     <footer className="bg-[#080f16] border-t border-[#c9a84c]/20 py-12 mt-16">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <Link href="/" className="inline-block mb-4">
-            <div className="bg-white rounded-2xl px-3 py-2">
-              <img src="/logo.png" alt="סוליסט וייטנאם" className="h-16 w-auto" />
+          <Link href="/" className="flex items-center gap-4 mb-5">
+            <div className="bg-white rounded-xl p-2 shadow-lg shadow-black/30 flex-shrink-0">
+              <img src="/logo.png" alt="סוליסט וייטנאם" className="h-20 w-auto" />
+            </div>
+            <div className="flex flex-col leading-none gap-1.5">
+              <span className="text-3xl font-black italic text-white tracking-tighter leading-none">סוליסט</span>
+              <div className="flex items-center gap-2">
+                <span className="h-px w-5 bg-[#c9a84c]" />
+                <span className="text-[0.65rem] font-bold text-[#c9a84c] tracking-[0.25em]">וייטנאם</span>
+                <span className="h-px w-5 bg-[#c9a84c]" />
+              </div>
             </div>
           </Link>
           <p className="text-[#f5f0e8]/60 text-sm leading-relaxed">
