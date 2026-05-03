@@ -47,7 +47,7 @@ const destinations = [
     name: 'סאפה',
     subtitle: 'הרים, ערפל ושדות אורז',
     emoji: '🌾',
-    image: 'https://plus.unsplash.com/premium_photo-1661917179706-33e305a4ee45?w=600&q=80',
+    image: '/sapa-hero.jpg',
     tags: ['הרים', 'שבטים', 'טרקים'],
     days: '2-3 ימים',
     chabad: true,
