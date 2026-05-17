@@ -96,9 +96,12 @@ export default function CommunityPage() {
         <div className="bg-gradient-to-br from-[#1a2535] to-[#0f1923] rounded-3xl p-10 text-center border border-[#c9a84c]/20">
           <div className="text-5xl mb-4">💬</div>
           <h2 className="text-3xl font-bold mb-4">יש לך שאלה שלא נענתה?</h2>
-          <p className="text-[#f5f0e8]/60 mb-8 max-w-md mx-auto">
+          <p className="text-[#f5f0e8]/60 mb-4 max-w-md mx-auto">
             הצטרף לקהילת הישראלים בוייטנאם ושאל הכל — מסלולים, מחירים, עצות ועוד
           </p>
+          <a href="mailto:soloistour@gmail.com" className="inline-flex items-center gap-2 text-[#c9a84c] hover:underline text-sm mb-8">
+            ✉️ soloistour@gmail.com
+          </a>
           <div className="flex flex-col gap-4 max-w-lg mx-auto">
             <input
               type="text"

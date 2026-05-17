@@ -36,13 +36,19 @@ export default function Footer() {
 
         <div>
           <h4 className="text-[#f5f0e8] font-semibold mb-3">יצירת קשר</h4>
-          <p className="text-sm text-[#f5f0e8]/60">
+          <p className="text-sm text-[#f5f0e8]/60 mb-3">
             יש שאלה? רוצה לשתף חוויה?<br />
             הצטרף לקהילה שלנו ושאל הכל.
           </p>
+          <a
+            href="mailto:soloistour@gmail.com"
+            className="flex items-center gap-2 text-sm text-[#c9a84c] hover:underline mb-4"
+          >
+            ✉️ soloistour@gmail.com
+          </a>
           <Link
             href="/community"
-            className="inline-block mt-3 text-sm bg-[#c9a84c] text-[#0f1923] px-4 py-2 rounded-full font-bold hover:bg-[#b8963d] transition-colors"
+            className="inline-block text-sm bg-[#c9a84c] text-[#0f1923] px-4 py-2 rounded-full font-bold hover:bg-[#b8963d] transition-colors"
           >
             הצטרף לקהילה
           </Link>
@@ -50,7 +56,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-[#c9a84c]/10 text-center text-xs text-[#f5f0e8]/30">
-        © 2025 סוליסט ויאטנם | כל הזכויות שמורות
+        © 2026 סוליסט וייטנאם | כל הזכויות שמורות
       </div>
     </footer>
   );

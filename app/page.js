@@ -31,7 +31,7 @@ const quickTips = [
   { icon: "💳", title: "כסף", text: "דונג וייטנאמי (VND). כספומטים בכל מקום. קחו מזומן ליעדים קטנים." },
   { icon: "📱", title: "SIM", text: "קנו SIM בחנות Viettel בעיר (לא בשדה התעופה — יקר ולעיתים הונאה). Viettel היא הרשת הטובה ביותר בפער." },
   { icon: "🛵", title: "תחבורה", text: "גראב (אובר מקומי) לנסיעות בעיר. אוטובוסי לילה בין ערים." },
-  { icon: "🍜", title: "אוכל", text: "פו, באן מי ובינה צ'ה — חובה לנסות. הימנעו ממסעדות עם תפריט באנגלית בלבד." },
+  { icon: "🍜", title: "אוכל", text: "פו, באן מי ובון צ'ה — חובה לנסות. הימנעו ממסעדות עם תפריט באנגלית בלבד." },
 ];
 
 export default function Home() {
@@ -53,7 +53,7 @@ export default function Home() {
           </p>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             גלה את
-            <span className="text-[#c9a84c]"> ויאטנם </span>
+            <span className="text-[#c9a84c]"> וייטנאם </span>
             בדרך שלך
           </h1>
           <p className="text-xl md:text-2xl text-[#f5f0e8]/80 mb-10 leading-relaxed">
