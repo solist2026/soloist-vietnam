@@ -168,36 +168,105 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Visa Section */}
-      <section className="bg-[#1a2535] py-16">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-          <div className="flex-1">
-            <div className="inline-block bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-bold px-3 py-1 rounded-full mb-4">
-              ⚠️ ישראלים חייבים ויזה
+      {/* Visa Ad Section */}
+      <section className="relative py-20 overflow-hidden">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0f1923] via-[#1a2535] to-[#0f1923]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_#c9a84c15_0%,_transparent_60%)]" />
+
+        <div className="relative max-w-7xl mx-auto px-4">
+          {/* Top label */}
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-bold px-4 py-1.5 rounded-full tracking-widest uppercase">
+              ⚠️ ישראלים חייבים ויזה לוייטנאם — אל תשכחו
             </div>
-            <h2 className="text-3xl font-bold mb-4">ויזה לוייטנאם</h2>
-            <p className="text-[#f5f0e8]/70 leading-relaxed mb-6">
-              ישראל <strong className="text-amber-400">אינה</strong> ברשימת המדינות הפטורות מויזה. חייבים להגיש E-Visa אונליין לפני הטיסה — תהליך פשוט שלוקח כמה דקות. עלות $25 לכניסה אחת.
-            </p>
-            <Link
-              href="/visa"
-              className="inline-block bg-[#c9a84c] text-[#0f1923] px-6 py-3 rounded-full font-bold hover:bg-[#b8963d] transition-colors"
-            >
-              מידע מלא על ויזה
-            </Link>
           </div>
-          <div className="flex-1 grid grid-cols-2 gap-4 text-center">
-            {[
-              { label: "עלות E-Visa (כניסה אחת)", value: "$25" },
-              { label: "עלות E-Visa (כניסות מרובות)", value: "$50" },
-              { label: "זמן עיבוד", value: "4-5 ימים" },
-              { label: "תוקף E-Visa", value: "90 יום" },
-            ].map((item) => (
-              <div key={item.label} className="bg-[#0f1923] rounded-xl p-5 border border-[#c9a84c]/10">
-                <div className="text-3xl font-bold text-[#c9a84c]">{item.value}</div>
-                <div className="text-xs text-[#f5f0e8]/60 mt-1">{item.label}</div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left — info */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
+                ויזה לוייטנאם —<br />
+                <span className="text-[#c9a84c]">בלי כאב ראש</span>
+              </h2>
+              <p className="text-[#f5f0e8]/70 text-lg leading-relaxed mb-8">
+                ישראל אינה פטורה מויזה. E-Visa אלקטרונית עולה <strong className="text-[#f5f0e8]/90">$25</strong> בלבד —
+                מגישים אונליין ומקבלים ויזה מאושרת במייל תוך ימים ספורים.
+                צוות סוליסט יכול לטפל בכל התהליך בשבילכם, בעברית.
+              </p>
+
+              {/* Trust signals */}
+              <div className="grid grid-cols-2 gap-3 mb-8">
+                {[
+                  { icon: "🛂", label: "תוקף 90 יום", sub: "מיום הכניסה" },
+                  { icon: "⚡", label: "אקספרס 24 שעות", sub: "עיבוד מהיר" },
+                  { icon: "🔍", label: "בדיקת מסמכים", sub: "לפני הגשה" },
+                  { icon: "🇮🇱", label: "שירות בעברית", sub: "תמיכה מלאה" },
+                ].map(item => (
+                  <div key={item.label} className="bg-[#1a2535]/80 border border-[#c9a84c]/10 rounded-xl px-4 py-3 flex items-center gap-3">
+                    <span className="text-xl">{item.icon}</span>
+                    <div>
+                      <div className="text-sm font-bold">{item.label}</div>
+                      <div className="text-xs text-[#f5f0e8]/40">{item.sub}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/visa"
+                  className="bg-[#c9a84c] text-[#0f1923] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b8963d] transition-colors"
+                >
+                  כל המידע על ויזה →
+                </Link>
+                <Link
+                  href="/visa/apply"
+                  className="border-2 border-[#c9a84c] text-[#c9a84c] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#c9a84c]/10 transition-colors"
+                >
+                  הגש ויזה דרכנו
+                </Link>
+              </div>
+            </div>
+
+            {/* Right — price cards */}
+            <div className="flex flex-col gap-4">
+              {/* Main card */}
+              <div className="bg-gradient-to-br from-[#1a2535] to-[#0f1923] border-2 border-[#c9a84c]/30 rounded-3xl p-7">
+                <div className="flex items-center justify-between mb-5">
+                  <span className="text-2xl font-black text-[#c9a84c]">E-Visa</span>
+                  <span className="bg-[#c9a84c]/15 text-[#c9a84c] text-xs font-bold px-3 py-1 rounded-full">הכי פופולרי</span>
+                </div>
+                <div className="grid grid-cols-2 gap-3 mb-5">
+                  <div className="bg-[#0f1923] rounded-2xl p-4 text-center">
+                    <div className="text-3xl font-black text-[#c9a84c]">$25</div>
+                    <div className="text-xs text-[#f5f0e8]/50 mt-1">כניסה אחת</div>
+                    <div className="text-xs text-[#f5f0e8]/30">≈ ₪169</div>
+                  </div>
+                  <div className="bg-[#0f1923] rounded-2xl p-4 text-center">
+                    <div className="text-3xl font-black text-[#c9a84c]">$50</div>
+                    <div className="text-xs text-[#f5f0e8]/50 mt-1">כניסות מרובות</div>
+                    <div className="text-xs text-[#f5f0e8]/30">≈ ₪339</div>
+                  </div>
+                </div>
+                <ul className="flex flex-col gap-2 text-sm text-[#f5f0e8]/60">
+                  {["תוקף 90 יום", "לא צריך לצאת לשגרירות", "מגישים אונליין מהבית", "ויזה מגיעה למייל כ-PDF"].map(t => (
+                    <li key={t} className="flex items-center gap-2">
+                      <span className="text-[#c9a84c] font-bold">✓</span> {t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Warning reminder */}
+              <div className="bg-amber-900/25 border border-amber-600/35 rounded-2xl p-4 flex items-start gap-3 text-sm">
+                <span className="text-2xl flex-shrink-0">⚠️</span>
+                <div>
+                  <strong className="text-amber-400">הגישו לפחות שבוע לפני הטיסה</strong>
+                  <p className="text-[#f5f0e8]/55 mt-1">זמן עיבוד 3-5 ימי עסקים. לאקספרס (24 שעות) פנו אלינו.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
