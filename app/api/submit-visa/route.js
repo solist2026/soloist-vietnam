@@ -1,7 +1,3 @@
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const visaTypeMap = {
   single: 'כניסה אחת — $25',
   multiple: 'כניסות מרובות — $50',
@@ -40,22 +36,18 @@ export async function POST(request) {
   .label{color:#888;flex-shrink:0}
   .value{font-weight:600;text-align:left}
   .total{background:#c9a84c;color:#1a2535;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-  .total-label{font-size:16px;font-weight:700}
-  .total-amount{font-size:28px;font-weight:900}
 </style></head>
 <body>
 <div class="container">
   <div class="header">
-    <h1>🛂 בקשת ויזה חדשה — סוליסט וייטנאם</h1>
+    <h1>בקשת ויזה חדשה - סוליסט וייטנאם</h1>
     <p>${new Date().toLocaleString('he-IL', { timeZone: 'Asia/Jerusalem' })}</p>
   </div>
-
   <div class="section">
     <h2>סוג ויזה ועיבוד</h2>
     ${row('סוג ויזה', visaTypeMap[data.visaType] || data.visaType)}
     ${row('מהירות עיבוד', processingMap[data.processing] || data.processing)}
   </div>
-
   <div class="section">
     <h2>פרטים אישיים</h2>
     ${row('שם בעברית', `${data.firstNameHe} ${data.lastNameHe}`)}
@@ -65,14 +57,12 @@ export async function POST(request) {
     ${row('מצב משפחתי', maritalMap[data.maritalStatus] || data.maritalStatus)}
     ${row('עיסוק', data.occupation)}
   </div>
-
   <div class="section">
     <h2>פרטי דרכון</h2>
     ${row('מספר דרכון', data.passportNumber)}
     ${row('תאריך הוצאה', data.passportIssueDate)}
     ${row('תאריך פקיעה', data.passportExpiry)}
   </div>
-
   <div class="section">
     <h2>פרטי נסיעה</h2>
     ${row('תאריך כניסה', data.entryDate)}
@@ -81,24 +71,21 @@ export async function POST(request) {
     ${row('מלון / הוסטל', data.hotelName)}
     ${row('כתובת מלון', data.hotelAddress)}
   </div>
-
   <div class="section">
     <h2>פרטי קשר</h2>
-    ${row('אימייל', `<a href="mailto:${data.email}">${data.email}</a>`)}
+    ${row('אימייל', data.email)}
     ${row('טלפון', data.phone)}
     ${data.whatsapp ? row('WhatsApp', data.whatsapp) : ''}
     ${data.notes ? row('הערות', data.notes) : ''}
   </div>
-
   <div class="section">
     <h2>מסמכים מצורפים</h2>
-    ${row('תמונת פנים', data.portraitPhotoName ? `✅ ${data.portraitPhotoName}` : '❌ לא צורף')}
-    ${row('צילום דרכון', data.passportPhotoName ? `✅ ${data.passportPhotoName}` : '❌ לא צורף')}
+    ${row('תמונת פנים', data.portraitPhotoName ? `מצורף: ${data.portraitPhotoName}` : 'לא צורף')}
+    ${row('צילום דרכון', data.passportPhotoName ? `מצורף: ${data.passportPhotoName}` : 'לא צורף')}
   </div>
-
   <div class="total">
-    <span class="total-label">להשלים טיפול ותשלום</span>
-    <span class="total-amount">📞 ${data.phone}</span>
+    <span>לחזרה ותיאום תשלום</span>
+    <span>${data.phone}</span>
   </div>
 </div>
 </body></html>`;
@@ -111,14 +98,30 @@ export async function POST(request) {
       attachments.push({ filename: `passport_${data.passportPhotoName}`, content: data.passportPhotoBase64 });
     }
 
-    await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
-      to: ['soloistour@gmail.com'],
-      replyTo: data.email,
-      subject: `🛂 ויזה: ${data.firstNameEn} ${data.lastNameEn} | ${visaTypeMap[data.visaType] || data.visaType}`,
-      html: htmlBody,
-      attachments,
+    const apiKey = (process.env.RESEND_API_KEY || '').trim();
+    const fromEmail = (process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev').trim();
+
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: `Soloist Vietnam <${fromEmail}>`,
+        to: ['soloistour@gmail.com'],
+        reply_to: data.email,
+        subject: `Visa: ${data.firstNameEn} ${data.lastNameEn} | ${visaTypeMap[data.visaType] || data.visaType}`,
+        html: htmlBody,
+        attachments: attachments.length > 0 ? attachments : undefined,
+      }),
     });
+
+    if (!res.ok) {
+      const errBody = await res.text();
+      console.error('Resend error:', res.status, errBody);
+      return Response.json({ error: 'שגיאה בשליחה' }, { status: 500 });
+    }
 
     return Response.json({ success: true });
   } catch (error) {
