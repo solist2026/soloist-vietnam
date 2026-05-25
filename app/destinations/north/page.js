@@ -7,7 +7,7 @@ const destinations = [
     name: 'האנוי',
     subtitle: 'עיר הבירה המסתורית',
     emoji: '🏛️',
-    image: 'https://images.unsplash.com/photo-1533497394934-b33cd9695ba9?w=600&q=80',
+    image: '/images/hanoi/hanoi-cover.jpg',
     tags: ['עיר', 'תרבות', 'אוכל'],
     days: '2-3 ימים',
     chabad: true,

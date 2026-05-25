@@ -18,7 +18,7 @@ const regions = [
     ],
     duration: "7-14 ימים מומלץ",
     best_time: "אוקטובר — אפריל",
-    image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
+    image: "/images/north-vietnam.jpg",
   },
   {
     id: "center",
