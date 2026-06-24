@@ -273,7 +273,6 @@ const data = {
     'בית חב"ד האנוי — Old Quarter',
     'WhatsApp: +84-83-872-8225 | אתר: jewishhanoi.com',
     'ארוחות שישי ושבת, חגים, מידע לתיירים',
-    'כרטיסי פסח 2027 באתר jewishhanoi.com',
   ],
   nextDest: { name: 'לופ הא גיאנג', href: '/destinations/north/ha-giang' },
 };
