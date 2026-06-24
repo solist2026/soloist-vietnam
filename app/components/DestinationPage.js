@@ -84,34 +84,56 @@ export default function DestinationPage({ dest }) {
         {/* Attractions */}
         <Accordion id="attractions" title="אטרקציות" emoji="🎯" defaultOpen={true}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {dest.attractions?.map((a) => (
-              <div key={a.name} className="bg-[#0f1923] rounded-xl overflow-hidden">
-                {a.image && (
-                  <img src={a.image} alt={a.name} className="w-full h-40 object-cover" />
-                )}
-                <div className="p-4">
-                  <div className="flex items-start justify-between gap-2 mb-1">
-                    <div className="font-bold text-[#c9a84c]">{a.name}</div>
-                    {a.mapLink && (
-                      <a
-                        href={a.mapLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs bg-[#1a2535] text-[#c9a84c] border border-[#c9a84c]/30 px-2 py-1 rounded-lg hover:bg-[#c9a84c]/10 transition-colors whitespace-nowrap flex-shrink-0"
-                      >
-                        📍 מפה
-                      </a>
+            {dest.attractions?.map((a) => {
+              const inner = (
+                <>
+                  {a.image && (
+                    <img src={a.image} alt={a.name} className="w-full h-40 object-cover" />
+                  )}
+                  <div className="p-4">
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <div className="font-bold text-[#c9a84c] group-hover:underline">{a.name}</div>
+                      {a.href ? (
+                        <span className="text-xs text-[#c9a84c]/50 flex-shrink-0 whitespace-nowrap">פרטים ←</span>
+                      ) : a.mapLink ? (
+                        <a
+                          href={a.mapLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs bg-[#1a2535] text-[#c9a84c] border border-[#c9a84c]/30 px-2 py-1 rounded-lg hover:bg-[#c9a84c]/10 transition-colors whitespace-nowrap flex-shrink-0"
+                        >
+                          📍 מפה
+                        </a>
+                      ) : null}
+                    </div>
+                    <div className="text-sm text-[#f5f0e8]/70 leading-relaxed">{a.desc}</div>
+                    {a.tip && (
+                      <div className="mt-2 text-xs text-emerald-400 bg-emerald-900/20 rounded-lg px-3 py-1.5">
+                        💡 {a.tip}
+                      </div>
                     )}
                   </div>
-                  <div className="text-sm text-[#f5f0e8]/70 leading-relaxed">{a.desc}</div>
-                  {a.tip && (
-                    <div className="mt-2 text-xs text-emerald-400 bg-emerald-900/20 rounded-lg px-3 py-1.5">
-                      💡 {a.tip}
-                    </div>
-                  )}
+                </>
+              );
+
+              if (a.href) {
+                return (
+                  <Link
+                    key={a.name}
+                    href={a.href}
+                    className="bg-[#0f1923] rounded-xl overflow-hidden block group hover:ring-2 hover:ring-[#c9a84c]/40 transition-all"
+                  >
+                    {inner}
+                  </Link>
+                );
+              }
+
+              return (
+                <div key={a.name} className="bg-[#0f1923] rounded-xl overflow-hidden">
+                  {inner}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </Accordion>
 
