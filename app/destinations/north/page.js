@@ -72,6 +72,16 @@ const destinations = [
     days: '1-2 ימים',
     chabad: false,
   },
+  {
+    id: 'bac-son',
+    name: 'עמק באק סון',
+    subtitle: 'ים האורז הירוק של צפון וייטנאם',
+    emoji: '🌾',
+    image: 'https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=600&q=80',
+    tags: ['עמק', 'שדות אורז', 'טבע', 'צילום'],
+    days: '1-2 ימים',
+    chabad: false,
+  },
 ];
 
 export default function NorthVietnamPage() {

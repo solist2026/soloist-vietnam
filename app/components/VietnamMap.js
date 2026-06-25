@@ -13,6 +13,7 @@ const allDestinations = [
   { id: 'halong',    name: 'הלונג ביי',  region: 'north',  lon: 107.12, lat: 20.91, color: '#06b6d4', ta: 'start', dx: 7,  dy: 3 },
   { id: 'catba',     name: 'קאט בה',      region: 'north',  lon: 107.05, lat: 20.75, color: '#0ea5e9', ta: 'end',   dx: -7, dy: 12 },
   { id: 'ninh-binh', name: 'ניין בינה',   region: 'north',  lon: 105.97, lat: 20.25, color: '#14b8a6', ta: 'end',   dx: -7, dy: 3 },
+  { id: 'bac-son',   name: 'באק סון',     region: 'north',  lon: 106.35, lat: 21.88, color: '#eab308', ta: 'end',   dx: -7, dy: 3 },
   // Center
   { id: 'hue',       name: 'הואה',        region: 'center', lon: 107.59, lat: 16.46, color: '#f59e0b', ta: 'end',   dx: -7, dy: 3 },
   { id: 'danang',    name: 'דה נאנג',     region: 'center', lon: 108.21, lat: 16.07, color: '#f97316', ta: 'start', dx: 7,  dy: 3 },
