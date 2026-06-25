@@ -4,7 +4,7 @@ const dest = {
   name: "עמק באק סון",
   subtitle: "ים האורז הירוק של צפון וייטנאם",
   emoji: "🌾",
-  heroImage: "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=1920&q=80",
+  heroImage: "/images/bac-son.jpg",
   regionName: "צפון וייטנאם",
   regionHref: "/destinations/north",
   chabad: false,
