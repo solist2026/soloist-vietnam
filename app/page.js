@@ -5,7 +5,15 @@ const destinations = [
     region: "צפון",
     color: "from-emerald-900 to-emerald-700",
     icon: "🏔️",
-    places: ["האנוי", "סאפה", "הלונג ביי", "הא גיאנג לופ", "ניין בינה", "עמק באק סון", "קאט בה"],
+    places: [
+      { name: "האנוי", href: "/destinations/north/hanoi" },
+      { name: "סאפה", href: "/destinations/north/sapa" },
+      { name: "הלונג ביי", href: "/destinations/north/halong" },
+      { name: "הא גיאנג לופ", href: "/destinations/north/ha-giang" },
+      { name: "ניין בינה", href: "/destinations/north/ninh-binh" },
+      { name: "עמק באק סון", href: "/destinations/north/bac-son" },
+      { name: "קאט בה", href: "/destinations/north/catba" },
+    ],
     description: "הרים מרהיבים, שדות אורז מדורגים, ועיר הבירה המסתורית",
     href: "/destinations/north",
   },
@@ -13,7 +21,12 @@ const destinations = [
     region: "מרכז",
     color: "from-amber-900 to-amber-700",
     icon: "🏯",
-    places: ["הוי אן", "דה נאנג", "הואה", "Ba Na Hills"],
+    places: [
+      { name: "הוי אן", href: "/destinations/center/hoi-an" },
+      { name: "דה נאנג", href: "/destinations/center/danang" },
+      { name: "הואה", href: "/destinations/center/hue" },
+      { name: "Ba Na Hills", href: "/destinations/center/danang" },
+    ],
     description: "עיירות עתיקות, חופים עוצרי נשימה ואוכל מהמשובח בוייטנאם",
     href: "/destinations/center",
   },
@@ -21,7 +34,12 @@ const destinations = [
     region: "דרום",
     color: "from-red-900 to-red-700",
     icon: "🌴",
-    places: ["הו צ'י מין", "מקונג", "פו קווק", "מוי נה"],
+    places: [
+      { name: "הו צ'י מין", href: "/destinations/south/hcmc" },
+      { name: "מקונג", href: "/destinations/south/mekong" },
+      { name: "פו קווק", href: "/destinations/south/phu-quoc" },
+      { name: "מוי נה", href: "/destinations/south/mui-ne" },
+    ],
     description: "עיר תוססת, דלתת מקונג ואיים טרופיים עם חופים בתוליים",
     href: "/destinations/south",
   },
@@ -57,7 +75,7 @@ export default function Home() {
             בדרך שלך
           </h1>
           <p className="text-xl md:text-2xl text-[#f5f0e8]/80 mb-10 leading-relaxed">
-            מהרי הצפון ועד החופים הטרופיים של הדרום —<br />
+            מהרי הצפון ועד החופים הטרופיים של הדרום<br />
             כל מה שצריך לדעת במקום אחד
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -84,41 +102,41 @@ export default function Home() {
       {/* Regions Section */}
       <section className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">חקור את וייטנאם</h2>
+          <h2 className="text-4xl font-bold mb-4">וייטנאם מחכה לכם מצפון ועד דרום</h2>
           <p className="text-[#f5f0e8]/60 text-lg">שלושה אזורים, אינסוף הרפתקאות</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {destinations.map((dest) => (
-            <Link
+            <div
               key={dest.region}
-              href={dest.href}
-              className="card-hover group relative rounded-2xl overflow-hidden bg-[#1a2535] border border-[#c9a84c]/10"
+              className="relative rounded-2xl overflow-hidden bg-[#1a2535] border border-[#c9a84c]/10"
             >
               <div className={`h-2 bg-gradient-to-r ${dest.color}`} />
               <div className="p-6">
                 <div className="text-4xl mb-3">{dest.icon}</div>
-                <h3 className="text-2xl font-bold mb-2 group-hover:text-[#c9a84c] transition-colors">
+                <h3 className="text-2xl font-bold mb-2">
                   {dest.region} וייטנאם
                 </h3>
                 <p className="text-[#f5f0e8]/60 text-sm mb-4 leading-relaxed">{dest.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {dest.places.map((place) => (
-                    <span
-                      key={place}
-                      className="text-xs bg-[#c9a84c]/10 text-[#c9a84c] px-3 py-1 rounded-full"
+                    <Link
+                      key={place.name}
+                      href={place.href}
+                      className="text-xs bg-[#c9a84c]/10 text-[#c9a84c] px-3 py-1 rounded-full hover:bg-[#c9a84c]/25 transition-colors"
                     >
-                      {place}
-                    </span>
+                      {place.name}
+                    </Link>
                   ))}
                 </div>
               </div>
               <div className="px-6 pb-5">
-                <span className="text-sm text-[#c9a84c] font-semibold group-hover:underline">
+                <Link href={dest.href} className="text-sm text-[#c9a84c] font-semibold hover:underline">
                   לכל היעדים ←
-                </span>
+                </Link>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>

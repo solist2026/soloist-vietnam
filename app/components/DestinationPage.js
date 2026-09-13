@@ -75,7 +75,7 @@ export default function DestinationPage({ dest }) {
 
       {/* Description */}
       <div className="max-w-7xl mx-auto px-4 py-10">
-        <p className="text-[#f5f0e8]/80 text-lg leading-relaxed max-w-4xl">{dest.description}</p>
+        <p className="text-[#f5f0e8]/90 text-xl leading-relaxed max-w-4xl">{dest.description}</p>
       </div>
 
       {/* Accordion Sections */}
@@ -106,7 +106,7 @@ export default function DestinationPage({ dest }) {
                         </a>
                       ) : null}
                     </div>
-                    <div className="text-sm text-[#f5f0e8]/70 leading-relaxed">{a.desc}</div>
+                    <div className="text-base text-[#f5f0e8]/85 leading-relaxed">{a.desc}</div>
                     {a.tip && (
                       <div className="mt-2 text-xs text-emerald-400 bg-emerald-900/20 rounded-lg px-3 py-1.5">
                         💡 {a.tip}
@@ -161,7 +161,7 @@ export default function DestinationPage({ dest }) {
                     {trip.duration && <span>⏱️ {trip.duration}</span>}
                     {trip.price && <span>💰 {trip.price}</span>}
                   </div>
-                  <p className="text-sm text-[#f5f0e8]/70 leading-relaxed">{trip.desc}</p>
+                  <p className="text-base text-[#f5f0e8]/85 leading-relaxed">{trip.desc}</p>
                   {trip.tip && (
                     <div className="mt-3 text-xs text-emerald-400 bg-emerald-900/20 rounded-lg px-3 py-1.5">
                       💡 {trip.tip}
@@ -183,7 +183,7 @@ export default function DestinationPage({ dest }) {
                 )}
                 <div className="p-4">
                   <div className="font-bold text-[#c9a84c] mb-1">{f.name}</div>
-                  <div className="text-sm text-[#f5f0e8]/70 leading-relaxed">{f.desc}</div>
+                  <div className="text-base text-[#f5f0e8]/85 leading-relaxed">{f.desc}</div>
                   {f.price && (
                     <div className="mt-2 text-xs font-bold text-[#c9a84c]">{f.price}</div>
                   )}
@@ -199,7 +199,7 @@ export default function DestinationPage({ dest }) {
               <div className="text-sm font-bold text-[#c9a84c] mb-2">🗺️ איפה לאכול</div>
               <ul className="flex flex-col gap-1">
                 {dest.foodTips.map((t, i) => (
-                  <li key={i} className="text-sm text-[#f5f0e8]/70 flex gap-2">
+                  <li key={i} className="text-base text-[#f5f0e8]/85 flex gap-2">
                     <span className="text-[#c9a84c]">•</span>{t}
                   </li>
                 ))}
@@ -222,7 +222,7 @@ export default function DestinationPage({ dest }) {
                     <span className="text-xs bg-[#1a2535] text-[#f5f0e8]/50 px-2 py-0.5 rounded-full">{a.type}</span>
                   )}
                 </div>
-                <p className="text-sm text-[#f5f0e8]/70 leading-relaxed">{a.desc}</p>
+                <p className="text-base text-[#f5f0e8]/85 leading-relaxed">{a.desc}</p>
               </div>
             ))}
           </div>
@@ -290,7 +290,7 @@ export default function DestinationPage({ dest }) {
               <div className="text-sm font-bold text-[#c9a84c] mb-2">🛵 תחבורה מקומית</div>
               <ul className="flex flex-col gap-1">
                 {dest.localTransport.map((t, i) => (
-                  <li key={i} className="text-sm text-[#f5f0e8]/70 flex gap-2">
+                  <li key={i} className="text-base text-[#f5f0e8]/85 flex gap-2">
                     <span className="text-[#c9a84c]">•</span>{t}
                   </li>
                 ))}
@@ -310,7 +310,7 @@ export default function DestinationPage({ dest }) {
                     <span className="font-bold">{s.months}</span>
                     {s.best && <span className="text-xs bg-[#c9a84c]/20 text-[#c9a84c] px-2 py-0.5 rounded-full">הכי טוב</span>}
                   </div>
-                  <p className="text-sm text-[#f5f0e8]/70 leading-relaxed">{s.desc}</p>
+                  <p className="text-base text-[#f5f0e8]/85 leading-relaxed">{s.desc}</p>
                 </div>
               ))}
             </div>
@@ -325,7 +325,7 @@ export default function DestinationPage({ dest }) {
                 <div key={t.type} className="bg-[#0f1923] rounded-xl p-4">
                   <div className="text-2xl mb-2">{t.icon}</div>
                   <div className="font-bold text-[#c9a84c] mb-1">{t.type}</div>
-                  <p className="text-sm text-[#f5f0e8]/70 leading-relaxed">{t.desc}</p>
+                  <p className="text-base text-[#f5f0e8]/85 leading-relaxed">{t.desc}</p>
                 </div>
               ))}
             </div>
@@ -338,7 +338,7 @@ export default function DestinationPage({ dest }) {
             {dest.tips?.map((tip, i) => (
               <div key={i} className="bg-[#0f1923] rounded-xl p-4 flex gap-3">
                 <span className="text-[#c9a84c] mt-0.5 flex-shrink-0">✓</span>
-                <span className="text-sm text-[#f5f0e8]/70 leading-relaxed">{tip}</span>
+                <span className="text-base text-[#f5f0e8]/85 leading-relaxed">{tip}</span>
               </div>
             ))}
           </div>
