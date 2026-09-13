@@ -115,9 +115,9 @@ export default function Home() {
               <div className={`h-2 bg-gradient-to-r ${dest.color}`} />
               <div className="p-6">
                 <div className="text-4xl mb-3">{dest.icon}</div>
-                <h3 className="text-2xl font-bold mb-2">
+                <Link href={dest.href} className="block text-2xl font-bold mb-2 hover:text-[#c9a84c] transition-colors">
                   {dest.region} וייטנאם
-                </h3>
+                </Link>
                 <p className="text-[#f5f0e8]/60 text-sm mb-4 leading-relaxed">{dest.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {dest.places.map((place) => (
