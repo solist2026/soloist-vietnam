@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
           </Link>
           <p className="text-[#f5f0e8]/60 text-sm leading-relaxed">
-            המדריך המלא למטייל הישראלי העצמאי בוייטנאם. כל מה שצריך לדעת — במקום אחד.
+            המדריך המלא למטייל הישראלי העצמאי בוייטנאם. כל מה שצריך לדעת, במקום אחד.
           </p>
         </div>
 

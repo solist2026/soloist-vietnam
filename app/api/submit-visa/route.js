@@ -1,13 +1,13 @@
-const visaTypeMap = {
-  single: 'כניסה אחת — $25',
-  multiple: 'כניסות מרובות — $50',
+﻿const visaTypeMap = {
+  single: 'כניסה אחת, $25',
+  multiple: 'כניסות מרובות, $50',
 };
 
 const processingMap = {
-  standard: 'רגיל — 4-5 ימי עסקים',
-  fast: 'מהיר — 2 ימי עסקים (+₪79)',
-  express: 'אקספרס — 24 שעות (+₪149)',
-  emergency: 'חירום — 4-6 שעות (+₪249)',
+  standard: 'רגיל, 4-5 ימי עסקים',
+  fast: 'מהיר, 2 ימי עסקים (+₪79)',
+  express: 'אקספרס, 24 שעות (+₪149)',
+  emergency: 'חירום, 4-6 שעות (+₪249)',
 };
 
 const genderMap = { male: 'זכר', female: 'נקבה' };

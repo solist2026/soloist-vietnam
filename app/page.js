@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const destinations = [
   {
@@ -46,10 +46,10 @@ const destinations = [
 ];
 
 const quickTips = [
-  { icon: "💳", title: "כסף", text: "דונג וייטנאמי (VND) — 1 שקל ≈ 7,500 דונג. מזומן הכרחי בשווקים ויעדים קטנים. VPBank — כספומט עם עמלות נמוכות." },
-  { icon: "📱", title: "SIM", text: "קנו SIM Viettel בחנות בעיר בלבד — לא בשדה התעופה (יקר פי 2-3 ולעיתים מטעינים פחות ימים). כיסוי מצוין גם בהא גיאנג וסאפה." },
-  { icon: "🛵", title: "תחבורה", text: "Grab בלבד לנסיעות בעיר — מחיר קבוע, ללא הפתעות. אוטובוסי לילה Vexere בין ערים. מוניות ללא Grab — מחיר תיירים." },
-  { icon: "🍜", title: "אוכל", text: "פו, בון צ'ה, באנה מי — חובה לנסות לפחות פעם אחת כל אחת. בחרו דוכן עמוס מקומיים, לא מסעדה עם תפריט באנגלית בלבד." },
+  { icon: "💳", title: "כסף", text: "דונג וייטנאמי (VND), 1 שקל ≈ 7,500 דונג. מזומן הכרחי בשווקים ויעדים קטנים. VPBank, כספומט עם עמלות נמוכות." },
+  { icon: "📱", title: "SIM", text: "קנו SIM Viettel בחנות בעיר בלבד, לא בשדה התעופה (יקר פי 2-3 ולעיתים מטעינים פחות ימים). כיסוי מצוין גם בהא גיאנג וסאפה." },
+  { icon: "🛵", title: "תחבורה", text: "Grab בלבד לנסיעות בעיר, מחיר קבוע, ללא הפתעות. אוטובוסי לילה Vexere בין ערים. מוניות ללא Grab, מחיר תיירים." },
+  { icon: "🍜", title: "אוכל", text: "פו, בון צ'ה, באנה מי, חובה לנסות לפחות פעם אחת כל אחת. בחרו דוכן עמוס מקומיים, לא מסעדה עם תפריט באנגלית בלבד." },
 ];
 
 export default function Home() {
@@ -175,7 +175,7 @@ export default function Home() {
         <div className="bg-gradient-to-br from-[#1a2535] to-[#0f1923] rounded-3xl p-12 border border-[#c9a84c]/20">
           <h2 className="text-4xl font-bold mb-4">לא יודע מאיפה להתחיל?</h2>
           <p className="text-[#f5f0e8]/70 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            ספר לנו כמה זמן יש לך ומה אתה מחפש — ונבנה לך מסלול מותאם אישית לוייטנאם
+            ספר לנו כמה זמן יש לך ומה אתה מחפש, ונבנה לך מסלול מותאם אישית לוייטנאם
           </p>
           <Link
             href="/itineraries"
@@ -196,19 +196,19 @@ export default function Home() {
           {/* Top label */}
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-bold px-4 py-1.5 rounded-full tracking-widest uppercase">
-              ⚠️ ישראלים חייבים ויזה לוייטנאם — אל תשכחו
+              ⚠️ ישראלים חייבים ויזה לוייטנאם, אל תשכחו
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Left — info */}
+            {/* Left, info */}
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
-                ויזה לוייטנאם —<br />
+                ויזה לוייטנאם<br />
                 <span className="text-[#c9a84c]">בלי כאב ראש</span>
               </h2>
               <p className="text-[#f5f0e8]/70 text-lg leading-relaxed mb-8">
-                ישראל אינה פטורה מויזה. E-Visa אלקטרונית עולה <strong className="text-[#f5f0e8]/90">$25</strong> בלבד —
+                ישראל אינה פטורה מויזה. E-Visa אלקטרונית עולה <strong className="text-[#f5f0e8]/90">$25</strong> בלבד
                 מגישים אונליין ומקבלים ויזה מאושרת במייל תוך ימים ספורים.
                 צוות סוליסט יכול לטפל בכל התהליך בשבילכם, בעברית.
               </p>
@@ -247,7 +247,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — price cards */}
+            {/* Right, price cards */}
             <div className="flex flex-col gap-4">
               {/* Main card */}
               <div className="bg-gradient-to-br from-[#1a2535] to-[#0f1923] border-2 border-[#c9a84c]/30 rounded-3xl p-7">

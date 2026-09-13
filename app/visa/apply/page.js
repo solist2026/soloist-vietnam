@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { useState } from 'react';
 
 const VISA_TYPES = [
@@ -31,27 +31,27 @@ const PROCESSING_TIERS = [
 
 const ENTRY_PORTS = {
   'שדות תעופה': [
-    'נוי ביי — האנוי (Hanoi Noi Bai)',
-    'טאן שון נהאט — הו צ\'י מין (Ho Chi Minh City)',
+    'נוי ביי, האנוי (Hanoi Noi Bai)',
+    'טאן שון נהאט, הו צ\'י מין (Ho Chi Minh City)',
     'דה נאנג (Da Nang)',
-    'קם ראן — ניה טראנג (Cam Ranh, Nha Trang)',
+    'קם ראן, ניה טראנג (Cam Ranh, Nha Trang)',
     'פו קווק (Phu Quoc)',
-    'פוי קאט — קוי נהון (Phu Cat, Quy Nhon)',
-    'ליאן חואנג — דה לט (Lien Khuong, Da Lat)',
-    'פוי בי — האואה (Phu Bai, Hue)',
-    'קאט בי — האיפונג (Cat Bi, Hai Phong)',
-    'ת\'ו קואן — תאן הואה (Tho Xuan, Thanh Hoa)',
+    'פוי קאט, קוי נהון (Phu Cat, Quy Nhon)',
+    'ליאן חואנג, דה לט (Lien Khuong, Da Lat)',
+    'פוי בי, האואה (Phu Bai, Hue)',
+    'קאט בי, האיפונג (Cat Bi, Hai Phong)',
+    'ת\'ו קואן, תאן הואה (Tho Xuan, Thanh Hoa)',
   ],
   'מעברי יבשה': [
-    'מוק ביי — גבול קמבודיה (Moc Bai)',
-    'לאו באו — גבול לאוס (Lao Bao)',
-    'לאו קאי — גבול סין (Lao Cai)',
-    'הוו נגי — גבול סין (Huu Nghi)',
-    'מונג קאי — גבול סין (Mong Cai)',
-    'האה תיאן — גבול קמבודיה (Ha Tien)',
-    'תיין ביאן — גבול קמבודיה (Tinh Bien)',
-    'בו י — גבול לאוס (Bo Y)',
-    'לה תאנה — גבול קמבודיה (Le Thanh)',
+    'מוק ביי, גבול קמבודיה (Moc Bai)',
+    'לאו באו, גבול לאוס (Lao Bao)',
+    'לאו קאי, גבול סין (Lao Cai)',
+    'הוו נגי, גבול סין (Huu Nghi)',
+    'מונג קאי, גבול סין (Mong Cai)',
+    'האה תיאן, גבול קמבודיה (Ha Tien)',
+    'תיין ביאן, גבול קמבודיה (Tinh Bien)',
+    'בו י, גבול לאוס (Bo Y)',
+    'לה תאנה, גבול קמבודיה (Le Thanh)',
   ],
   'נמלי ים': [
     'נמל האלונג (Hon Gai - Ha Long)',
@@ -224,7 +224,7 @@ function Step2({ formData, updateField }) {
       </div>
 
       <div className="bg-amber-900/20 border border-amber-600/30 rounded-xl p-4 text-sm text-amber-300">
-        ⚠️ חשוב: שם באנגלית חייב להיות זהה בדיוק לכתוב בדרכון — שגיאה תפסל את הויזה
+        ⚠️ חשוב: שם באנגלית חייב להיות זהה בדיוק לכתוב בדרכון, שגיאה תפסל את הויזה
       </div>
 
       <div className="grid grid-cols-2 gap-4">
@@ -234,7 +234,7 @@ function Step2({ formData, updateField }) {
 
       <div className="grid grid-cols-2 gap-4">
         <InputField
-          label="שם פרטי — כבדרכון"
+          label="שם פרטי, כבדרכון"
           value={formData.firstNameEn}
           onChange={v => updateField('firstNameEn', v.toUpperCase())}
           placeholder="ISRAEL"
@@ -242,7 +242,7 @@ function Step2({ formData, updateField }) {
           hint="אנגלית, אותיות גדולות"
         />
         <InputField
-          label="שם משפחה — כבדרכון"
+          label="שם משפחה, כבדרכון"
           value={formData.lastNameEn}
           onChange={v => updateField('lastNameEn', v.toUpperCase())}
           placeholder="COHEN"
@@ -393,7 +393,7 @@ function Step4({ formData, updateField }) {
     <div className="flex flex-col gap-5">
       <div>
         <h3 className="text-xl font-bold mb-1">מסמכים ויצירת קשר</h3>
-        <p className="text-[#f5f0e8]/50 text-sm">העלו קבצים ברורים — תמונות לא תקניות יגרמו לדחיית הויזה</p>
+        <p className="text-[#f5f0e8]/50 text-sm">העלו קבצים ברורים, תמונות לא תקניות יגרמו לדחיית הויזה</p>
       </div>
 
       <div className="bg-[#0f1923] rounded-2xl p-5 flex flex-col gap-5 border border-[#c9a84c]/10">
@@ -451,7 +451,7 @@ function Step4({ formData, updateField }) {
             value={formData.whatsapp}
             onChange={v => updateField('whatsapp', v)}
             placeholder="050-1234567"
-            hint="אופציונלי — לעדכונים מהירים"
+            hint="אופציונלי, לעדכונים מהירים"
           />
         </div>
         <div className="flex flex-col gap-1.5">
@@ -492,8 +492,8 @@ function Step5({ formData }) {
       </div>
 
       <div className="bg-[#0f1923] rounded-2xl p-2 border border-[#c9a84c]/10">
-        <SummaryRow label="סוג ויזה" value={`${selectedVisa.label} — $${selectedVisa.priceUSD}`} />
-        <SummaryRow label="מהירות עיבוד" value={`${selectedTier.label} — ${selectedTier.days}`} />
+        <SummaryRow label="סוג ויזה" value={`${selectedVisa.label}, $${selectedVisa.priceUSD}`} />
+        <SummaryRow label="מהירות עיבוד" value={`${selectedTier.label}, ${selectedTier.days}`} />
         <SummaryRow label="שם בעברית" value={`${formData.firstNameHe} ${formData.lastNameHe}`} />
         <SummaryRow label="שם באנגלית" value={`${formData.firstNameEn} ${formData.lastNameEn}`} />
         <SummaryRow label="תאריך לידה" value={formData.birthDate} />
@@ -628,13 +628,13 @@ export default function VisaPage() {
     <div className="min-h-screen pt-20">
       {/* Service inactive banner */}
       <div className="bg-red-600 text-white text-center py-3 px-4 font-bold text-sm tracking-wide">
-        ⚠️ שירות הגשת ויזות אינו פעיל כרגע — בשלבי השקה. ניתן לבדוק את הטופס אך הבקשות לא יטופלו.
+        ⚠️ שירות הגשת ויזות אינו פעיל כרגע, בשלבי השקה. ניתן לבדוק את הטופס אך הבקשות לא יטופלו.
       </div>
       <div className="relative py-16 bg-gradient-to-b from-[#1a2535] to-[#0f1923] text-center">
         <p className="text-[#c9a84c] text-sm font-semibold tracking-widest mb-3 uppercase">שירות מהיר ובעברית</p>
         <h1 className="text-5xl font-bold mb-4">הגשת ויזה לוייטנאם</h1>
         <p className="text-[#f5f0e8]/60 text-lg max-w-2xl mx-auto">
-          מלאו את הטופס — אנחנו נטפל בהכל. ויזה מאושרת תגיע לתיבת המייל שלכם.
+          מלאו את הטופס, אנחנו נטפל בהכל. ויזה מאושרת תגיע לתיבת המייל שלכם.
         </p>
         <div className="flex flex-wrap justify-center gap-3 mt-6 text-sm">
           {[
@@ -702,10 +702,10 @@ export default function VisaPage() {
             {[
               'הגישו לפחות 7 ימים לפני הטיסה',
               'הדרכון חייב להיות בתוקף 6+ חודשים מיום הכניסה',
-              'תאריכים חייבים להתאים לטיסות — שינוי מחייב בקשה חדשה',
+              'תאריכים חייבים להתאים לטיסות, שינוי מחייב בקשה חדשה',
               'Single Entry: יציאה לקמבודיה = ויזה חדשה לחזרה',
-              'חייבים להדפיס את הויזה — עותק מודפס בגבול',
-              'אתרי E-Visa אחרים (לא ממשלתיים) — הונאה',
+              'חייבים להדפיס את הויזה, עותק מודפס בגבול',
+              'אתרי E-Visa אחרים (לא ממשלתיים), הונאה',
             ].map(item => (
               <li key={item} className="flex items-start gap-2">
                 <span className="text-amber-400 flex-shrink-0 mt-0.5">•</span>
@@ -721,7 +721,7 @@ export default function VisaPage() {
             {[
               { q: 'כמה זמן לוקח לקבל את הויזה?', a: 'עיבוד רגיל: 4-5 ימי עסקים. אקספרס: 24 שעות. חירום: 4-6 שעות.' },
               { q: 'איך מגיעה הויזה?', a: 'הויזה תגיע לאימייל שהזנתם כקובץ PDF מוכן להדפסה.' },
-              { q: 'מה אם יש שגיאה בטופס?', a: 'צוות סוליסט יבדוק ויצור קשר לפני ההגשה הסופית — לא תהיו לבד בתהליך.' },
+              { q: 'מה אם יש שגיאה בטופס?', a: 'צוות סוליסט יבדוק ויצור קשר לפני ההגשה הסופית, לא תהיו לבד בתהליך.' },
               { q: 'האם אפשר לשנות תאריכים לאחר הגשה?', a: 'לא. שינוי כלשהו (תאריך, נמל, שם) מחייב פתיחת בקשה חדשה לחלוטין.' },
             ].map(item => (
               <div key={item.q} className="bg-[#0f1923] rounded-xl p-4">

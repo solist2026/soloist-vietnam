@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import Accordion from './Accordion';
 
 export default function DestinationPage({ dest }) {
@@ -245,10 +245,10 @@ export default function DestinationPage({ dest }) {
                         <span className="flex-shrink-0">•</span>
                         {p.mapLink ? (
                           <a href={p.mapLink} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-[#c9a84c]">
-                            {p.name}{p.note ? ` — ${p.note}` : ''}
+                            {p.name}{p.note ? `, ${p.note}` : ''}
                           </a>
                         ) : (
-                          <span>{p.name}{p.note ? ` — ${p.note}` : ''}</span>
+                          <span>{p.name}{p.note ? `, ${p.note}` : ''}</span>
                         )}
                       </div>
                     ))}

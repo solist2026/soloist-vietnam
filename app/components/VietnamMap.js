@@ -1,4 +1,4 @@
-// SVG map of Vietnam with destination markers
+﻿// SVG map of Vietnam with destination markers
 // Coordinate system: lon 102-110°E → x 0-220, lat 8-24°N → y 0-520 (inverted)
 
 const toX = (lon) => ((lon - 102) / 8) * 220;
@@ -62,7 +62,7 @@ export default function VietnamMap({ activeRegion, baseHref }) {
           <path d={regionHighlights[activeRegion]} fill={highlightColor} fillOpacity="0.15" />
         )}
 
-        {/* Inactive destinations — colored dots */}
+        {/* Inactive destinations, colored dots */}
         {allDestinations
           .filter((d) => d.region !== activeRegion)
           .map((d) => (
@@ -80,7 +80,7 @@ export default function VietnamMap({ activeRegion, baseHref }) {
             </a>
           ))}
 
-        {/* Active destinations — larger marker + label */}
+        {/* Active destinations, larger marker + label */}
         {allDestinations
           .filter((d) => d.region === activeRegion)
           .map((d) => {

@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const regions = [
   {
@@ -19,7 +19,7 @@ const regions = [
       { name: "קאט בה",       href: "/destinations/north/catba" },
     ],
     duration: "7-14 ימים מומלץ",
-    best_time: "אוקטובר — אפריל",
+    best_time: "אוקטובר, אפריל",
     image: "/images/north-vietnam.jpg",
   },
   {
@@ -37,7 +37,7 @@ const regions = [
       { name: "קוי נהון",  href: "/destinations/center/quy-nhon" },
     ],
     duration: "4-7 ימים מומלץ",
-    best_time: "פברואר — אוגוסט",
+    best_time: "פברואר, אוגוסט",
     image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&q=80",
   },
   {
@@ -56,7 +56,7 @@ const regions = [
       { name: "קון דאו",       href: "/destinations/south/con-dao" },
     ],
     duration: "5-10 ימים מומלץ",
-    best_time: "נובמבר — אפריל",
+    best_time: "נובמבר, אפריל",
     image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
   },
 ];
@@ -71,7 +71,7 @@ export default function DestinationsPage() {
           <p className="text-[#c9a84c] text-sm font-semibold tracking-widest mb-3 uppercase">חקור את וייטנאם</p>
           <h1 className="text-5xl font-bold mb-4">יעדים בוייטנאם</h1>
           <p className="text-[#f5f0e8]/60 text-lg max-w-2xl mx-auto">
-            מצפון לדרום — כל אזור מציע חוויה שונה לחלוטין. בחר את היעד שלך וצלל לפרטים
+            מצפון לדרום, כל אזור מציע חוויה שונה לחלוטין. בחר את היעד שלך וצלל לפרטים
           </p>
         </div>
       </div>

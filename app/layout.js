@@ -1,17 +1,17 @@
-import "./globals.css";
+﻿import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata = {
   title: "סוליסט וייטנאם | המדריך המלא למטייל הישראלי",
-  description: "כל המידע שצריך המטייל הישראלי לוייטנאם — יעדים, מסלולים, טיפים, לינה, ויזות וקהילה",
+  description: "כל המידע שצריך המטייל הישראלי לוייטנאם, יעדים, מסלולים, טיפים, לינה, ויזות וקהילה",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
   },
   openGraph: {
     title: "סוליסט וייטנאם | המדריך המלא למטייל הישראלי",
-    description: "כל המידע שצריך המטייל הישראלי לוייטנאם — יעדים, מסלולים, טיפים, לינה, ויזות וקהילה",
+    description: "כל המידע שצריך המטייל הישראלי לוייטנאם, יעדים, מסלולים, טיפים, לינה, ויזות וקהילה",
     images: ["/logo.png"],
   },
 };
