@@ -1,17 +1,26 @@
 @import "tailwindcss";
 
 :root {
+  /* Light theme design tokens */
+  --primary: #F97316;
+  --primary-dark: #C2540A;
+  --navy: #1A2535;
+  --wa-green: #25D366;
+  --surface: #F8FAFC;
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --border-light: #E2E8F0;
+
+  /* Legacy dark theme */
   --background: #0f1923;
   --foreground: #f5f0e8;
   --gold: #c9a84c;
-  --red: #c0392b;
-  --green: #2d6a4f;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-heebo, 'Heebo'), Arial, Helvetica, sans-serif;
   direction: rtl;
 }
 
@@ -19,6 +28,35 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Image zoom */
+.img-zoom {
+  transition: transform 0.45s ease;
+}
+.group:hover .img-zoom {
+  transform: scale(1.07);
+}
+
+/* Fade in up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in     { animation: fadeInUp 0.6s ease-out both; }
+.anim-d1             { animation-delay: 0.1s; }
+.anim-d2             { animation-delay: 0.2s; }
+.anim-d3             { animation-delay: 0.3s; }
+.anim-d4             { animation-delay: 0.4s; }
+
+/* Legacy classes (dark pages) */
 .hero-gradient {
   background: linear-gradient(
     to bottom,
@@ -31,16 +69,10 @@ html {
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card-hover:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.gold-text {
-  color: var(--gold);
-}
-
-.section-divider {
-  border-color: rgba(201, 168, 76, 0.3);
-}
+.gold-text { color: var(--gold); }
+.section-divider { border-color: rgba(201, 168, 76, 0.3); }

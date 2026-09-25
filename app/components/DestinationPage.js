@@ -3,7 +3,7 @@ import Accordion from './Accordion';
 
 export default function DestinationPage({ dest }) {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-[88px]">
       {/* Hero */}
       <div className="relative h-[60vh] min-h-[400px]">
         <img
@@ -374,3 +374,4 @@ export default function DestinationPage({ dest }) {
     </div>
   );
 }
+

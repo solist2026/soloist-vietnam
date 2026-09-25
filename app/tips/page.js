@@ -87,7 +87,7 @@ const tipCategories = [
 
 export default function TipsPage() {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-[88px]">
       {/* Header */}
       <div className="relative py-20 bg-gradient-to-b from-[#1a2535] to-[#0f1923] text-center">
         <p className="text-[#c9a84c] text-sm font-semibold tracking-widest mb-3 uppercase">מדריך למטייל</p>
@@ -158,3 +158,4 @@ export default function TipsPage() {
     </div>
   );
 }
+

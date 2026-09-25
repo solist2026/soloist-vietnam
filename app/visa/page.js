@@ -11,7 +11,7 @@ const steps = [
 
 export default function VisaPage() {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-[88px]">
       {/* Header */}
       <div className="relative py-20 bg-gradient-to-b from-[#1a2535] to-[#0f1923] text-center">
         <div className="inline-block bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-bold px-3 py-1 rounded-full mb-4">
@@ -243,3 +243,4 @@ export default function VisaPage() {
     </div>
   );
 }
+

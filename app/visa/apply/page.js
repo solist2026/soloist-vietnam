@@ -600,7 +600,7 @@ export default function VisaPage() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen pt-20 flex items-center justify-center">
+      <div className="min-h-screen pt-[88px] flex items-center justify-center">
         <div className="text-center px-4 max-w-md">
           <div className="text-7xl mb-6">🎉</div>
           <h1 className="text-4xl font-bold mb-4">הבקשה נשלחה!</h1>
@@ -625,7 +625,7 @@ export default function VisaPage() {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-[88px]">
       {/* Service inactive banner */}
       <div className="bg-red-600 text-white text-center py-3 px-4 font-bold text-sm tracking-wide">
         ⚠️ שירות הגשת ויזות אינו פעיל כרגע, בשלבי השקה. ניתן לבדוק את הטופס אך הבקשות לא יטופלו.
@@ -742,3 +742,4 @@ export default function VisaPage() {
     </div>
   );
 }
+

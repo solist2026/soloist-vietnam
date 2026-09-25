@@ -1,293 +1,414 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
-const destinations = [
+export const metadata = {
+  title: "סוליסט וייטנאם | וייטנאם בדרך שלך",
+  description: "כל מה שהמטייל הישראלי צריך לדעת לפני ובזמן הטיול לוייטנאם. ויזה, יעדים, מסלולים, טיפים וקהילה",
+};
+
+const benefits = [
   {
-    region: "צפון",
-    color: "from-emerald-900 to-emerald-700",
-    icon: "🏔️",
-    places: [
-      { name: "האנוי", href: "/destinations/north/hanoi" },
-      { name: "סאפה", href: "/destinations/north/sapa" },
-      { name: "הלונג ביי", href: "/destinations/north/halong" },
-      { name: "הא גיאנג לופ", href: "/destinations/north/ha-giang" },
-      { name: "ניין בינה", href: "/destinations/north/ninh-binh" },
-      { name: "עמק באק סון", href: "/destinations/north/bac-son" },
-      { name: "קאט בה", href: "/destinations/north/catba" },
-    ],
-    description: "הרים מרהיבים, שדות אורז מדורגים, ועיר הבירה המסתורית",
+    icon: "🛂",
+    title: "הוצאת ויזה בקלות",
+    desc: "נטפל בכל תהליך ה-E-Visa עבורכם, בעברית ובמחיר שקוף",
+    href: "/visa",
+  },
+  {
+    icon: "🗺️",
+    title: "מידע עדכני ומהימן",
+    desc: "מדריך מפורט לכל יעד, מסלול ושכונה עם עצות מהשטח",
+    href: "/destinations",
+  },
+  {
+    icon: "✈️",
+    title: "מסלולים מותאמים אישית",
+    desc: "מסלולים מוכנים לכל משך זמן ולכל סגנון מטייל",
+    href: "/itineraries",
+  },
+  {
+    icon: "💬",
+    title: "קהילת מטיילים ישראלית",
+    desc: "הצטרפו לקבוצות WhatsApp הפעילות של מטיילים ישראלים בוייטנאם",
+    href: "/community",
+  },
+];
+
+const regions = [
+  {
+    name: "צפון וייטנאם",
+    desc: "הרים מרהיבים, שדות אורז מדורגים ועיר הבירה ההיסטורית",
+    img: "/images/north-vietnam.jpg",
     href: "/destinations/north",
+    places: ["האנוי", "סאפה", "הלונג ביי", "הא גיאנג"],
   },
   {
-    region: "מרכז",
-    color: "from-amber-900 to-amber-700",
-    icon: "🏯",
-    places: [
-      { name: "הוי אן", href: "/destinations/center/hoi-an" },
-      { name: "דה נאנג", href: "/destinations/center/danang" },
-      { name: "הואה", href: "/destinations/center/hue" },
-      { name: "Ba Na Hills", href: "/destinations/center/danang" },
-    ],
-    description: "עיירות עתיקות, חופים עוצרי נשימה ואוכל מהמשובח בוייטנאם",
+    name: "מרכז וייטנאם",
+    desc: "עיירות עתיקות, חופים עוצרי נשימה ואוכל מהמשובח בעולם",
+    img: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
     href: "/destinations/center",
+    places: ["הוי אן", "דה נאנג", "הואה"],
   },
   {
-    region: "דרום",
-    color: "from-red-900 to-red-700",
-    icon: "🌴",
-    places: [
-      { name: "הו צ'י מין", href: "/destinations/south/hcmc" },
-      { name: "מקונג", href: "/destinations/south/mekong" },
-      { name: "פו קווק", href: "/destinations/south/phu-quoc" },
-      { name: "מוי נה", href: "/destinations/south/mui-ne" },
-    ],
-    description: "עיר תוססת, דלתת מקונג ואיים טרופיים עם חופים בתוליים",
+    name: "דרום וייטנאם",
+    desc: "עיר תוססת, דלתת מקונג ואיים טרופיים עם חופים בתוליים",
+    img: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
     href: "/destinations/south",
+    places: ["הו צ'י מין", "פו קווק", "מוי נה"],
+  },
+  {
+    name: "מפת וייטנאם",
+    desc: "סקירה גרפית של כל האזורים, הערים והיעדים בוייטנאם",
+    img: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
+    href: "/map",
+    places: ["כל הערים", "לפי אזורים"],
+    isMap: true,
   },
 ];
 
-const quickTips = [
-  { icon: "💳", title: "כסף", text: "דונג וייטנאמי (VND), 1 שקל ≈ 7,500 דונג. מזומן הכרחי בשווקים ויעדים קטנים. VPBank, כספומט עם עמלות נמוכות." },
-  { icon: "📱", title: "SIM", text: "קנו SIM Viettel בחנות בעיר בלבד, לא בשדה התעופה (יקר פי 2-3 ולעיתים מטעינים פחות ימים). כיסוי מצוין גם בהא גיאנג וסאפה." },
-  { icon: "🛵", title: "תחבורה", text: "Grab בלבד לנסיעות בעיר, מחיר קבוע, ללא הפתעות. אוטובוסי לילה Vexere בין ערים. מוניות ללא Grab, מחיר תיירים." },
-  { icon: "🍜", title: "אוכל", text: "פו, בון צ'ה, באנה מי, חובה לנסות לפחות פעם אחת כל אחת. בחרו דוכן עמוס מקומיים, לא מסעדה עם תפריט באנגלית בלבד." },
+const services = [
+  {
+    emoji: "🛂",
+    title: "הוצאת ויזה לוייטנאם",
+    desc: "שירות מלא לקבלת E-Visa. ממלאים פרטים פעם אחת ואנחנו מטפלים בכל השאר.",
+    img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
+    href: "/visa",
+    cta: "להוצאת ויזה",
+    highlight: true,
+  },
+  {
+    emoji: "🗺️",
+    title: "מסלולים לטיול בוייטנאם",
+    desc: "מסלולים מוכנים ומותאמים אישית, לכל משך זמן ולכל סגנון מטייל.",
+    img: "/sapa-hero.jpg",
+    href: "/itineraries",
+    cta: "לכל המסלולים",
+    highlight: false,
+  },
+  {
+    emoji: "💬",
+    title: "קבוצות WhatsApp למטיילים",
+    desc: "הצטרפו לקהילה ישראלית פעילה. שאלו שאלות, קבלו עצות ומצאו שותפים לטיול.",
+    img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+    href: "/whatsapp",
+    cta: "להצטרפות",
+    highlight: false,
+  },
 ];
 
-export default function Home() {
-  return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=1920&q=80')`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0f1923]/40 via-[#0f1923]/60 to-[#0f1923]" />
+const gallery = [
+  { src: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&q=80", alt: "הלונג ביי, וייטנאם" },
+  { src: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=80", alt: "פו וייטנאמי" },
+  { src: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&q=80", alt: "פנסי הוי אן" },
+  { src: "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=600&q=80", alt: "שדות אורז בסאפה" },
+  { src: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=600&q=80", alt: "רחוב בוייטנאם" },
+];
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <p className="text-[#c9a84c] text-sm font-semibold tracking-widest mb-4 uppercase">
-            המדריך המלא למטייל הישראלי
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            גלה את
-            <span className="text-[#c9a84c]"> וייטנאם </span>
-            בדרך שלך
-          </h1>
-          <p className="text-xl md:text-2xl text-[#f5f0e8]/80 mb-10 leading-relaxed">
-            מהרי הצפון ועד החופים הטרופיים של הדרום<br />
-            כל מה שצריך לדעת במקום אחד
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/destinations"
-              className="bg-[#c9a84c] text-[#0f1923] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b8963d] transition-colors"
-            >
-              גלה יעדים
-            </Link>
-            <Link
-              href="/itineraries"
-              className="border border-[#c9a84c] text-[#c9a84c] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#c9a84c]/10 transition-colors"
-            >
-              בנה מסלול
-            </Link>
+const blogPosts = [
+  { title: "10 דברים שאתם חייבים לעשות בהלונג ביי", category: "יעדים" },
+  { title: "המדריך המלא לאיים הכי יפים בוייטנאם", category: "יעדים" },
+  { title: "כמה עולה טיול חודש בוייטנאם? פירוט עלויות מלא", category: "תכנון" },
+  { title: "ויזה לוייטנאם 2026: כל מה שצריך לדעת", category: "ויזה" },
+];
+
+export default function HomePage() {
+  return (
+    <div className="bg-white text-slate-800">
+
+      {/* ───────── HERO ───────── */}
+      <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+        <img
+          src="/hero-bg.jpg"
+          alt="הלונג ביי, וייטנאם"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 w-full pb-20 md:pb-32">
+          <div className="max-w-xl">
+            <div className="inline-block bg-orange-500/90 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 animate-fade-in">
+              המדריך הישראלי לוייטנאם
+            </div>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-white leading-tight mb-5 animate-fade-in anim-d1">
+              וייטנאם<br />מחכה לך
+            </h1>
+            <p className="text-lg md:text-xl text-white/85 mb-8 leading-relaxed animate-fade-in anim-d2">
+              טבע עוצר נשימה, תרבות עשירה וחוויות של פעם בחיים. הכל כאן, בעברית ובדיוק בשבילכם.
+            </p>
+            <div className="flex flex-wrap gap-3 animate-fade-in anim-d3">
+              <Link
+                href="/itineraries"
+                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-3.5 rounded-full text-base transition-all hover:scale-105 shadow-lg shadow-orange-500/30"
+              >
+                התחילו לתכנן את הטיול שלכם
+              </Link>
+              <Link
+                href="/visa"
+                className="bg-white/15 hover:bg-white/25 border border-white/40 text-white font-bold px-7 py-3.5 rounded-full text-base transition-all backdrop-blur-sm"
+              >
+                הוצאת ויזה לוייטנאם
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-[#c9a84c] text-2xl">
-          ↓
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
+          <div className="w-5 h-8 border border-white/30 rounded-full flex items-start justify-center pt-1.5">
+            <div className="w-1 h-2 bg-white/60 rounded-full animate-bounce" />
+          </div>
         </div>
       </section>
 
-      {/* Regions Section */}
-      <section className="max-w-7xl mx-auto px-4 py-20">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">וייטנאם מחכה לכם מצפון ועד דרום</h2>
-          <p className="text-[#f5f0e8]/60 text-lg">שלושה אזורים, אינסוף הרפתקאות</p>
+      {/* ───────── BENEFITS ───────── */}
+      <section className="bg-white py-12 md:py-16 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
+            {benefits.map((b, i) => (
+              <Link
+                key={i}
+                href={b.href}
+                className="group text-center p-5 rounded-2xl hover:bg-orange-50 transition-colors card-lift"
+              >
+                <div className="text-4xl mb-3">{b.icon}</div>
+                <h3 className="font-bold text-slate-800 text-sm md:text-base mb-1.5 leading-snug">{b.title}</h3>
+                <p className="text-slate-500 text-xs md:text-sm leading-relaxed">{b.desc}</p>
+              </Link>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {destinations.map((dest) => (
-            <div
-              key={dest.region}
-              className="relative rounded-2xl overflow-hidden bg-[#1a2535] border border-[#c9a84c]/10"
-            >
-              <div className={`h-2 bg-gradient-to-r ${dest.color}`} />
-              <div className="p-6">
-                <div className="text-4xl mb-3">{dest.icon}</div>
-                <Link href={dest.href} className="block text-2xl font-bold mb-2 hover:text-[#c9a84c] transition-colors">
-                  {dest.region} וייטנאם
-                </Link>
-                <p className="text-[#f5f0e8]/60 text-sm mb-4 leading-relaxed">{dest.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {dest.places.map((place) => (
-                    <Link
-                      key={place.name}
-                      href={place.href}
-                      className="text-xs bg-[#c9a84c]/10 text-[#c9a84c] px-3 py-1 rounded-full hover:bg-[#c9a84c]/25 transition-colors"
-                    >
-                      {place.name}
-                    </Link>
-                  ))}
+      {/* ───────── REGIONS ───────── */}
+      <section className="bg-slate-50 py-14 md:py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">גלה את אזורי וייטנאם</h2>
+            <p className="text-slate-500 text-lg max-w-xl mx-auto">
+              מצפון ועד דרום, כל אזור מציע עולם שלם של חוויות, נופים וטעמים
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {regions.map((r) => (
+              <Link
+                key={r.href}
+                href={r.href}
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all card-lift"
+              >
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={r.img}
+                    alt={r.name}
+                    className="w-full h-full object-cover img-zoom"
+                    loading="lazy"
+                  />
+                  {r.isMap && (
+                    <div className="absolute inset-0 bg-[#1A2535]/60 flex items-center justify-center">
+                      <span className="text-4xl">🗺️</span>
+                    </div>
+                  )}
+                </div>
+                <div className="p-5">
+                  <h3 className="font-black text-lg text-slate-900 mb-1.5">{r.name}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-3">{r.desc}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {r.places.map((p) => (
+                      <span key={p} className="text-xs bg-orange-50 text-orange-600 font-medium px-2.5 py-0.5 rounded-full">
+                        {p}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-4 flex items-center gap-1 text-orange-500 text-sm font-bold group-hover:gap-2 transition-all">
+                    <span>לפרטים</span>
+                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── SERVICES ───────── */}
+      <section className="bg-white py-14 md:py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">השירותים שלנו</h2>
+            <p className="text-slate-500 text-lg max-w-xl mx-auto">
+              כל מה שצריך כדי שהטיול שלכם יהיה חלק, מרגש ובלתי נשכח
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+            {services.map((s, i) => (
+              <div
+                key={i}
+                className={`group rounded-2xl overflow-hidden card-lift ${
+                  s.highlight
+                    ? "ring-2 ring-orange-500 shadow-lg shadow-orange-100"
+                    : "border border-slate-100 shadow-sm"
+                }`}
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    className="w-full h-full object-cover img-zoom"
+                    loading="lazy"
+                  />
+                  {s.highlight && (
+                    <div className="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      מומלץ
+                    </div>
+                  )}
+                </div>
+                <div className="p-6 bg-white">
+                  <div className="text-3xl mb-3">{s.emoji}</div>
+                  <h3 className="font-black text-xl text-slate-900 mb-2">{s.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-5">{s.desc}</p>
+                  <Link
+                    href={s.href}
+                    className={`inline-block font-bold px-6 py-2.5 rounded-full text-sm transition-all ${
+                      s.highlight
+                        ? "bg-orange-500 hover:bg-orange-600 text-white shadow-md"
+                        : "border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white"
+                    }`}
+                  >
+                    {s.cta}
+                  </Link>
                 </div>
               </div>
-              <div className="px-6 pb-5">
-                <Link href={dest.href} className="text-sm text-[#c9a84c] font-semibold hover:underline">
-                  לכל היעדים ←
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── BLOG + VIDEO ───────── */}
+      <section className="bg-slate-50 py-14 md:py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+
+            {/* Blog */}
+            <div className="lg:col-span-3">
+              <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">מה חדש בבלוג?</h2>
+              <div className="space-y-3">
+                {blogPosts.map((post, i) => (
+                  <Link
+                    key={i}
+                    href="/blog"
+                    className="group flex items-center gap-4 bg-white rounded-xl px-5 py-4 shadow-sm hover:shadow-md transition-shadow card-lift"
+                  >
+                    <div className="flex-shrink-0 w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center">
+                      <span className="text-orange-500 font-black text-sm">{String(i + 1).padStart(2, "0")}</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs text-orange-500 font-bold mb-0.5">{post.category}</div>
+                      <div className="font-semibold text-slate-800 text-sm leading-snug group-hover:text-orange-500 transition-colors">
+                        {post.title}
+                      </div>
+                    </div>
+                    <svg className="w-4 h-4 text-slate-300 flex-shrink-0 rotate-180 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-5">
+                <Link href="/blog" className="inline-flex items-center gap-2 text-orange-500 font-bold text-sm hover:text-orange-600 transition-colors">
+                  <span>לכל הכתבות בבלוג</span>
+                  <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               </div>
             </div>
-          ))}
+
+            {/* Video */}
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">וייטנאם בדקה</h2>
+              <div className="rounded-2xl overflow-hidden shadow-md" style={{ aspectRatio: "16/9" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/ugPZDwhvEAM"
+                  title="סוליסט וייטנאם"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                  className="w-full h-full"
+                />
+              </div>
+              <p className="text-slate-500 text-sm mt-3 leading-relaxed">
+                הצצה קצרה ועוצרת נשימה לאחד היעדים המרתקים בדרום מזרח אסיה.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Quick Tips Section */}
-      <section className="bg-[#1a2535] py-20">
+      {/* ───────── GALLERY ───────── */}
+      <section className="bg-white py-14 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">טיפים חיוניים</h2>
-            <p className="text-[#f5f0e8]/60 text-lg">מה חשוב לדעת לפני שעולים למטוס</p>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">וייטנאם דרך העדשה שלנו</h2>
+            <p className="text-slate-500 text-lg">כמה רגעים שתפסנו בדרך</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickTips.map((tip) => (
-              <div key={tip.title} className="bg-[#0f1923] rounded-xl p-6 border border-[#c9a84c]/10 card-hover">
-                <div className="text-3xl mb-3">{tip.icon}</div>
-                <h4 className="font-bold text-lg mb-2 text-[#c9a84c]">{tip.title}</h4>
-                <p className="text-sm text-[#f5f0e8]/70 leading-relaxed">{tip.text}</p>
+          {/* Desktop mosaic */}
+          <div
+            className="hidden md:grid gap-3 rounded-2xl overflow-hidden"
+            style={{ gridTemplateColumns: "2fr 1fr 1fr", gridTemplateRows: "220px 220px" }}
+          >
+            <div className="row-span-2 overflow-hidden group">
+              <img src={gallery[0].src} alt={gallery[0].alt} className="w-full h-full object-cover img-zoom" loading="lazy" />
+            </div>
+            {gallery.slice(1).map((img, i) => (
+              <div key={i} className="overflow-hidden group">
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover img-zoom" loading="lazy" />
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-10">
-            <Link
-              href="/tips"
-              className="inline-block border border-[#c9a84c] text-[#c9a84c] px-8 py-3 rounded-full font-semibold hover:bg-[#c9a84c]/10 transition-colors"
-            >
-              לכל הטיפים הפרקטיים
+          {/* Mobile scroll */}
+          <div className="flex md:hidden gap-3 overflow-x-auto pb-2 snap-x snap-mandatory">
+            {gallery.map((img, i) => (
+              <div key={i} className="flex-shrink-0 w-60 h-40 rounded-xl overflow-hidden snap-start group">
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover img-zoom" loading="lazy" />
+              </div>
+            ))}
+          </div>
+
+          {/* Instagram CTA */}
+          <div className="mt-10 text-center bg-gradient-to-l from-orange-50 to-rose-50 rounded-2xl py-8 px-6">
+            <div className="text-4xl mb-3">📸</div>
+            <h3 className="font-black text-xl text-slate-900 mb-2">שתפו את הרגעים שלכם</h3>
+            <p className="text-slate-500 mb-4 text-sm">
+              תייגו אותנו בתמונות שלכם מוייטנאם ואנחנו נשתף את הרגעים היפים ביותר
+            </p>
+            <span className="inline-block bg-white border border-orange-200 text-orange-500 font-bold px-5 py-2 rounded-full text-sm shadow-sm">
+              #SoloistVietnam
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── FINAL CTA ───────── */}
+      <section className="bg-[#1A2535] py-16 text-center text-white">
+        <div className="max-w-2xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-black mb-4">מוכנים לטייל בוייטנאם?</h2>
+          <p className="text-white/70 text-lg mb-8">
+            אנחנו כאן כדי לעזור לכם לתכנן, להכין ולחוות את הטיול המושלם
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/itineraries" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3.5 rounded-full text-base transition-all hover:scale-105 shadow-lg">
+              בנו מסלול טיול
+            </Link>
+            <Link href="/visa" className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-8 py-3.5 rounded-full text-base transition-all">
+              הוצאת ויזה
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Itinerary CTA */}
-      <section className="max-w-7xl mx-auto px-4 py-20 text-center">
-        <div className="bg-gradient-to-br from-[#1a2535] to-[#0f1923] rounded-3xl p-12 border border-[#c9a84c]/20">
-          <h2 className="text-4xl font-bold mb-4">לא יודע מאיפה להתחיל?</h2>
-          <p className="text-[#f5f0e8]/70 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            ספר לנו כמה זמן יש לך ומה אתה מחפש, ונבנה לך מסלול מותאם אישית לוייטנאם
-          </p>
-          <Link
-            href="/itineraries"
-            className="bg-[#c9a84c] text-[#0f1923] px-10 py-4 rounded-full font-bold text-lg hover:bg-[#b8963d] transition-colors inline-block"
-          >
-            בנה את המסלול שלי ✈️
-          </Link>
-        </div>
-      </section>
-
-      {/* Visa Ad Section */}
-      <section className="relative py-20 overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0f1923] via-[#1a2535] to-[#0f1923]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_#c9a84c15_0%,_transparent_60%)]" />
-
-        <div className="relative max-w-7xl mx-auto px-4">
-          {/* Top label */}
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-bold px-4 py-1.5 rounded-full tracking-widest uppercase">
-              ⚠️ ישראלים חייבים ויזה לוייטנאם, אל תשכחו
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Left, info */}
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
-                ויזה לוייטנאם<br />
-                <span className="text-[#c9a84c]">בלי כאב ראש</span>
-              </h2>
-              <p className="text-[#f5f0e8]/70 text-lg leading-relaxed mb-8">
-                ישראל אינה פטורה מויזה. E-Visa אלקטרונית עולה <strong className="text-[#f5f0e8]/90">$25</strong> בלבד
-                מגישים אונליין ומקבלים ויזה מאושרת במייל תוך ימים ספורים.
-                צוות סוליסט יכול לטפל בכל התהליך בשבילכם, בעברית.
-              </p>
-
-              {/* Trust signals */}
-              <div className="grid grid-cols-2 gap-3 mb-8">
-                {[
-                  { icon: "🛂", label: "תוקף 90 יום", sub: "מיום הכניסה" },
-                  { icon: "⚡", label: "אקספרס 24 שעות", sub: "עיבוד מהיר" },
-                  { icon: "🔍", label: "בדיקת מסמכים", sub: "לפני הגשה" },
-                  { icon: "🇮🇱", label: "שירות בעברית", sub: "תמיכה מלאה" },
-                ].map(item => (
-                  <div key={item.label} className="bg-[#1a2535]/80 border border-[#c9a84c]/10 rounded-xl px-4 py-3 flex items-center gap-3">
-                    <span className="text-xl">{item.icon}</span>
-                    <div>
-                      <div className="text-sm font-bold">{item.label}</div>
-                      <div className="text-xs text-[#f5f0e8]/40">{item.sub}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/visa"
-                  className="bg-[#c9a84c] text-[#0f1923] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b8963d] transition-colors"
-                >
-                  כל המידע על ויזה →
-                </Link>
-                <Link
-                  href="/visa/apply"
-                  className="border-2 border-[#c9a84c] text-[#c9a84c] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#c9a84c]/10 transition-colors"
-                >
-                  הגש ויזה דרכנו
-                </Link>
-              </div>
-            </div>
-
-            {/* Right, price cards */}
-            <div className="flex flex-col gap-4">
-              {/* Main card */}
-              <div className="bg-gradient-to-br from-[#1a2535] to-[#0f1923] border-2 border-[#c9a84c]/30 rounded-3xl p-7">
-                <div className="flex items-center justify-between mb-5">
-                  <span className="text-2xl font-black text-[#c9a84c]">E-Visa</span>
-                  <span className="bg-[#c9a84c]/15 text-[#c9a84c] text-xs font-bold px-3 py-1 rounded-full">הכי פופולרי</span>
-                </div>
-                <div className="grid grid-cols-2 gap-3 mb-5">
-                  <div className="bg-[#0f1923] rounded-2xl p-4 text-center">
-                    <div className="text-3xl font-black text-[#c9a84c]">$25</div>
-                    <div className="text-xs text-[#f5f0e8]/50 mt-1">כניסה אחת</div>
-                    <div className="text-xs text-[#f5f0e8]/30">≈ ₪169</div>
-                  </div>
-                  <div className="bg-[#0f1923] rounded-2xl p-4 text-center">
-                    <div className="text-3xl font-black text-[#c9a84c]">$50</div>
-                    <div className="text-xs text-[#f5f0e8]/50 mt-1">כניסות מרובות</div>
-                    <div className="text-xs text-[#f5f0e8]/30">≈ ₪339</div>
-                  </div>
-                </div>
-                <ul className="flex flex-col gap-2 text-sm text-[#f5f0e8]/60">
-                  {["תוקף 90 יום", "לא צריך לצאת לשגרירות", "מגישים אונליין מהבית", "ויזה מגיעה למייל כ-PDF"].map(t => (
-                    <li key={t} className="flex items-center gap-2">
-                      <span className="text-[#c9a84c] font-bold">✓</span> {t}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Warning reminder */}
-              <div className="bg-amber-900/25 border border-amber-600/35 rounded-2xl p-4 flex items-start gap-3 text-sm">
-                <span className="text-2xl flex-shrink-0">⚠️</span>
-                <div>
-                  <strong className="text-amber-400">הגישו לפחות שבוע לפני הטיסה</strong>
-                  <p className="text-[#f5f0e8]/55 mt-1">זמן עיבוד 3-5 ימי עסקים. לאקספרס (24 שעות) פנו אלינו.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
