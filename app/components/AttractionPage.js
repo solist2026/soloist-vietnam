@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 
 export default function AttractionPage({ data }) {
   return (
@@ -14,13 +14,13 @@ export default function AttractionPage({ data }) {
         <div className="absolute bottom-0 left-0 right-0 p-8 max-w-5xl mx-auto">
           <div className="flex items-center gap-2 mb-3 text-sm flex-wrap">
             <Link href="/destinations/north" className="text-[#c9a84c]/70 hover:text-[#c9a84c]">
-              ׳¦׳₪׳•׳ ׳•׳™׳™׳˜׳ ׳׳
+              צפון וייטנאם
             </Link>
-            <span className="text-[#f5f0e8]/30">ג†</span>
+            <span className="text-[#f5f0e8]/30">←</span>
             <Link href="/destinations/north/hanoi" className="text-[#c9a84c]/70 hover:text-[#c9a84c]">
-              ׳”׳׳ ׳•׳™
+              האנוי
             </Link>
-            <span className="text-[#f5f0e8]/30">ג†</span>
+            <span className="text-[#f5f0e8]/30">←</span>
             <span className="text-[#f5f0e8]/60">{data.name}</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-2">{data.name}</h1>
@@ -59,14 +59,14 @@ export default function AttractionPage({ data }) {
             title={data.name}
           />
           <div className="p-4 flex items-center justify-between gap-4 flex-wrap">
-            <span className="text-sm text-[#f5f0e8]/50">נ“ {data.address}</span>
+            <span className="text-sm text-[#f5f0e8]/50">📍 {data.address}</span>
             <a
               href={`https://www.google.com/maps?q=${data.lat},${data.lng}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#c9a84c] text-[#0f1923] px-6 py-2.5 rounded-full font-bold text-sm hover:bg-[#b8963d] transition-colors whitespace-nowrap"
             >
-              ׳₪׳×׳— ׳‘׳’׳•׳’׳ ׳׳₪׳” ג†—
+              פתח בגוגל מפה ↗
             </a>
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function AttractionPage({ data }) {
             <div className="flex flex-col gap-2.5">
               {section.items.map((item, i) => (
                 <div key={i} className="flex gap-3 text-sm text-[#f5f0e8]/70 leading-relaxed">
-                  <span className="text-[#c9a84c] flex-shrink-0 mt-0.5">ג€¢</span>
+                  <span className="text-[#c9a84c] flex-shrink-0 mt-0.5">•</span>
                   <span>{item}</span>
                 </div>
               ))}
@@ -90,10 +90,9 @@ export default function AttractionPage({ data }) {
 
         {/* Back */}
         <Link href="/destinations/north/hanoi" className="text-[#c9a84c] hover:underline text-sm">
-          ג† ׳—׳–׳¨׳” ׳׳“׳£ ׳”׳׳ ׳•׳™
+          ← חזרה לדף האנוי
         </Link>
       </div>
     </div>
   );
 }
-

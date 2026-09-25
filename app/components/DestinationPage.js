@@ -374,4 +374,3 @@ export default function DestinationPage({ dest }) {
     </div>
   );
 }
-

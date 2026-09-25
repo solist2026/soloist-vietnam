@@ -195,16 +195,39 @@ export default function HomePage() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all card-lift"
               >
                 <div className="relative h-44 overflow-hidden">
-                  <img
-                    src={r.img}
-                    alt={r.name}
-                    className="w-full h-full object-cover img-zoom"
-                    loading="lazy"
-                  />
-                  {r.isMap && (
-                    <div className="absolute inset-0 bg-[#1A2535]/60 flex items-center justify-center">
-                      <span className="text-4xl">🗺️</span>
+                  {r.isMap ? (
+                    <div className="w-full h-full bg-[#0D2137] flex items-center justify-center">
+                      <svg viewBox="30 5 135 415" className="h-36 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M75 10 L120 20 L130 55 L145 90 L148 120 L152 150 L148 175 L145 200 L150 225 L152 250 L148 275 L142 300 L135 330 L120 360 L110 380 L95 395 L88 415 L75 395 L55 365 L45 335 L42 305 L50 278 L55 252 L60 228 L70 202 L72 178 L68 152 L65 122 L62 92 L65 62 L60 32 L65 15 Z"
+                          fill="#2DD4BF"
+                          opacity="0.2"
+                        />
+                        <path
+                          d="M75 10 L120 20 L130 55 L145 90 L148 120 L152 150 L148 175 L145 200 L150 225 L152 250 L148 275 L142 300 L135 330 L120 360 L110 380 L95 395 L88 415 L75 395 L55 365 L45 335 L42 305 L50 278 L55 252 L60 228 L70 202 L72 178 L68 152 L65 122 L62 92 L65 62 L60 32 L65 15 Z"
+                          fill="none"
+                          stroke="#2DD4BF"
+                          strokeWidth="1.5"
+                        />
+                        <circle cx="75" cy="72" r="3.5" fill="#F97316" />
+                        <circle cx="98" cy="60" r="2.5" fill="#F97316" opacity="0.7" />
+                        <circle cx="145" cy="205" r="3" fill="#F97316" />
+                        <circle cx="148" cy="230" r="3" fill="#F97316" />
+                        <circle cx="103" cy="382" r="3.5" fill="#F97316" />
+                        <text x="80" y="69" fill="white" fontSize="8" fontFamily="Arial, sans-serif">האנוי</text>
+                        <text x="100" y="400" fill="white" fontSize="8" fontFamily="Arial, sans-serif">HCM</text>
+                        <text x="34" y="418" fill="#2DD4BF" fontSize="7" fontFamily="Arial, sans-serif" opacity="0.6">N</text>
+                        <line x1="37" y1="405" x2="37" y2="415" stroke="#2DD4BF" strokeWidth="1" opacity="0.5" />
+                        <line x1="33" y1="410" x2="41" y2="410" stroke="#2DD4BF" strokeWidth="1" opacity="0.5" />
+                      </svg>
                     </div>
+                  ) : (
+                    <img
+                      src={r.img}
+                      alt={r.name}
+                      className="w-full h-full object-cover img-zoom"
+                      loading="lazy"
+                    />
                   )}
                 </div>
                 <div className="p-5">
