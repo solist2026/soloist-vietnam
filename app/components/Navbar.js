@@ -46,20 +46,32 @@ export default function Navbar() {
 
       {/* Main nav */}
       <nav className={`bg-white transition-shadow ${scrolled ? "shadow-md" : "shadow-sm"}`}>
-        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-          <Link href="/" className="flex-shrink-0">
-            <img src="/logo.png" alt="סוליסט וייטנאם" className="h-10 w-auto" />
-          </Link>
-
-          {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-1">
+        {/* Desktop: 3-column grid — nav links | logo centered | CTA */}
+        <div className="hidden md:grid grid-cols-3 items-center h-14 max-w-7xl mx-auto px-4">
+          {/* Left col: CTA */}
+          <div className="flex justify-start">
+            <Link
+              href="/visa"
+              className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold px-5 py-1.5 rounded-full transition-colors"
+            >
+              הוצאת ויזה
+            </Link>
+          </div>
+          {/* Center col: Logo */}
+          <div className="flex justify-center">
+            <Link href="/">
+              <img src="/logo.png" alt="סוליסט וייטנאם" className="h-12 w-auto max-w-[260px] object-contain" />
+            </Link>
+          </div>
+          {/* Right col: Nav links */}
+          <div className="flex justify-end items-center gap-1">
             {navLinks.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-1.5 rounded-full text-sm font-bold transition-all ${
+                  className={`px-3 py-1.5 rounded-full text-sm font-bold transition-all ${
                     active
                       ? "bg-orange-500 text-white"
                       : "text-slate-700 hover:bg-orange-50 hover:text-orange-500"
@@ -69,17 +81,14 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <Link
-              href="/visa"
-              className="mr-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold px-5 py-1.5 rounded-full transition-colors"
-            >
-              הוצאת ויזה
-            </Link>
           </div>
+        </div>
 
-          {/* Mobile hamburger */}
+        {/* Mobile: logo centered, hamburger on left */}
+        <div className="md:hidden relative flex items-center justify-between h-14 px-3">
+          {/* Hamburger on left (RTL end) */}
           <button
-            className="md:hidden text-slate-700 p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="text-slate-700 p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "סגור תפריט" : "פתח תפריט"}
           >
@@ -93,6 +102,12 @@ export default function Navbar() {
               </svg>
             )}
           </button>
+          {/* Logo centered */}
+          <Link href="/" className="absolute left-1/2 -translate-x-1/2">
+            <img src="/logo.png" alt="סוליסט וייטנאם" className="h-11 w-auto max-w-[200px] object-contain" />
+          </Link>
+          {/* Right placeholder for balance */}
+          <div className="w-9" />
         </div>
 
         {/* Mobile dropdown */}
