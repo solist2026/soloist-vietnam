@@ -114,7 +114,9 @@ export default function HomePage() {
     <div className="bg-white text-slate-800">
 
       {/* ───────── HERO ───────── */}
-      <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+
+      {/* Desktop hero: full-screen overlay */}
+      <section className="hidden md:flex relative min-h-screen flex-col justify-end overflow-hidden">
         <img
           src="/hero-bg.jpg"
           alt="הלונג ביי, וייטנאם"
@@ -122,16 +124,15 @@ export default function HomePage() {
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 w-full pb-20 md:pb-32">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 w-full pb-28">
           <div className="max-w-xl">
             <div className="inline-block bg-orange-500/90 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 animate-fade-in">
               המדריך הישראלי לוייטנאם
             </div>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-white leading-tight mb-5 animate-fade-in anim-d1">
+            <h1 className="text-6xl xl:text-7xl font-black text-white leading-tight mb-5 animate-fade-in anim-d1">
               וייטנאם<br />מחכה לך
             </h1>
-            <p className="text-lg md:text-xl text-white/85 mb-8 leading-relaxed animate-fade-in anim-d2">
+            <p className="text-xl text-white/85 mb-8 leading-relaxed animate-fade-in anim-d2">
               טבע עוצר נשימה, תרבות עשירה וחוויות של פעם בחיים. הכל כאן, בעברית ובדיוק בשבילכם.
             </p>
             <div className="flex flex-wrap gap-3 animate-fade-in anim-d3">
@@ -150,13 +151,50 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
           <div className="w-5 h-8 border border-white/30 rounded-full flex items-start justify-center pt-1.5">
             <div className="w-1 h-2 bg-white/60 rounded-full animate-bounce" />
           </div>
         </div>
       </section>
+
+      {/* Mobile hero: full panoramic image (2:1) + text below on dark background */}
+      <div className="md:hidden">
+        <div className="relative w-full" style={{ aspectRatio: "2.04 / 1" }}>
+          <img
+            src="/hero-bg.jpg"
+            alt="הלונג ביי, וייטנאם"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            loading="eager"
+          />
+          <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#1A2535] to-transparent" />
+        </div>
+        <div className="bg-[#1A2535] text-white px-5 py-7 text-right">
+          <div className="inline-block bg-orange-500/90 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+            המדריך הישראלי לוייטנאם
+          </div>
+          <h1 className="text-4xl font-black text-white leading-tight mb-3">
+            וייטנאם מחכה לך
+          </h1>
+          <p className="text-white/75 mb-6 leading-relaxed text-base">
+            טבע עוצר נשימה, תרבות עשירה וחוויות של פעם בחיים.
+          </p>
+          <div className="flex flex-col gap-3">
+            <Link
+              href="/itineraries"
+              className="block text-center bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3.5 rounded-full text-base transition-all shadow-lg"
+            >
+              התחילו לתכנן את הטיול שלכם
+            </Link>
+            <Link
+              href="/visa"
+              className="block text-center border border-white/30 text-white font-bold px-6 py-3 rounded-full text-base transition-all hover:bg-white/10"
+            >
+              הוצאת ויזה לוייטנאם
+            </Link>
+          </div>
+        </div>
+      </div>
 
       {/* ───────── BENEFITS ───────── */}
       <section className="bg-white py-12 md:py-16 border-b border-slate-100">
