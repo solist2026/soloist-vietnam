@@ -111,7 +111,7 @@ const blogPosts = [
 
 export default function HomePage() {
   return (
-    <div className="bg-white text-slate-800">
+    <div className="text-slate-800" style={{ background: "radial-gradient(ellipse 90% 50% at 5% 12%, rgba(251,191,36,0.11) 0%, transparent 60%), radial-gradient(ellipse 70% 40% at 95% 28%, rgba(16,185,129,0.09) 0%, transparent 55%), radial-gradient(ellipse 65% 35% at 15% 88%, rgba(20,184,166,0.09) 0%, transparent 50%), radial-gradient(ellipse 55% 30% at 88% 72%, rgba(249,115,22,0.07) 0%, transparent 45%), #ffffff" }}>
 
       {/* ───────── HERO ───────── */}
 
@@ -195,7 +195,7 @@ export default function HomePage() {
       </div>
 
       {/* ───────── BENEFITS ───────── */}
-      <section className="bg-white py-12 md:py-16 border-b border-slate-100">
+      <section className="py-12 md:py-16 border-b border-amber-100/60" style={{ background: "linear-gradient(135deg, rgba(251,191,36,0.08) 0%, rgba(255,255,255,0.95) 50%, rgba(16,185,129,0.06) 100%)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             {benefits.map((b, i) => (
@@ -214,7 +214,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── REGIONS ───────── */}
-      <section className="bg-slate-50 py-14 md:py-20">
+      <section className="py-14 md:py-20" style={{ background: "linear-gradient(160deg, rgba(16,185,129,0.08) 0%, rgba(20,184,166,0.06) 40%, rgba(255,255,255,0.97) 100%)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">גלה את אזורי וייטנאם</h2>
@@ -262,7 +262,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── SERVICES ───────── */}
-      <section className="bg-white py-14 md:py-20">
+      <section className="py-14 md:py-20" style={{ background: "linear-gradient(145deg, rgba(255,255,255,0.98) 0%, rgba(251,191,36,0.07) 50%, rgba(249,115,22,0.06) 100%)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">השירותים שלנו</h2>
@@ -316,7 +316,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── BLOG + VIDEO ───────── */}
-      <section className="bg-slate-50 py-14 md:py-20">
+      <section className="py-14 md:py-20" style={{ background: "linear-gradient(135deg, rgba(20,184,166,0.07) 0%, rgba(16,185,129,0.05) 40%, rgba(255,255,255,0.97) 100%)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
 
@@ -377,7 +377,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── GALLERY ───────── */}
-      <section className="bg-white py-14 md:py-20">
+      <section className="py-14 md:py-20" style={{ background: "linear-gradient(160deg, rgba(251,191,36,0.07) 0%, rgba(255,255,255,0.98) 45%, rgba(20,184,166,0.06) 100%)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">וייטנאם דרך העדשה שלנו</h2>
