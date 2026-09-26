@@ -138,13 +138,13 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3 animate-fade-in anim-d3">
               <Link
                 href="/itineraries"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-3.5 rounded-full text-base transition-all hover:scale-105 shadow-lg shadow-orange-500/30"
+                className="bg-white/15 hover:bg-white/25 border border-white/40 text-white font-bold px-7 py-3.5 rounded-full text-base transition-all backdrop-blur-sm"
               >
                 התחילו לתכנן את הטיול שלכם
               </Link>
               <Link
                 href="/visa"
-                className="bg-white/15 hover:bg-white/25 border border-white/40 text-white font-bold px-7 py-3.5 rounded-full text-base transition-all backdrop-blur-sm"
+                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-3.5 rounded-full text-base transition-all hover:scale-105 shadow-lg shadow-orange-500/30"
               >
                 הוצאת ויזה לוייטנאם
               </Link>
@@ -180,13 +180,13 @@ export default function HomePage() {
           <div className="flex flex-col gap-2.5">
             <Link
               href="/itineraries"
-              className="block text-center bg-orange-500 text-white font-bold px-6 py-3.5 rounded-full text-sm transition-all shadow-lg"
+              className="block text-center border border-white/35 text-white font-bold px-6 py-3 rounded-full text-sm backdrop-blur-sm"
             >
               התחילו לתכנן את הטיול שלכם
             </Link>
             <Link
               href="/visa"
-              className="block text-center border border-white/35 text-white font-bold px-6 py-3 rounded-full text-sm backdrop-blur-sm"
+              className="block text-center bg-orange-500 text-white font-bold px-6 py-3.5 rounded-full text-sm transition-all shadow-lg"
             >
               הוצאת ויזה לוייטנאם
             </Link>
