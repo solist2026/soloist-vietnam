@@ -168,7 +168,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10" />
         <div className="absolute inset-0 flex flex-col justify-end px-5 pb-7 text-white text-right">
-          <div className="inline-block self-end bg-orange-500/90 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+          <div className="inline-block self-start bg-orange-500/90 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
             המדריך הישראלי לוייטנאם
           </div>
           <h1 className="text-4xl font-black text-white leading-tight mb-2">
