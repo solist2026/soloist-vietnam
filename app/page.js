@@ -130,7 +130,7 @@ export default function HomePage() {
               המדריך הישראלי לוייטנאם
             </div>
             <h1 className="text-6xl xl:text-7xl font-black text-white leading-tight mb-5 animate-fade-in anim-d1">
-              וייטנאם<br />מחכה לך
+              וייטנאם<br />מחכה לכם
             </h1>
             <p className="text-xl text-white/85 mb-8 leading-relaxed animate-fade-in anim-d2">
               טבע עוצר נשימה, תרבות עשירה וחוויות של פעם בחיים. הכל כאן, בעברית ובדיוק בשבילכם.
@@ -172,7 +172,7 @@ export default function HomePage() {
             המדריך הישראלי לוייטנאם
           </div>
           <h1 className="text-4xl font-black text-white leading-tight mb-2">
-            וייטנאם מחכה לך
+            וייטנאם מחכה לכם
           </h1>
           <p className="text-white/80 mb-5 text-sm leading-relaxed">
             טבע עוצר נשימה, תרבות עשירה וחוויות של פעם בחיים.
