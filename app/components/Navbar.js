@@ -59,7 +59,7 @@ export default function Navbar() {
       {/* Main nav */}
       <nav className={`bg-white transition-shadow ${scrolled ? "shadow-md" : "shadow-sm"}`}>
         {/* Desktop: 3-column grid — nav links | logo centered | CTA */}
-        <div className="hidden md:grid grid-cols-3 items-center h-14 max-w-7xl mx-auto px-4">
+        <div className="hidden md:grid grid-cols-3 items-center h-24 max-w-7xl mx-auto px-4">
           {/* Left col: CTA */}
           <div className="flex justify-start">
             <Link
@@ -72,7 +72,7 @@ export default function Navbar() {
           {/* Center col: Logo */}
           <div className="flex justify-center">
             <Link href="/">
-              <img src="/logo.png" alt="סוליסט וייטנאם" className="h-14 w-auto max-w-[340px] object-contain" />
+              <img src="/banner-top.png" alt="סוליסט וייטנאם" className="h-24 w-auto max-w-[560px] object-contain" />
             </Link>
           </div>
           {/* Right col: Nav links */}
@@ -97,7 +97,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile: logo centered, hamburger on left */}
-        <div className="md:hidden relative flex items-center justify-between h-14 px-3">
+        <div className="md:hidden relative flex items-center justify-between h-16 px-3">
           {/* Hamburger on left (RTL end) */}
           <button
             className="text-slate-700 p-2 rounded-lg hover:bg-gray-100 transition-colors"
@@ -116,7 +116,7 @@ export default function Navbar() {
           </button>
           {/* Logo centered */}
           <Link href="/" className="absolute left-1/2 -translate-x-1/2">
-            <img src="/logo.png" alt="סוליסט וייטנאם" className="h-12 w-auto max-w-[230px] object-contain" />
+            <img src="/banner-top.png" alt="סוליסט וייטנאם" className="h-14 w-auto max-w-[300px] object-contain" />
           </Link>
           {/* Right placeholder for balance */}
           <div className="w-9" />
