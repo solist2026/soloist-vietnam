@@ -158,37 +158,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Mobile hero: full panoramic image (2:1) + text below on dark background */}
-      <div className="md:hidden">
-        <div className="relative w-full" style={{ aspectRatio: "2.04 / 1" }}>
-          <img
-            src="/hero-bg.jpg"
-            alt="הלונג ביי, וייטנאם"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            loading="eager"
-          />
-          <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#1A2535] to-transparent" />
-        </div>
-        <div className="bg-[#1A2535] text-white px-5 py-7 text-right">
-          <div className="inline-block bg-orange-500/90 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+      {/* Mobile hero: image with text overlaid at bottom */}
+      <div className="md:hidden relative" style={{ minHeight: "88vw" }}>
+        <img
+          src="/hero-mobile.jpg"
+          alt="הלונג ביי, וייטנאם"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10" />
+        <div className="absolute inset-0 flex flex-col justify-end px-5 pb-7 text-white text-right">
+          <div className="inline-block self-end bg-orange-500/90 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
             המדריך הישראלי לוייטנאם
           </div>
-          <h1 className="text-4xl font-black text-white leading-tight mb-3">
+          <h1 className="text-4xl font-black text-white leading-tight mb-2">
             וייטנאם מחכה לך
           </h1>
-          <p className="text-white/75 mb-6 leading-relaxed text-base">
+          <p className="text-white/80 mb-5 text-sm leading-relaxed">
             טבע עוצר נשימה, תרבות עשירה וחוויות של פעם בחיים.
           </p>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2.5">
             <Link
               href="/itineraries"
-              className="block text-center bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3.5 rounded-full text-base transition-all shadow-lg"
+              className="block text-center bg-orange-500 text-white font-bold px-6 py-3.5 rounded-full text-sm transition-all shadow-lg"
             >
               התחילו לתכנן את הטיול שלכם
             </Link>
             <Link
               href="/visa"
-              className="block text-center border border-white/30 text-white font-bold px-6 py-3 rounded-full text-base transition-all hover:bg-white/10"
+              className="block text-center border border-white/35 text-white font-bold px-6 py-3 rounded-full text-sm backdrop-blur-sm"
             >
               הוצאת ויזה לוייטנאם
             </Link>
