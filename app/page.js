@@ -159,7 +159,7 @@ export default function HomePage() {
       </section>
 
       {/* Mobile hero: image with text overlaid at bottom */}
-      <div className="md:hidden relative" style={{ minHeight: "88vw" }}>
+      <div className="md:hidden relative" style={{ minHeight: "calc(88vw + 88px)" }}>
         <img
           src="/hero-mobile.jpg"
           alt="הלונג ביי, וייטנאם"
