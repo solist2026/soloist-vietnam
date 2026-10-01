@@ -43,7 +43,7 @@ const regions = [
   {
     name: "מרכז וייטנאם",
     desc: "עיירות עתיקות, חופים עוצרי נשימה ואוכל מהמשובח בעולם",
-    img: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    img: "/images/center-vietnam.jpg",
     href: "/destinations/center",
     places: ["הוי אן", "דה נאנג", "הואה"],
   },
