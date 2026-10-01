@@ -7,7 +7,7 @@ export const metadata = {
 
 const benefits = [
   {
-    icon: "🛂",
+    img: "/icon-visa.png",
     title: "הוצאת ויזה בקלות",
     desc: "נטפל בכל תהליך ה-E-Visa עבורכם, בעברית ובמחיר שקוף",
     href: "/visa",
@@ -19,7 +19,7 @@ const benefits = [
     href: "/destinations",
   },
   {
-    icon: "✈️",
+    img: "/icon-itineraries.png",
     title: "מסלולים מותאמים אישית",
     desc: "מסלולים מוכנים לכל משך זמן ולכל סגנון מטייל",
     href: "/itineraries",
@@ -204,7 +204,13 @@ export default function HomePage() {
                 href={b.href}
                 className="group text-center p-5 rounded-2xl hover:bg-orange-50 transition-colors card-lift"
               >
-                <div className="text-4xl mb-3">{b.icon}</div>
+                <div className="mb-3 flex justify-center">
+                  {b.img ? (
+                    <img src={b.img} alt={b.title} className="w-16 h-16 object-contain" />
+                  ) : (
+                    <span className="text-4xl">{b.icon}</span>
+                  )}
+                </div>
                 <h3 className="font-bold text-slate-800 text-sm md:text-base mb-1.5 leading-snug">{b.title}</h3>
                 <p className="text-slate-500 text-xs md:text-sm leading-relaxed">{b.desc}</p>
               </Link>
