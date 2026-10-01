@@ -13,7 +13,7 @@ const benefits = [
     href: "/visa",
   },
   {
-    icon: "🗺️",
+    img: "/icon-info.png",
     title: "מידע עדכני ומהימן",
     desc: "מדריך מפורט לכל יעד, מסלול ושכונה עם עצות מהשטח",
     href: "/destinations",
@@ -25,7 +25,7 @@ const benefits = [
     href: "/itineraries",
   },
   {
-    icon: "💬",
+    img: "/icon-community.png",
     title: "קהילת מטיילים ישראלית",
     desc: "הצטרפו לקבוצות WhatsApp הפעילות של מטיילים ישראלים בוייטנאם",
     href: "/community",
