@@ -212,7 +212,7 @@ export default function HomePage() {
               <Link
                 key={i}
                 href={b.href}
-                className="group text-center p-5 rounded-2xl hover:bg-orange-50 transition-colors card-lift"
+                className="group text-center p-5 rounded-2xl bg-white/80 shadow-sm hover:bg-orange-50/90 transition-colors card-lift"
               >
                 <div className="mb-3 flex justify-center">
                   {b.img ? (
