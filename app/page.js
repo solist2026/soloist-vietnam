@@ -195,8 +195,18 @@ export default function HomePage() {
       </div>
 
       {/* ───────── BENEFITS ───────── */}
-      <section className="py-12 md:py-16 border-b border-amber-200/60" style={{ background: "linear-gradient(135deg, rgba(251,191,36,0.18) 0%, rgba(255,255,255,1) 55%, rgba(16,185,129,0.14) 100%)" }}>
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-12 md:py-16 border-b border-amber-200/60 relative overflow-hidden">
+        {/* Mobile background */}
+        <div
+          className="md:hidden absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-benefits-mobile.png')" }}
+        />
+        {/* Desktop background */}
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-benefits-desktop.png')" }}
+        />
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             {benefits.map((b, i) => (
               <Link
