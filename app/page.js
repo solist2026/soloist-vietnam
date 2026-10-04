@@ -34,6 +34,14 @@ const benefits = [
 
 const regions = [
   {
+    name: "מפת וייטנאם",
+    desc: "סקירה גרפית של כל האזורים, הערים והיעדים בוייטנאם",
+    img: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
+    href: "/map",
+    places: ["כל הערים", "לפי אזורים"],
+    isMap: true,
+  },
+  {
     name: "צפון וייטנאם",
     desc: "הרים מרהיבים, שדות אורז מדורגים ועיר הבירה ההיסטורית",
     img: "/images/north-vietnam.jpg",
@@ -53,14 +61,6 @@ const regions = [
     img: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
     href: "/destinations/south",
     places: ["הו צ'י מין", "פו קווק", "מוי נה"],
-  },
-  {
-    name: "מפת וייטנאם",
-    desc: "סקירה גרפית של כל האזורים, הערים והיעדים בוייטנאם",
-    img: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
-    href: "/map",
-    places: ["כל הערים", "לפי אזורים"],
-    isMap: true,
   },
 ];
 
