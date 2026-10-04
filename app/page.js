@@ -36,17 +36,19 @@ const benefits = [
 const regions = [
   {
     name: "מפת וייטנאם",
-    desc: "סקירה גרפית של כל האזורים, הערים והיעדים בוייטנאם",
+    desc: "דרך נוחה להכיר את המדינה לפני שמתחילים לתכנן את המסלול. במפה תוכלו לראות את האזורים, הערים והיעדים המרכזיים ולהבין איך הם מתחברים אחד לשני.",
     img: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
     href: "/map",
     places: ["כל הערים", "לפי אזורים"],
     isMap: true,
+    cta: "למפת וייטנאם",
   },
   {
     name: "צפון וייטנאם",
-    desc: "הרים מרהיבים, שדות אורז מדורגים ועיר הבירה ההיסטורית",
+    desc: "צפון וייטנאם הוא האזור של ההרים, טרסות האורז והכפרים המסורתיים. כאן נמצאים האנוי, סאפה, הא ג'יאנג והאלונג ביי, וזה אזור שמתאים במיוחד למי שאוהב טבע, נופים ותרבות מקומית.",
     img: "/images/north-vietnam.jpg",
     href: "/destinations/north",
+    cta: "גלו את צפון וייטנאם",
     places: [
       { name: "האנוי", href: "/destinations/north/hanoi" },
       { name: "הלונג ביי", href: "/destinations/north/halong" },
@@ -60,9 +62,10 @@ const regions = [
   },
   {
     name: "מרכז וייטנאם",
-    desc: "עיירות עתיקות, חופים עוצרי נשימה ואוכל מהמשובח בעולם",
+    desc: "מרכז וייטנאם משלב חופים, ערים עתיקות, אוכל מקומי ואווירה רגועה יותר. הוי אן, דה נאנג והואה נמצאות יחסית קרוב זו לזו, ולכן קל לשלב ביניהן כחלק מהמסלול.",
     img: "/images/center-vietnam.jpg",
     href: "/destinations/center",
+    cta: "גלו את מרכז וייטנאם",
     places: [
       { name: "דה נאנג", href: "/destinations/center/danang" },
       { name: "הוי אן", href: "/destinations/center/hoi-an" },
@@ -73,9 +76,10 @@ const regions = [
   },
   {
     name: "דרום וייטנאם",
-    desc: "עיר תוססת, דלתת מקונג ואיים טרופיים עם חופים בתוליים",
+    desc: "בדרום תמצאו את הו צ'י מין סיטי, דלתת המקונג, חופים ואיים כמו פו קווק. זה אזור מגוון עם שילוב של עיר גדולה, אוכל, חיי לילה, טבע ומקומות שמתאימים גם למי שרוצה קצת לנוח בסוף הטיול.",
     img: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
     href: "/destinations/south",
+    cta: "גלו את דרום וייטנאם",
     places: [
       { name: "הו צ'י מין", href: "/destinations/south/hcmc" },
       { name: "פו קווק", href: "/destinations/south/phu-quoc" },
@@ -266,9 +270,12 @@ export default function HomePage() {
         />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">גלה את אזורי וייטנאם</h2>
-            <p className="text-slate-500 text-lg max-w-xl mx-auto">
-              מצפון ועד דרום, כל אזור מציע עולם שלם של חוויות, נופים וטעמים
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">גלו את וייטנאם לפי אזורים</h2>
+            <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto mb-2 leading-relaxed">
+              וייטנאם היא מדינה ארוכה ומגוונת, וכל אזור בה מרגיש קצת אחרת. בצפון תמצאו הרים, כפרים ונופים דרמטיים, במרכז ערים היסטוריות וחופים, ובדרום קצב אחר לגמרי עם ערים גדולות, איים ואזורי טבע.
+            </p>
+            <p className="text-slate-500 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              כאן תוכלו להכיר את האזורים המרכזיים, להבין מה יש בכל אחד מהם ולבחור את המקומות שהכי מתאימים לסגנון הטיול שלכם.
             </p>
           </div>
 
@@ -302,7 +309,7 @@ export default function HomePage() {
                     )}
                   </div>
                   <div className="mt-4 flex items-center gap-1 text-orange-500 text-sm font-bold group-hover:gap-2 transition-all">
-                    <span>לפרטים</span>
+                    <span>{r.cta || "לפרטים"}</span>
                     <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
