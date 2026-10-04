@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CityPill from "./components/CityPill";
 
 export const metadata = {
   title: "סוליסט וייטנאם | וייטנאם בדרך שלך",
@@ -46,7 +47,15 @@ const regions = [
     desc: "הרים מרהיבים, שדות אורז מדורגים ועיר הבירה ההיסטורית",
     img: "/images/north-vietnam.jpg",
     href: "/destinations/north",
-    places: ["האנוי", "סאפה", "הלונג ביי", "הא גיאנג"],
+    places: [
+      { name: "האנוי", href: "/destinations/north/hanoi" },
+      { name: "הלונג ביי", href: "/destinations/north/halong" },
+      { name: "סאפה", href: "/destinations/north/sapa" },
+      { name: "לופ הא גיאנג", href: "/destinations/north/ha-giang" },
+      { name: "קאט בה", href: "/destinations/north/catba" },
+      { name: "ניין בינה", href: "/destinations/north/ninh-binh" },
+      { name: "מאי צ'או", href: "/destinations/north/mai-chau" },
+    ],
   },
   {
     name: "מרכז וייטנאם",
@@ -258,11 +267,15 @@ export default function HomePage() {
                   <h3 className="font-black text-lg text-slate-900 mb-1.5">{r.name}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed mb-3">{r.desc}</p>
                   <div className="flex flex-wrap gap-1.5">
-                    {r.places.map((p) => (
-                      <span key={p} className="text-xs bg-orange-50 text-orange-600 font-medium px-2.5 py-0.5 rounded-full">
-                        {p}
-                      </span>
-                    ))}
+                    {r.places.map((p) =>
+                      typeof p === "object" ? (
+                        <CityPill key={p.name} name={p.name} href={p.href} />
+                      ) : (
+                        <span key={p} className="text-xs bg-orange-50 text-orange-600 font-medium px-2.5 py-0.5 rounded-full">
+                          {p}
+                        </span>
+                      )
+                    )}
                   </div>
                   <div className="mt-4 flex items-center gap-1 text-orange-500 text-sm font-bold group-hover:gap-2 transition-all">
                     <span>לפרטים</span>
