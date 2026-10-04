@@ -284,9 +284,9 @@ export default function HomePage() {
               <Link
                 key={r.href}
                 href={r.href}
-                className="group bg-amber-50/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:bg-amber-50/80 transition-all card-lift"
+                className="group bg-amber-50/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:bg-amber-50/80 transition-all card-lift md:flex md:flex-col"
               >
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-44 overflow-hidden flex-shrink-0">
                   <img
                     src={r.isMap ? "/vietnam-map.png" : r.img}
                     alt={r.name}
@@ -294,7 +294,7 @@ export default function HomePage() {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-5">
+                <div className="p-5 md:flex md:flex-col md:flex-1">
                   <h3 className="font-black text-lg text-slate-900 mb-1.5">{r.name}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed mb-3">{r.desc}</p>
                   <div className="flex flex-wrap gap-1.5">
@@ -308,7 +308,7 @@ export default function HomePage() {
                       )
                     )}
                   </div>
-                  <div className="mt-4 flex items-center gap-1 text-orange-500 text-sm font-bold group-hover:gap-2 transition-all">
+                  <div className="mt-4 md:mt-auto md:pt-4 flex items-center gap-1 text-orange-500 text-sm font-bold group-hover:gap-2 transition-all">
                     <span>{r.cta || "לפרטים"}</span>
                     <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
