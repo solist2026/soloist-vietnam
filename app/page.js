@@ -55,6 +55,7 @@ const regions = [
       { name: "קאט בה", href: "/destinations/north/catba" },
       { name: "ניין בינה", href: "/destinations/north/ninh-binh" },
       { name: "מאי צ'או", href: "/destinations/north/mai-chau" },
+      { name: "עמק באק סון", href: "/destinations/north/bac-son" },
     ],
   },
   {
@@ -62,14 +63,27 @@ const regions = [
     desc: "עיירות עתיקות, חופים עוצרי נשימה ואוכל מהמשובח בעולם",
     img: "/images/center-vietnam.jpg",
     href: "/destinations/center",
-    places: ["הוי אן", "דה נאנג", "הואה"],
+    places: [
+      { name: "דה נאנג", href: "/destinations/center/danang" },
+      { name: "הוי אן", href: "/destinations/center/hoi-an" },
+      { name: "הואה", href: "/destinations/center/hue" },
+      { name: "מי שון", href: "/destinations/center/my-son" },
+      { name: "קוי נהון", href: "/destinations/center/quy-nhon" },
+    ],
   },
   {
     name: "דרום וייטנאם",
     desc: "עיר תוססת, דלתת מקונג ואיים טרופיים עם חופים בתוליים",
     img: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
     href: "/destinations/south",
-    places: ["הו צ'י מין", "פו קווק", "מוי נה"],
+    places: [
+      { name: "הו צ'י מין", href: "/destinations/south/hcmc" },
+      { name: "פו קווק", href: "/destinations/south/phu-quoc" },
+      { name: "מוי נה", href: "/destinations/south/mui-ne" },
+      { name: "דלתת מקונג", href: "/destinations/south/mekong" },
+      { name: "קון דאו", href: "/destinations/south/con-dao" },
+      { name: "וונג טאו", href: "/destinations/south/vung-tau" },
+    ],
   },
 ];
 
