@@ -277,7 +277,7 @@ export default function HomePage() {
               <Link
                 key={r.href}
                 href={r.href}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all card-lift"
+                className="group bg-amber-50/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:bg-amber-50/80 transition-all card-lift"
               >
                 <div className="relative h-44 overflow-hidden">
                   <img
