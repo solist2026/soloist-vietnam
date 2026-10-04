@@ -253,8 +253,18 @@ export default function HomePage() {
       </section>
 
       {/* ───────── REGIONS ───────── */}
-      <section className="py-14 md:py-20" style={{ background: "linear-gradient(160deg, rgba(16,185,129,0.2) 0%, rgba(20,184,166,0.14) 40%, rgba(255,255,255,1) 100%)" }}>
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-14 md:py-20 relative overflow-hidden">
+        {/* Mobile background */}
+        <div
+          className="md:hidden absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-regions-mobile.png')" }}
+        />
+        {/* Desktop background */}
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-regions-desktop.png')" }}
+        />
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">גלה את אזורי וייטנאם</h2>
             <p className="text-slate-500 text-lg max-w-xl mx-auto">
