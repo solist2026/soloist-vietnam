@@ -94,7 +94,7 @@ const regions = [
 const services = [
   {
     icon: "/icon-visa.png",
-    title: "ויזה לווייטנאם",
+    title: "ויזה לוייטנאם",
     desc: "מוציאים ויזה בלי להסתבך. ממלאים את הפרטים ואנחנו מלווים אתכם בתהליך עד לקבלת ה-E-Visa.",
     img: "/images/service-visa.png",
     href: "/visa",
