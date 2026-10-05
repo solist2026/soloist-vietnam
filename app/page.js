@@ -37,7 +37,7 @@ const regions = [
   {
     name: "מפת וייטנאם",
     desc: "דרך נוחה להכיר את המדינה לפני שמתחילים לתכנן את המסלול. במפה תוכלו לראות את האזורים, הערים והיעדים המרכזיים ולהבין איך הם מתחברים אחד לשני.",
-    img: "/images/vietnam-map-satellite.jpg",
+    img: "/images/vietnam-map-regions.png",
     href: "/map",
     places: [],
     isMap: true,
@@ -311,11 +311,11 @@ export default function HomePage() {
                 href={r.href}
                 className="group bg-amber-50/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:bg-amber-50/80 transition-all card-lift md:flex md:flex-col"
               >
-                <div className="relative h-44 overflow-hidden flex-shrink-0">
+                <div className={`relative h-44 overflow-hidden flex-shrink-0 ${r.isMap ? "bg-[#1a6b9a]" : ""}`}>
                   <img
                     src={r.img}
                     alt={r.name}
-                    className="w-full h-full object-cover object-center img-zoom"
+                    className={`w-full h-full img-zoom ${r.isMap ? "object-contain" : "object-cover object-center"}`}
                     loading="lazy"
                   />
                 </div>
