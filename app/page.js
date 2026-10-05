@@ -131,7 +131,7 @@ const blogPosts = [
     title: "הלונג ביי: 10 דברים שכדאי לעשות ולא לפספס",
     excerpt: "מהנופים המפורסמים של וייטנאם ועד שייט בין האיים. כל מה שכדאי לדעת לפני שמגיעים להלונג ביי.",
     category: "יעדים",
-    img: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&q=80",
+    img: "/images/halong.jpg",
     href: "/blog",
     cta: "למדריך המלא",
   },
