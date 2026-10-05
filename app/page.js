@@ -645,11 +645,11 @@ export default function HomePage() {
       <section className="relative overflow-hidden pt-14 pb-14 md:pt-24 md:pb-20">
         <div
           className="md:hidden absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/images/bg-vietnam-minute-mobile.png')" }}
+          style={{ backgroundImage: "url('/images/bg-trio-mobile.png')" }}
         />
         <div
           className="hidden md:block absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/bg-vietnam-minute-desktop.png')" }}
+          style={{ backgroundImage: "url('/images/bg-trio-desktop.png')" }}
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4">
