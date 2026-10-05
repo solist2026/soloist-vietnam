@@ -96,7 +96,7 @@ const services = [
     icon: "/icon-visa.png",
     title: "ויזה לווייטנאם",
     desc: "מוציאים ויזה בלי להסתבך. ממלאים את הפרטים ואנחנו מלווים אתכם בתהליך עד לקבלת ה-E-Visa.",
-    img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
+    img: "/images/service-visa.png",
     href: "/visa",
     cta: "להוצאת ויזה",
   },
@@ -104,7 +104,7 @@ const services = [
     icon: "/icon-itineraries.png",
     title: "תכנון מסלול אישי",
     desc: "לא יודעים מאיפה להתחיל? נבנה יחד מסלול שמתאים לזמן שלכם, לקצב שלכם ולדרך שבה אתם אוהבים לטייל.",
-    img: "/sapa-hero.jpg",
+    img: "/images/service-itineraries.png",
     href: "/itineraries",
     cta: "לתכנון המסלול",
   },
@@ -112,7 +112,7 @@ const services = [
     icon: "/icon-community.png",
     title: "קהילת המטיילים",
     desc: "מצטרפים לישראלים שכבר מטיילים בווייטנאם. שואלים, מתייעצים, מקבלים המלצות ומוצאים שותפים לדרך.",
-    img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+    img: "/images/service-community.png",
     href: "/community",
     cta: "לקבוצות WhatsApp",
   },
@@ -348,7 +348,7 @@ export default function HomePage() {
                   <img
                     src={s.img}
                     alt={s.title}
-                    className="w-full h-full object-cover img-zoom"
+                    className="w-full h-full object-cover object-top img-zoom"
                     loading="lazy"
                   />
                 </div>
