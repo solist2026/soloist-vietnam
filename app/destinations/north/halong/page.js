@@ -4,7 +4,7 @@ const data = {
   name: 'הלונג ביי',
   subtitle: 'פלא הטבע של וייטנאם',
   emoji: '⛵',
-  heroImage: 'https://images.unsplash.com/photo-1643029891412-92f9a81a8c16?w=1600&q=80',
+  heroImage: '/images/halong.jpg',
   regionName: 'צפון וייטנאם',
   regionHref: '/destinations/north',
   tags: ['טבע', 'שייט', 'מערות', 'UNESCO'],

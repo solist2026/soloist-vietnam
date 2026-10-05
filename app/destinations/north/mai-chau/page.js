@@ -4,7 +4,7 @@ const data = {
   name: "מאי צ'או",
   subtitle: "עמק האורז של שבטי ה-Thai הלבן",
   emoji: '🌿',
-  heroImage: 'https://plus.unsplash.com/premium_photo-1661917179706-33e305a4ee45?w=1600&q=80',
+  heroImage: '/images/mai-chau.jpg',
   regionName: 'צפון וייטנאם',
   regionHref: '/destinations/north',
   tags: ['עמק', 'שבטים', 'הומסטיי', 'אופניים', 'אורז', 'טבע'],

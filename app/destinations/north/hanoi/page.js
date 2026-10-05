@@ -4,7 +4,7 @@ const data = {
   name: 'האנוי',
   subtitle: 'עיר הבירה המסתורית',
   emoji: '🏛️',
-  heroImage: '/images/hanoi/hanoi-cover.jpg',
+  heroImage: '/images/hanoi.jpg',
   regionName: 'צפון וייטנאם',
   regionHref: '/destinations/north',
   tags: [
