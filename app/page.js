@@ -401,16 +401,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ───────── BLOG ───────── */}
-      <section className="py-14 md:py-20 relative overflow-hidden">
+      {/* ═══ WRAPPER: BLOG + VIETNAM IN A MINUTE + GALLERY — shared background ═══ */}
+      <div className="relative overflow-hidden">
+        {/* Mobile background — continuous across all three sections */}
         <div
           className="md:hidden absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/images/bg-blog-mobile.png')" }}
+          style={{ backgroundImage: "url('/images/bg-trio-mobile.png')" }}
         />
+        {/* Desktop background — continuous across all three sections */}
         <div
-          className="hidden md:block absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/images/bg-blog-desktop.png')" }}
+          className="hidden md:block absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-trio-desktop.png')" }}
         />
+
+      {/* ───────── BLOG ───────── */}
+      <section className="py-14 md:py-20 relative">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
 
           {/* Header */}
@@ -559,17 +564,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── VIETNAM IN A MINUTE ───────── */}
-      <section className="relative overflow-hidden py-16 md:py-24">
-        {/* Mobile background */}
-        <div
-          className="md:hidden absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/bg-vietnam-minute-mobile.png')" }}
-        />
-        {/* Desktop background */}
-        <div
-          className="hidden md:block absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/bg-vietnam-minute-desktop.png')" }}
-        />
+      <section className="relative py-16 md:py-24">
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
 
@@ -644,17 +639,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── GALLERY ───────── */}
-      <section className="relative overflow-hidden pt-14 pb-14 md:pt-24 md:pb-20">
-        {/* Mobile background */}
-        <div
-          className="md:hidden absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/images/bg-vietnam-minute-mobile.png')" }}
-        />
-        {/* Desktop background */}
-        <div
-          className="hidden md:block absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/bg-vietnam-minute-desktop.png')" }}
-        />
+      <section className="relative pt-14 pb-14 md:pt-24 md:pb-20">
 
         <div className="relative z-10 max-w-7xl mx-auto px-4">
 
@@ -835,6 +820,7 @@ export default function HomePage() {
 
         </div>
       </section>
+      </div>{/* ═══ end WRAPPER ═══ */}
 
       {/* ───────── FINAL CTA ───────── */}
       <section className="bg-[#1A2535] py-16 text-center text-white">
