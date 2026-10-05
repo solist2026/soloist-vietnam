@@ -311,11 +311,11 @@ export default function HomePage() {
                 href={r.href}
                 className="group bg-amber-50/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:bg-amber-50/80 transition-all card-lift md:flex md:flex-col"
               >
-                <div className={`relative h-44 overflow-hidden flex-shrink-0 ${r.isMap ? "bg-[#1a6b9a]" : ""}`}>
+                <div className="relative h-44 overflow-hidden flex-shrink-0">
                   <img
                     src={r.img}
                     alt={r.name}
-                    className={`w-full h-full img-zoom ${r.isMap ? "object-contain" : "object-cover object-center"}`}
+                    className="w-full h-full object-cover object-center img-zoom"
                     loading="lazy"
                   />
                 </div>
@@ -401,21 +401,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ WRAPPER: BLOG + VIETNAM IN A MINUTE + GALLERY — shared background ═══ */}
-      <div className="relative overflow-hidden">
-        {/* Mobile background — continuous across all three sections */}
+      {/* ───────── BLOG ───────── */}
+      <section className="py-14 md:py-20 relative overflow-hidden">
         <div
           className="md:hidden absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/images/bg-trio-mobile.png')" }}
+          style={{ backgroundImage: "url('/images/bg-blog-mobile.png')" }}
         />
-        {/* Desktop background — continuous across all three sections */}
         <div
-          className="hidden md:block absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/bg-trio-desktop.png')" }}
+          className="hidden md:block absolute inset-0 bg-cover bg-top"
+          style={{ backgroundImage: "url('/images/bg-blog-desktop.png')" }}
         />
-
-      {/* ───────── BLOG ───────── */}
-      <section className="py-14 md:py-20 relative">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
 
           {/* Header */}
@@ -564,7 +559,15 @@ export default function HomePage() {
       </section>
 
       {/* ───────── VIETNAM IN A MINUTE ───────── */}
-      <section className="relative py-16 md:py-24">
+      <section className="relative overflow-hidden py-16 md:py-24">
+        <div
+          className="md:hidden absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-vietnam-minute-mobile.png')" }}
+        />
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-vietnam-minute-desktop.png')" }}
+        />
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
 
@@ -639,7 +642,15 @@ export default function HomePage() {
       </section>
 
       {/* ───────── GALLERY ───────── */}
-      <section className="relative pt-14 pb-14 md:pt-24 md:pb-20">
+      <section className="relative overflow-hidden pt-14 pb-14 md:pt-24 md:pb-20">
+        <div
+          className="md:hidden absolute inset-0 bg-cover bg-top"
+          style={{ backgroundImage: "url('/images/bg-vietnam-minute-mobile.png')" }}
+        />
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-vietnam-minute-desktop.png')" }}
+        />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4">
 
@@ -820,7 +831,6 @@ export default function HomePage() {
 
         </div>
       </section>
-      </div>{/* ═══ end WRAPPER ═══ */}
 
       {/* ───────── FINAL CTA ───────── */}
       <section className="bg-[#1A2535] py-16 text-center text-white">
