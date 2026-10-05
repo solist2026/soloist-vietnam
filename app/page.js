@@ -559,27 +559,87 @@ export default function HomePage() {
       </section>
 
       {/* ───────── VIETNAM IN A MINUTE ───────── */}
-      <section className="py-14 md:py-20" style={{ background: "linear-gradient(180deg, rgba(240,253,244,0.7) 0%, rgba(255,255,255,1) 35%)" }}>
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-3">וייטנאם בדקה</h2>
-            <p className="text-slate-500 text-base max-w-md mx-auto leading-relaxed">
-              מידע קצר ושימושי שיעזור לכם להכיר את וייטנאם קצת יותר טוב, בדקה אחת.
-            </p>
+      <section className="relative overflow-hidden py-16 md:py-24">
+        {/* Mobile background */}
+        <div
+          className="md:hidden absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-vietnam-minute-mobile.png')" }}
+        />
+        {/* Desktop background */}
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-vietnam-minute-desktop.png')" }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+
+          {/* Desktop: text (right) + video (left) — RTL natural order */}
+          <div className="hidden md:flex items-center gap-12 lg:gap-16">
+
+            {/* Text column — RIGHT side in RTL (first in DOM) */}
+            <div className="w-72 lg:w-96 flex-shrink-0">
+              <span className="inline-block text-xs font-bold text-emerald-700 bg-white/80 border border-emerald-200 px-3 py-1 rounded-full mb-5">
+                וייטנאם בדקה
+              </span>
+              <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4 leading-tight">
+                חוויה שלמה<br />בדקה אחת
+              </h2>
+              <p className="text-slate-600 text-base leading-relaxed mb-8 max-w-xs">
+                סרטון קצר שמביא לכם את האווירה, הנופים, התרבות והאנשים שעושים את וייטנאם ליעד כל כך מיוחד.
+              </p>
+              <a
+                href="https://www.youtube.com/watch?v=ugPZDwhvEAM"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-7 py-3 rounded-full text-sm transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              >
+                <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                צפו עכשיו
+              </a>
+            </div>
+
+            {/* Video — LEFT side in RTL (second in DOM) */}
+            <div className="flex-1 min-w-0">
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl" style={{ aspectRatio: "16/9" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/ugPZDwhvEAM"
+                  title="סוליסט וייטנאם"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full border-0"
+                />
+              </div>
+            </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: "16/9" }}>
-            <iframe
-              src="https://www.youtube.com/embed/ugPZDwhvEAM"
-              title="סוליסט וייטנאם"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="w-full h-full"
-            />
+
+          {/* Mobile: stacked — tag → title → text → video */}
+          <div className="md:hidden">
+            <div className="text-center mb-6">
+              <span className="inline-block text-xs font-bold text-emerald-700 bg-white/80 border border-emerald-200 px-3 py-1 rounded-full mb-4">
+                וייטנאם בדקה
+              </span>
+              <h2 className="text-2xl font-black text-slate-900 mb-3 leading-tight">
+                חוויה שלמה בדקה אחת
+              </h2>
+              <p className="text-slate-600 text-sm leading-relaxed max-w-xs mx-auto">
+                סרטון קצר שמביא לכם את האווירה, הנופים, התרבות והאנשים שעושים את וייטנאם ליעד כל כך מיוחד.
+              </p>
+            </div>
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: "16/9" }}>
+              <iframe
+                src="https://www.youtube.com/embed/ugPZDwhvEAM"
+                title="סוליסט וייטנאם"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            </div>
           </div>
-          <p className="text-slate-500 text-sm mt-4 leading-relaxed text-center">
-            הצצה קצרה ועוצרת נשימה לאחד היעדים המרתקים בדרום מזרח אסיה.
-          </p>
+
         </div>
       </section>
 
