@@ -93,31 +93,28 @@ const regions = [
 
 const services = [
   {
-    emoji: "🛂",
-    title: "הוצאת ויזה לוייטנאם",
-    desc: "שירות מלא לקבלת E-Visa. ממלאים פרטים פעם אחת ואנחנו מטפלים בכל השאר.",
+    icon: "/icon-visa.png",
+    title: "ויזה לווייטנאם",
+    desc: "מוציאים ויזה בלי להסתבך. ממלאים את הפרטים ואנחנו מלווים אתכם בתהליך עד לקבלת ה-E-Visa.",
     img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
     href: "/visa",
     cta: "להוצאת ויזה",
-    highlight: true,
   },
   {
-    emoji: "🗺️",
-    title: "מסלולים לטיול בוייטנאם",
-    desc: "מסלולים מוכנים ומותאמים אישית, לכל משך זמן ולכל סגנון מטייל.",
+    icon: "/icon-itineraries.png",
+    title: "תכנון מסלול אישי",
+    desc: "לא יודעים מאיפה להתחיל? נבנה יחד מסלול שמתאים לזמן שלכם, לקצב שלכם ולדרך שבה אתם אוהבים לטייל.",
     img: "/sapa-hero.jpg",
     href: "/itineraries",
-    cta: "לכל המסלולים",
-    highlight: false,
+    cta: "לתכנון המסלול",
   },
   {
-    emoji: "💬",
-    title: "קבוצות WhatsApp למטיילים",
-    desc: "הצטרפו לקהילה ישראלית פעילה. שאלו שאלות, קבלו עצות ומצאו שותפים לטיול.",
+    icon: "/icon-community.png",
+    title: "קהילת המטיילים",
+    desc: "מצטרפים לישראלים שכבר מטיילים בווייטנאם. שואלים, מתייעצים, מקבלים המלצות ומוצאים שותפים לדרך.",
     img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
-    href: "/whatsapp",
-    cta: "להצטרפות",
-    highlight: false,
+    href: "/community",
+    cta: "לקבוצות WhatsApp",
   },
 ];
 
@@ -322,52 +319,53 @@ export default function HomePage() {
       </section>
 
       {/* ───────── SERVICES ───────── */}
-      <section className="py-14 md:py-20" style={{ background: "linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(251,191,36,0.18) 50%, rgba(249,115,22,0.16) 100%)" }}>
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-14 md:py-20 relative overflow-hidden">
+        <div
+          className="md:hidden absolute inset-0 bg-cover bg-top"
+          style={{ backgroundImage: "url('/images/bg-services-mobile.png')" }}
+        />
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-top"
+          style={{ backgroundImage: "url('/images/bg-services-desktop.png')" }}
+        />
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">השירותים שלנו</h2>
-            <p className="text-slate-500 text-lg max-w-xl mx-auto">
-              כל מה שצריך כדי שהטיול שלכם יהיה חלק, מרגש ובלתי נשכח
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">
+              כל מה שצריך לפני שיוצאים לווייטנאם
+            </h2>
+            <p className="text-slate-600 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+              אנחנו כאן כדי לעשות לכם סדר בתכנון ולעזור בדברים שבאמת חשובים בדרך.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-7">
             {services.map((s, i) => (
               <div
                 key={i}
-                className={`group rounded-2xl overflow-hidden card-lift ${
-                  s.highlight
-                    ? "ring-2 ring-orange-500 shadow-lg shadow-orange-100"
-                    : "border border-slate-100 shadow-sm"
-                }`}
+                className="group bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all card-lift md:flex md:flex-col"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden flex-shrink-0">
                   <img
                     src={s.img}
                     alt={s.title}
                     className="w-full h-full object-cover img-zoom"
                     loading="lazy"
                   />
-                  {s.highlight && (
-                    <div className="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      מומלץ
-                    </div>
-                  )}
                 </div>
-                <div className="p-6 bg-white">
-                  <div className="text-3xl mb-3">{s.emoji}</div>
+                <div className="p-6 md:flex md:flex-col md:flex-1 text-center">
+                  <div className="mb-3 flex justify-center">
+                    <img src={s.icon} alt={s.title} className="w-14 h-14 object-contain" />
+                  </div>
                   <h3 className="font-black text-xl text-slate-900 mb-2">{s.title}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed mb-5">{s.desc}</p>
-                  <Link
-                    href={s.href}
-                    className={`inline-block font-bold px-6 py-2.5 rounded-full text-sm transition-all ${
-                      s.highlight
-                        ? "bg-orange-500 hover:bg-orange-600 text-white shadow-md"
-                        : "border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white"
-                    }`}
-                  >
-                    {s.cta}
-                  </Link>
+                  <div className="md:mt-auto flex justify-center">
+                    <Link
+                      href={s.href}
+                      className="inline-block font-bold px-7 py-2.5 rounded-full text-sm transition-all bg-orange-500 hover:bg-orange-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                    >
+                      {s.cta}
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
