@@ -37,7 +37,7 @@ const regions = [
   {
     name: "מפת וייטנאם",
     desc: "דרך נוחה להכיר את המדינה לפני שמתחילים לתכנן את המסלול. במפה תוכלו לראות את האזורים, הערים והיעדים המרכזיים ולהבין איך הם מתחברים אחד לשני.",
-    img: "/images/vietnam-map-regions.png",
+    img: "/images/vietnam-map-satellite.jpg",
     href: "/map",
     places: [],
     isMap: true,
