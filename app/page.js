@@ -37,7 +37,7 @@ const regions = [
   {
     name: "מפת וייטנאם",
     desc: "דרך נוחה להכיר את המדינה לפני שמתחילים לתכנן את המסלול. במפה תוכלו לראות את האזורים, הערים והיעדים המרכזיים ולהבין איך הם מתחברים אחד לשני.",
-    img: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
+    img: "/images/vietnam-map-satellite.jpg",
     href: "/map",
     places: [],
     isMap: true,
@@ -288,7 +288,7 @@ export default function HomePage() {
               >
                 <div className="relative h-44 overflow-hidden flex-shrink-0">
                   <img
-                    src={r.isMap ? "/vietnam-map.png" : r.img}
+                    src={r.img}
                     alt={r.name}
                     className="w-full h-full object-cover object-center img-zoom"
                     loading="lazy"
