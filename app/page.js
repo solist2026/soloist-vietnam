@@ -127,10 +127,38 @@ const gallery = [
 ];
 
 const blogPosts = [
-  { title: "10 דברים שאתם חייבים לעשות בהלונג ביי", category: "יעדים" },
-  { title: "המדריך המלא לאיים הכי יפים בוייטנאם", category: "יעדים" },
-  { title: "כמה עולה טיול חודש בוייטנאם? פירוט עלויות מלא", category: "תכנון" },
-  { title: "ויזה לוייטנאם 2026: כל מה שצריך לדעת", category: "ויזה" },
+  {
+    title: "הלונג ביי: 10 דברים שכדאי לעשות ולא לפספס",
+    excerpt: "מהנופים המפורסמים של וייטנאם ועד שייט בין האיים. כל מה שכדאי לדעת לפני שמגיעים להלונג ביי.",
+    category: "יעדים",
+    img: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&q=80",
+    href: "/blog",
+    cta: "למדריך המלא",
+  },
+  {
+    title: "האיים היפים של וייטנאם שכדאי להכיר",
+    excerpt: "חופים, טבע ואווירה אחרת. הכירו את האיים שכדאי לשלב במסלול.",
+    category: "יעדים",
+    img: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
+    href: "/blog",
+    cta: "לקריאת הכתבה",
+  },
+  {
+    title: "כמה באמת עולה חודש בווייטנאם?",
+    excerpt: "לינה, אוכל, תחבורה ואטרקציות. עושים סדר בהוצאות לפני שיוצאים לדרך.",
+    category: "תכנון",
+    img: "/sapa-hero.jpg",
+    href: "/blog",
+    cta: "לקריאת הכתבה",
+  },
+  {
+    title: "ויזה לווייטנאם 2026 – המדריך למטייל הישראלי",
+    excerpt: "מי צריך ויזה, איך מוציאים E-Visa ומה חשוב לבדוק לפני הטיסה.",
+    category: "ויזה",
+    img: "/images/service-visa.png",
+    href: "/blog",
+    cta: "לקריאת הכתבה",
+  },
 ];
 
 export default function HomePage() {
@@ -373,64 +401,185 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ───────── BLOG + VIDEO ───────── */}
-      <section className="py-14 md:py-20" style={{ background: "linear-gradient(135deg, rgba(20,184,166,0.2) 0%, rgba(16,185,129,0.14) 40%, rgba(255,255,255,1) 100%)" }}>
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+      {/* ───────── BLOG ───────── */}
+      <section className="py-14 md:py-20 relative overflow-hidden">
+        <div
+          className="md:hidden absolute inset-0 bg-cover bg-top"
+          style={{ backgroundImage: "url('/images/bg-blog-mobile.png')" }}
+        />
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-top"
+          style={{ backgroundImage: "url('/images/bg-blog-desktop.png')" }}
+        />
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
 
-            {/* Blog */}
-            <div className="lg:col-span-3">
-              <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">מה חדש בבלוג?</h2>
-              <div className="space-y-3">
-                {blogPosts.map((post, i) => (
-                  <Link
-                    key={i}
-                    href="/blog"
-                    className="group flex items-center gap-4 bg-white rounded-xl px-5 py-4 shadow-sm hover:shadow-md transition-shadow card-lift"
-                  >
-                    <div className="flex-shrink-0 w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center">
-                      <span className="text-orange-500 font-black text-sm">{String(i + 1).padStart(2, "0")}</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-xs text-orange-500 font-bold mb-0.5">{post.category}</div>
-                      <div className="font-semibold text-slate-800 text-sm leading-snug group-hover:text-orange-500 transition-colors">
-                        {post.title}
-                      </div>
-                    </div>
-                    <svg className="w-4 h-4 text-slate-300 flex-shrink-0 rotate-180 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                ))}
+          {/* Header */}
+          <div className="text-center mb-10 md:mb-12">
+            <span className="inline-block text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full mb-4">
+              מה חדש בבלוג
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">מטיילים חכם יותר בווייטנאם</h2>
+            <p className="text-slate-600 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+              מדריכים, טיפים ומידע שיעזרו לכם לתכנן נכון, להכיר מקומות חדשים וליהנות יותר מהדרך.
+            </p>
+          </div>
+
+          {/* Desktop: editorial layout */}
+          <div className="hidden lg:flex gap-6 items-stretch">
+            {/* Featured article */}
+            <Link
+              href={blogPosts[0].href}
+              className="group flex-1 bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all card-lift flex flex-col"
+            >
+              <div className="relative overflow-hidden flex-shrink-0" style={{ height: "280px" }}>
+                <img
+                  src={blogPosts[0].img}
+                  alt={blogPosts[0].title}
+                  className="w-full h-full object-cover object-center img-zoom"
+                  loading="lazy"
+                />
+                <span className="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  {blogPosts[0].category}
+                </span>
               </div>
-              <div className="mt-5">
-                <Link href="/blog" className="inline-flex items-center gap-2 text-orange-500 font-bold text-sm hover:text-orange-600 transition-colors">
-                  <span>לכל הכתבות בבלוג</span>
+              <div className="p-7 flex flex-col flex-1">
+                <h3 className="font-black text-2xl text-slate-900 mb-3 leading-snug">{blogPosts[0].title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-1">{blogPosts[0].excerpt}</p>
+                <span className="inline-flex items-center gap-2 text-sm font-bold text-orange-500 group-hover:gap-3 transition-all">
+                  {blogPosts[0].cta}
                   <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
 
-            {/* Video */}
-            <div className="lg:col-span-2">
-              <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">וייטנאם בדקה</h2>
-              <div className="rounded-2xl overflow-hidden shadow-md" style={{ aspectRatio: "16/9" }}>
-                <iframe
-                  src="https://www.youtube.com/embed/ugPZDwhvEAM"
-                  title="סוליסט וייטנאם"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                  className="w-full h-full"
-                />
-              </div>
-              <p className="text-slate-500 text-sm mt-3 leading-relaxed">
-                הצצה קצרה ועוצרת נשימה לאחד היעדים המרתקים בדרום מזרח אסיה.
-              </p>
+            {/* 3 secondary articles */}
+            <div className="w-80 flex-shrink-0 flex flex-col gap-4">
+              {blogPosts.slice(1).map((post, i) => (
+                <Link
+                  key={i}
+                  href={post.href}
+                  className="group flex-1 bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all card-lift flex flex-row"
+                >
+                  <div className="w-28 flex-shrink-0 overflow-hidden">
+                    <img
+                      src={post.img}
+                      alt={post.title}
+                      className="w-full h-full object-cover img-zoom"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-4 flex flex-col justify-between flex-1">
+                    <div>
+                      <span className="text-xs font-bold text-emerald-600 mb-1 block">{post.category}</span>
+                      <h3 className="font-bold text-sm text-slate-900 leading-snug">{post.title}</h3>
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-xs font-bold text-orange-500 group-hover:gap-2 transition-all mt-2">
+                      {post.cta}
+                      <svg className="w-3 h-3 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
+
+          {/* Mobile layout */}
+          <div className="lg:hidden space-y-4">
+            {/* Featured */}
+            <Link
+              href={blogPosts[0].href}
+              className="group bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all card-lift block"
+            >
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src={blogPosts[0].img}
+                  alt={blogPosts[0].title}
+                  className="w-full h-full object-cover object-center img-zoom"
+                  loading="lazy"
+                />
+                <span className="absolute top-3 right-3 bg-emerald-600 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">
+                  {blogPosts[0].category}
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="font-black text-lg text-slate-900 mb-2 leading-snug">{blogPosts[0].title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed mb-3">{blogPosts[0].excerpt}</p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-bold text-orange-500">
+                  {blogPosts[0].cta}
+                  <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </Link>
+
+            {/* Secondary – compact horizontal */}
+            {blogPosts.slice(1).map((post, i) => (
+              <Link
+                key={i}
+                href={post.href}
+                className="group bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all card-lift flex flex-row h-24"
+              >
+                <div className="w-24 flex-shrink-0 overflow-hidden">
+                  <img
+                    src={post.img}
+                    alt={post.title}
+                    className="w-full h-full object-cover img-zoom"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="px-4 py-3 flex flex-col justify-center flex-1 min-w-0">
+                  <span className="text-xs font-bold text-emerald-600 mb-0.5">{post.category}</span>
+                  <h3 className="font-bold text-sm text-slate-900 leading-snug line-clamp-2">{post.title}</h3>
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-orange-500 mt-1">
+                    {post.cta}
+                    <svg className="w-3 h-3 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-10">
+            <Link
+              href="/blog"
+              className="inline-block font-bold px-8 py-3 rounded-full text-sm transition-all border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white"
+            >
+              לכל המדריכים והכתבות
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── VIETNAM IN A MINUTE ───────── */}
+      <section className="py-14 md:py-20" style={{ background: "linear-gradient(180deg, rgba(240,253,244,0.7) 0%, rgba(255,255,255,1) 35%)" }}>
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-3">וייטנאם בדקה</h2>
+            <p className="text-slate-500 text-base max-w-md mx-auto leading-relaxed">
+              מידע קצר ושימושי שיעזור לכם להכיר את וייטנאם קצת יותר טוב, בדקה אחת.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: "16/9" }}>
+            <iframe
+              src="https://www.youtube.com/embed/ugPZDwhvEAM"
+              title="סוליסט וייטנאם"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              className="w-full h-full"
+            />
+          </div>
+          <p className="text-slate-500 text-sm mt-4 leading-relaxed text-center">
+            הצצה קצרה ועוצרת נשימה לאחד היעדים המרתקים בדרום מזרח אסיה.
+          </p>
         </div>
       </section>
 
