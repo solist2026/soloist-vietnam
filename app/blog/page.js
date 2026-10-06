@@ -60,17 +60,16 @@ const posts = [
 
 export default function BlogPage() {
   return (
-    <div className="bg-white text-slate-800 min-h-screen pt-[88px]">
+    <div className="inner-page min-h-screen pt-[88px]">
 
       {/* Header */}
-      <div className="bg-[#1A2535] text-white py-16 text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="text-5xl mb-4">📝</div>
-          <h1 className="text-4xl md:text-5xl font-black mb-4">הבלוג שלנו</h1>
-          <p className="text-white/75 text-lg leading-relaxed">
-            כתבות, מדריכים ועצות מהשטח למטייל הישראלי בוייטנאם. הכל שכתב מישהו שהיה שם.
-          </p>
-        </div>
+      <div className="py-14 md:py-20 text-center px-4">
+        <p className="text-orange-500 text-xs font-bold tracking-widest mb-3 uppercase">מאמרים ומדריכים</p>
+        <div className="text-5xl mb-4">📝</div>
+        <h1 className="text-4xl md:text-5xl font-black text-[#1A2535] mb-4">הבלוג שלנו</h1>
+        <p className="text-slate-500 text-base md:text-lg max-w-2xl mx-auto">
+          כתבות, מדריכים ועצות מהשטח למטייל הישראלי בוייטנאם. הכל שכתב מישהו שהיה שם.
+        </p>
       </div>
 
       {/* Coming soon banner */}

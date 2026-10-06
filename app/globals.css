@@ -56,6 +56,12 @@ html {
 .anim-d3             { animation-delay: 0.3s; }
 .anim-d4             { animation-delay: 0.4s; }
 
+/* ── Inner pages (all except homepage) ── */
+.inner-page {
+  background-color: #FAFAF7;
+  color: #1e293b;
+}
+
 /* Legacy classes (dark pages) */
 .hero-gradient {
   background: linear-gradient(

@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -27,7 +27,7 @@ const faqs = [
     emoji: "🍜",
     questions: [
       { q: "האם האוכל הוייטנאמי מתאים לישראלים?", a: "מאוד! האוכל הוייטנאמי לא חריף במיוחד, טרי, בריא ומגוון. רוב הישראלים מתאהבים בו מהיום הראשון. יש שפע של אופציות צמחוניות. ויגאן? בהחלט אפשר. רגישות לגלוטן, רוב המנות מבוססות אורז, אבל שאלו על כל מנה בנפרד." },
-      { q: "האם אפשר למצוא אוכל כשר בוייטנאם?", a: "בבתי חב\"ד! בהאנוי ובהו צ'י מין יש בתי חב\"ד עם ארוחות כשרות. מחוצה להם, קשה, אבל פירות, ירקות ואורז זמינים בכל מקום." },
+      { q: 'האם אפשר למצוא אוכל כשר בוייטנאם?', a: 'בבתי חב"ד! בהאנוי ובהו צ\'י מין יש בתי חב"ד עם ארוחות כשרות. מחוצה להם, קשה, אבל פירות, ירקות ואורז זמינים בכל מקום.' },
       { q: "מה חובה לאכול בוייטנאם?", a: "פו (Pho), Bun Cha, Banh Mi, White Rose Dumplings בהוי אן, Com Tam בסייגון, ביצת קאפה באנוי. כל אחד מאזור אחר." },
       { q: "האם האוכל ברחוב בטוח?", a: "כן, אבל תתחילו לאט. בחרו דוכנים עמוסים, סימן שהאוכל טרי. הימנעו מסלטים שטופים במים לא מטוהרים. שבוע ראשון, היו זהירים." },
     ],
@@ -37,55 +37,56 @@ const faqs = [
     emoji: "🇮🇱",
     questions: [
       { q: "יש קהילה ישראלית גדולה בוייטנאם?", a: "מאוד! עשרות אלפי ישראלים מגיעים לוייטנאם כל שנה. תמיד תפגשו ישראלים, ב-Old Quarter האנוי, Bui Vien בסייגון ובהוי אן זה כמעט כמו בית. לופ הא גיאנג הוא אחת החוויות הכי ישראליות שיש." },
-      { q: "איפה בתי חב\"ד בוייטנאם?", a: "בית חב\"ד בהאנוי (Old Quarter), WhatsApp: +84-83-872-8225 | jewishhanoi.com. בית חב\"ד בהו צ'י מין (District 1), אחד הגדולים בדרום-מזרח אסיה. יש גם בסאפה ובהוי אן." },
-      { q: "מה זה הבית הישראלי (Israeli House) בהוי אן?", a: "בית ישראלי בהוי אן מארגן ארוחות שישי בלילה, 300,000 VND לאדם, ידידותי ל-vegan/צמחוני. יצרו קשר עם דודי: +972-544-802424 (WhatsApp). כתובת: 2 Ly Thai To St, הוי אן." },
-      { q: "מה לעשות אם יש בעיה / מצוקה בוייטנאם?", a: "בית חב\"ד הוא מקום ראשון לפנות (+84-83-872-8225 בהאנוי). גם שגרירות ישראל בהאנוי (+84-24-3843-3140) ועם ישראל לקונסוליה בסייגון (+84-28-3911-3090)." },
+      { q: 'איפה בתי חב"ד בוייטנאם?', a: 'בית חב"ד בהאנוי (Old Quarter), WhatsApp: +84-83-872-8225 | jewishhanoi.com. בית חב"ד בהו צ\'י מין (District 1), אחד הגדולים בדרום-מזרח אסיה. יש גם בסאפה ובהוי אן.' },
+      { q: 'מה זה הבית הישראלי (Israeli House) בהוי אן?', a: 'בית ישראלי בהוי אן מארגן ארוחות שישי בלילה, 300,000 VND לאדם, ידידותי ל-vegan/צמחוני. יצרו קשר עם דודי: +972-544-802424 (WhatsApp). כתובת: 2 Ly Thai To St, הוי אן.' },
+      { q: "מה לעשות אם יש בעיה / מצוקה בוייטנאם?", a: 'בית חב"ד הוא מקום ראשון לפנות (+84-83-872-8225 בהאנוי). גם שגרירות ישראל בהאנוי (+84-24-3843-3140) ועם ישראל לקונסוליה בסייגון (+84-28-3911-3090).' },
     ],
   },
 ];
 
 export default function CommunityPage() {
   return (
-    <div className="min-h-screen pt-[88px]">
+    <div className="inner-page min-h-screen pt-[88px]">
+
       {/* Header */}
-      <div className="relative py-20 bg-gradient-to-b from-[#1a2535] to-[#0f1923] text-center">
-        <p className="text-[#c9a84c] text-sm font-semibold tracking-widest mb-3 uppercase">קהילת מטיילים</p>
-        <h1 className="text-5xl font-bold mb-4">קהילה ושאלות ותשובות</h1>
-        <p className="text-[#f5f0e8]/60 text-lg max-w-2xl mx-auto">
+      <div className="py-14 md:py-20 text-center px-4">
+        <p className="text-orange-500 text-xs font-bold tracking-widest mb-3 uppercase">קהילת מטיילים</p>
+        <h1 className="text-4xl md:text-5xl font-black text-[#1A2535] mb-4">קהילה ושאלות ותשובות</h1>
+        <p className="text-slate-500 text-base md:text-lg max-w-2xl mx-auto">
           שאלות נפוצות, עצות מניסיון וקהילת ישראלים שטיילו בוייטנאם
         </p>
       </div>
 
       {/* Stats */}
-      <div className="bg-[#1a2535] py-10">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="bg-white border-y border-slate-100 py-8">
+        <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: "מטיילים ישראלים בשנה", value: "50K+" },
             { label: "שאלות שנענו", value: "500+" },
             { label: "חברי קהילה", value: "2,000+" },
-            { label: "בתי חב\"ד", value: "4+" },
+            { label: 'בתי חב"ד', value: "4+" },
           ].map((stat) => (
-            <div key={stat.label} className="bg-[#0f1923] rounded-xl p-5 text-center border border-[#c9a84c]/10">
-              <div className="text-3xl font-bold text-[#c9a84c]">{stat.value}</div>
-              <div className="text-xs text-[#f5f0e8]/50 mt-1">{stat.label}</div>
+            <div key={stat.label} className="bg-slate-50 rounded-xl p-5 text-center border border-slate-100">
+              <div className="text-2xl font-black text-orange-500">{stat.value}</div>
+              <div className="text-xs text-slate-500 mt-1">{stat.label}</div>
             </div>
           ))}
         </div>
       </div>
 
       {/* FAQ */}
-      <div className="max-w-5xl mx-auto px-4 py-16 flex flex-col gap-10">
+      <div className="max-w-5xl mx-auto px-4 py-12 flex flex-col gap-8">
         {faqs.map((cat) => (
-          <div key={cat.category} className="bg-[#1a2535] rounded-3xl p-8 border border-[#c9a84c]/10">
+          <div key={cat.category} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-3xl">{cat.emoji}</span>
-              <h2 className="text-2xl font-bold">{cat.category}</h2>
+              <h2 className="text-2xl font-bold text-[#1A2535]">{cat.category}</h2>
             </div>
             <div className="flex flex-col gap-4">
               {cat.questions.map((item) => (
-                <div key={item.q} className="bg-[#0f1923] rounded-xl p-6">
-                  <h3 className="font-bold text-[#c9a84c] mb-3">❓ {item.q}</h3>
-                  <p className="text-[#f5f0e8]/70 text-sm leading-relaxed">{item.a}</p>
+                <div key={item.q} className="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                  <h3 className="font-bold text-[#1A2535] mb-3">❓ {item.q}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.a}</p>
                 </div>
               ))}
             </div>
@@ -93,35 +94,35 @@ export default function CommunityPage() {
         ))}
 
         {/* Ask Question CTA */}
-        <div className="bg-gradient-to-br from-[#1a2535] to-[#0f1923] rounded-3xl p-10 text-center border border-[#c9a84c]/20">
+        <div className="bg-[#1A2535] rounded-3xl p-10 text-center">
           <div className="text-5xl mb-4">💬</div>
-          <h2 className="text-3xl font-bold mb-4">יש לך שאלה שלא נענתה?</h2>
-          <p className="text-[#f5f0e8]/60 mb-4 max-w-md mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4">יש לך שאלה שלא נענתה?</h2>
+          <p className="text-white/60 mb-4 max-w-md mx-auto text-sm">
             הצטרף לקהילת הישראלים בוייטנאם ושאל הכל, מסלולים, מחירים, עצות ועוד
           </p>
-          <a href="mailto:soloistour@gmail.com" className="inline-flex items-center gap-2 text-[#c9a84c] hover:underline text-sm mb-8">
+          <a href="mailto:soloistour@gmail.com" className="inline-flex items-center gap-2 text-orange-400 hover:underline text-sm mb-8">
             ✉️ soloistour@gmail.com
           </a>
           <div className="flex flex-col gap-4 max-w-lg mx-auto">
             <input
               type="text"
               placeholder="מה השאלה שלך?"
-              className="w-full bg-[#0f1923] border border-[#c9a84c]/30 rounded-full px-6 py-4 text-right focus:outline-none focus:border-[#c9a84c]"
+              className="w-full bg-white/10 border border-white/20 rounded-full px-6 py-4 text-right text-white placeholder-white/40 focus:outline-none focus:border-orange-400"
             />
             <input
               type="email"
               placeholder="המייל שלך"
-              className="w-full bg-[#0f1923] border border-[#c9a84c]/30 rounded-full px-6 py-4 text-right focus:outline-none focus:border-[#c9a84c]"
+              className="w-full bg-white/10 border border-white/20 rounded-full px-6 py-4 text-right text-white placeholder-white/40 focus:outline-none focus:border-orange-400"
             />
-            <button className="bg-[#c9a84c] text-[#0f1923] px-8 py-4 rounded-full font-bold hover:bg-[#b8963d] transition-colors">
+            <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold transition-colors">
               שלח שאלה
             </button>
           </div>
         </div>
 
         {/* Chabad Houses */}
-        <div className="bg-blue-900/20 border border-blue-700/30 rounded-3xl p-8">
-          <h2 className="text-2xl font-bold mb-6">✡️ בתי חב"ד בוייטנאם</h2>
+        <div className="bg-blue-50 border border-blue-100 rounded-3xl p-8">
+          <h2 className="text-2xl font-bold text-blue-800 mb-6">✡️ בתי חב"ד בוייטנאם</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               {
@@ -149,9 +150,9 @@ export default function CommunityPage() {
                 notes: "פעיל בשישי ושבת. בנוסף: Israeli House, דודי +972-544-802424",
               },
             ].map((ch) => (
-              <div key={ch.city} className="bg-[#0f1923] rounded-xl p-6">
-                <h3 className="font-bold text-blue-300 text-lg mb-3">בית חב"ד {ch.city}</h3>
-                <div className="flex flex-col gap-2 text-sm text-[#f5f0e8]/60">
+              <div key={ch.city} className="bg-white rounded-xl p-6 border border-blue-100">
+                <h3 className="font-bold text-blue-700 text-lg mb-3">בית חב"ד {ch.city}</h3>
+                <div className="flex flex-col gap-2 text-sm text-slate-600">
                   <div>📍 {ch.address}</div>
                   <div>📞 {ch.phone}</div>
                   <div>ℹ️ {ch.notes}</div>

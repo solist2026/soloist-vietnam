@@ -1,12 +1,10 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const regions = [
   {
     id: "north",
     name: "צפון וייטנאם",
     emoji: "🏔️",
-    color: "from-emerald-800 to-teal-600",
-    border: "border-emerald-700",
     description: "הרים מרהיבים, שדות אורז מדורגים, עיר הבירה האנוי והנס הטבעי הלונג ביי",
     highlights: [
       { name: "האנוי",         href: "/destinations/north/hanoi" },
@@ -26,8 +24,6 @@ const regions = [
     id: "center",
     name: "מרכז וייטנאם",
     emoji: "🏯",
-    color: "from-amber-800 to-yellow-600",
-    border: "border-amber-700",
     description: "עיירות עתיקות, ארמונות מלכותיים, חופים עוצרי נשימה ואוכל מהטעים בוייטנאם",
     highlights: [
       { name: "הוי אן",   href: "/destinations/center/hoi-an" },
@@ -44,8 +40,6 @@ const regions = [
     id: "south",
     name: "דרום וייטנאם",
     emoji: "🌴",
-    color: "from-red-800 to-orange-600",
-    border: "border-red-700",
     description: "עיר תוססת ועצומה, דלתת מקונג מופלאה ואיים טרופיים עם חופים בתוליים",
     highlights: [
       { name: "הו צ'י מין",   href: "/destinations/south/hcmc" },
@@ -63,70 +57,77 @@ const regions = [
 
 export default function DestinationsPage() {
   return (
-    <div className="min-h-screen pt-[88px]">
+    <div className="inner-page min-h-screen pt-[88px]">
+
       {/* Header */}
-      <div className="relative py-20 text-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1a2535] to-[#0f1923]" />
-        <div className="relative z-10">
-          <p className="text-[#c9a84c] text-sm font-semibold tracking-widest mb-3 uppercase">חקור את וייטנאם</p>
-          <h1 className="text-5xl font-bold mb-4">יעדים בוייטנאם</h1>
-          <p className="text-[#f5f0e8]/60 text-lg max-w-2xl mx-auto">
-            מצפון לדרום, כל אזור מציע חוויה שונה לחלוטין. בחר את היעד שלך וצלל לפרטים
-          </p>
-        </div>
+      <div className="py-14 md:py-20 text-center px-4">
+        <p className="text-orange-500 text-xs font-bold tracking-widest uppercase mb-3">חקור את וייטנאם</p>
+        <h1 className="text-4xl md:text-5xl font-black text-[#1A2535] mb-4">יעדים בוייטנאם</h1>
+        <p className="text-slate-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          מצפון לדרום, כל אזור מציע חוויה שונה לחלוטין. בחר את היעד שלך וצלל לפרטים
+        </p>
       </div>
 
-      {/* Regions */}
-      <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col gap-12">
-        {regions.map((region) => (
-          <div key={region.id} className={`rounded-3xl overflow-hidden border ${region.border} bg-[#1a2535]`}>
-            <div className="grid grid-cols-1 md:grid-cols-2">
+      {/* Region cards */}
+      <div className="max-w-5xl mx-auto px-4 pb-16 flex flex-col gap-8">
+        {regions.map((region, i) => (
+          <div
+            key={region.id}
+            className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+          >
+            <div className={`flex flex-col ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
+
               {/* Image */}
-              <div className="relative h-64 md:h-auto min-h-64">
+              <div className="md:w-[42%] flex-shrink-0 relative h-60 md:h-auto min-h-[260px]">
                 <img
                   src={region.image}
                   alt={region.name}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-l from-[#1a2535] via-transparent to-transparent" />
               </div>
 
               {/* Content */}
-              <div className="p-8 flex flex-col justify-between">
+              <div className="flex-1 p-7 md:p-9 flex flex-col justify-between gap-6">
                 <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl">{region.emoji}</span>
-                    <h2 className="text-3xl font-bold">{region.name}</h2>
+                  {/* Title */}
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-3xl">{region.emoji}</span>
+                    <h2 className="text-2xl md:text-3xl font-black text-[#1A2535]">{region.name}</h2>
                   </div>
-                  <p className="text-[#f5f0e8]/70 leading-relaxed mb-6">{region.description}</p>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  {/* Description */}
+                  <p className="text-slate-600 leading-relaxed mb-5 text-sm md:text-base">{region.description}</p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {region.highlights.map((place) => (
                       <Link
                         key={place.name}
                         href={place.href}
-                        className="text-sm bg-[#c9a84c]/10 text-[#c9a84c] px-3 py-1 rounded-full hover:bg-[#c9a84c]/25 hover:text-white transition-colors"
+                        className="text-xs bg-emerald-50 text-emerald-700 border border-emerald-100 px-3 py-1 rounded-full hover:bg-emerald-100 transition-colors font-medium"
                       >
                         {place.name}
                       </Link>
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-[#0f1923] rounded-xl p-4">
-                      <div className="text-xs text-[#f5f0e8]/40 mb-1">משך מומלץ</div>
-                      <div className="text-sm font-semibold text-[#c9a84c]">{region.duration}</div>
+                  {/* Stats */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5">
+                      <div className="text-xs text-slate-400 mb-1">משך מומלץ</div>
+                      <div className="text-sm font-bold text-[#1A2535]">{region.duration}</div>
                     </div>
-                    <div className="bg-[#0f1923] rounded-xl p-4">
-                      <div className="text-xs text-[#f5f0e8]/40 mb-1">עונה מומלצת</div>
-                      <div className="text-sm font-semibold text-[#c9a84c]">{region.best_time}</div>
+                    <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5">
+                      <div className="text-xs text-slate-400 mb-1">עונה מומלצת</div>
+                      <div className="text-sm font-bold text-[#1A2535]">{region.best_time}</div>
                     </div>
                   </div>
                 </div>
 
+                {/* CTA */}
                 <Link
                   href={`/destinations/${region.id}`}
-                  className={`inline-block text-center bg-gradient-to-r ${region.color} text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition-opacity`}
+                  className="inline-block text-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold transition-colors text-sm"
                 >
                   לכל היעדים ב{region.name} ←
                 </Link>

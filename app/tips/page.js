@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const tipCategories = [
   {
@@ -49,7 +49,7 @@ const tipCategories = [
     tips: [
       { title: "ביטוח נסיעות", desc: "חובה מוחלטת. ודאו שהביטוח מכסה: רכיבת אופנוע (מוטו), ספורט אתגרי, ופינוי רפואי. ביטוח ללא כיסוי מוטו = לא שווה כלום בוייטנאם." },
       { title: "אוכל רחוב", desc: "תתחילו לאט, תנו לבטן להסתגל. אם המקום עמוס, טוב סימן." },
-      { title: "מים", desc: "אל תשתו מהברז. מים מינרליים בקבוק, $0.3. קרח במסעדות בד\"כ בטוח." },
+      { title: "מים", desc: 'אל תשתו מהברז. מים מינרליים בקבוק, $0.3. קרח במסעדות בד"כ בטוח.' },
       { title: "שמש", desc: "קרם הגנה גבוה, כובע וחולצות שרוול ארוך. השמש כאן חזקה מאוד." },
       { title: "תרופות בסיסיות", desc: "מה לקחת: נגד שלשולים (חיוני), נגד כאבי ראש, אנטיביוטיקה רחבת טווח, תרסיס יתושים, ומשחת קרם לאחר שמש. הכל זמין גם בבתי מרקחת מקומיים בזול." },
       { title: "בתי חולים", desc: "בערים הגדולות יש בתי חולים בינלאומיים מצוינים. FV Hospital בסייגון, מומלץ." },
@@ -87,46 +87,47 @@ const tipCategories = [
 
 export default function TipsPage() {
   return (
-    <div className="min-h-screen pt-[88px]">
+    <div className="inner-page min-h-screen pt-[88px]">
+
       {/* Header */}
-      <div className="relative py-20 bg-gradient-to-b from-[#1a2535] to-[#0f1923] text-center">
-        <p className="text-[#c9a84c] text-sm font-semibold tracking-widest mb-3 uppercase">מדריך למטייל</p>
-        <h1 className="text-5xl font-bold mb-4">טיפים פרקטיים</h1>
-        <p className="text-[#f5f0e8]/60 text-lg max-w-2xl mx-auto">
+      <div className="py-14 md:py-20 text-center px-4">
+        <p className="text-orange-500 text-xs font-bold tracking-widest mb-3 uppercase">מדריך למטייל</p>
+        <h1 className="text-4xl md:text-5xl font-black text-[#1A2535] mb-4">טיפים פרקטיים</h1>
+        <p className="text-slate-500 text-base md:text-lg max-w-2xl mx-auto">
           כל מה שצריך לדעת לפני שעולים למטוס, וגם בזמן הטיול
         </p>
       </div>
 
       {/* Quick Stats */}
-      <div className="bg-[#1a2535] py-10">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="bg-white border-y border-slate-100 py-8">
+        <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: "עלות ממוצעת יומית", value: "$30-50" },
             { label: "שקל לדונג", value: "≈ 7,500" },
             { label: "E-Visa (כניסה אחת)", value: "$25" },
             { label: "עלות SIM לחודש", value: "$7" },
           ].map((stat) => (
-            <div key={stat.label} className="bg-[#0f1923] rounded-xl p-5 text-center border border-[#c9a84c]/10">
-              <div className="text-3xl font-bold text-[#c9a84c]">{stat.value}</div>
-              <div className="text-xs text-[#f5f0e8]/50 mt-1">{stat.label}</div>
+            <div key={stat.label} className="bg-slate-50 rounded-xl p-5 text-center border border-slate-100">
+              <div className="text-2xl font-black text-orange-500">{stat.value}</div>
+              <div className="text-xs text-slate-500 mt-1">{stat.label}</div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Tips Categories */}
-      <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col gap-12">
+      <div className="max-w-7xl mx-auto px-4 py-12 flex flex-col gap-8">
         {tipCategories.map((cat) => (
-          <div key={cat.id} id={cat.id} className="bg-[#1a2535] rounded-3xl p-8 border border-[#c9a84c]/10">
-            <div className="flex items-center gap-3 mb-8">
+          <div key={cat.id} id={cat.id} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm">
+            <div className="flex items-center gap-3 mb-7">
               <span className="text-4xl">{cat.emoji}</span>
-              <h2 className="text-3xl font-bold">{cat.title}</h2>
+              <h2 className="text-2xl font-bold text-[#1A2535]">{cat.title}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {cat.tips.map((tip) => (
-                <div key={tip.title} className="bg-[#0f1923] rounded-xl p-5 border border-[#c9a84c]/5">
-                  <div className="font-bold text-[#c9a84c] mb-2">{tip.title}</div>
-                  <div className="text-sm text-[#f5f0e8]/70 leading-relaxed">{tip.desc}</div>
+                <div key={tip.title} className="bg-slate-50 rounded-xl p-5 border border-slate-100">
+                  <div className="font-bold text-[#1A2535] mb-2">{tip.title}</div>
+                  <div className="text-sm text-slate-600 leading-relaxed">{tip.desc}</div>
                 </div>
               ))}
             </div>
@@ -136,21 +137,21 @@ export default function TipsPage() {
 
       {/* Emergency Numbers */}
       <div className="max-w-7xl mx-auto px-4 pb-16">
-        <div className="bg-red-900/20 border border-red-700/40 rounded-3xl p-8">
-          <h2 className="text-2xl font-bold mb-6 text-red-400">🆘 מספרי חירום בוייטנאם</h2>
+        <div className="bg-red-50 border border-red-200 rounded-3xl p-8">
+          <h2 className="text-2xl font-bold mb-6 text-red-700">🆘 מספרי חירום בוייטנאם</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               { label: "משטרה", number: "113" },
               { label: "אמבולנס", number: "115" },
               { label: "כיבוי אש", number: "114" },
             ].map((item) => (
-              <div key={item.label} className="bg-[#0f1923] rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-red-400">{item.number}</div>
-                <div className="text-sm text-[#f5f0e8]/60 mt-1">{item.label}</div>
+              <div key={item.label} className="bg-white rounded-xl p-4 text-center border border-red-100">
+                <div className="text-3xl font-bold text-red-500">{item.number}</div>
+                <div className="text-sm text-slate-500 mt-1">{item.label}</div>
               </div>
             ))}
           </div>
-          <p className="text-sm text-[#f5f0e8]/50 mt-4">
+          <p className="text-sm text-slate-500 mt-4">
             שגרירות ישראל בהאנוי: +84-24-3843-3140 | קונסוליה בהו צ'י מין: +84-28-3911-3090
           </p>
         </div>

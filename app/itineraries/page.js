@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 const predefinedItineraries = [
@@ -29,7 +29,7 @@ const predefinedItineraries = [
     type: "popular",
     route: ["האנוי", "סאפה", "הלונג ביי", "ניין בינה", "הואה", "הוי אן", "דה נאנג", "הו צ'י מין", "מקונג", "פו קווק"],
     days: [
-      { day: "1-3", location: "האנוי", activities: ["Old Quarter", "אגם חרב", "מקדשים", "אוכל מקומי", "בית חב\"ד"] },
+      { day: "1-3", location: "האנוי", activities: ["Old Quarter", "אגם חרב", "מקדשים", "אוכל מקומי", 'בית חב"ד'] },
       { day: "4-6", location: "סאפה", activities: ["שדות אורז", "טיול כפרים", "Fansipan", "שבטים מקומיים"] },
       { day: "7-8", location: "הלונג ביי", activities: ["שייט 2 לילות", "מערות", "קאיאקינג"] },
       { day: "9-10", location: "ניין בינה", activities: ["Tam Coc", "Trang An", "Mua Cave"] },
@@ -144,21 +144,22 @@ export default function ItinerariesPage() {
   const result = recommendations[answers.duration];
 
   return (
-    <div className="min-h-screen pt-[88px]">
+    <div className="inner-page min-h-screen pt-[88px]">
+
       {/* Header */}
-      <div className="relative py-20 bg-gradient-to-b from-[#1a2535] to-[#0f1923] text-center">
-        <p className="text-[#c9a84c] text-sm font-semibold tracking-widest mb-3 uppercase">תכנון טיול</p>
-        <h1 className="text-5xl font-bold mb-4">מסלולים לוייטנאם</h1>
-        <p className="text-[#f5f0e8]/60 text-lg max-w-2xl mx-auto">
+      <div className="py-14 md:py-20 text-center px-4">
+        <p className="text-orange-500 text-xs font-bold tracking-widest mb-3 uppercase">תכנון טיול</p>
+        <h1 className="text-4xl md:text-5xl font-black text-[#1A2535] mb-4">מסלולים לוייטנאם</h1>
+        <p className="text-slate-500 text-base md:text-lg max-w-2xl mx-auto">
           מסלולים מוכנים לכל משך זמן, ובונה מסלול חכם שיתאים אותו בדיוק בשבילך
         </p>
       </div>
 
       {/* Smart Builder */}
-      <div className="max-w-3xl mx-auto px-4 py-16">
-        <div className="bg-[#1a2535] rounded-3xl p-8 border border-[#c9a84c]/20 mb-16">
-          <h2 className="text-3xl font-bold mb-2 text-center">🧭 בונה המסלול החכם</h2>
-          <p className="text-[#f5f0e8]/60 text-center mb-8">ענה על כמה שאלות ונבנה לך מסלול מותאם אישית</p>
+      <div className="max-w-3xl mx-auto px-4 pb-8">
+        <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm mb-10">
+          <h2 className="text-2xl font-bold text-[#1A2535] mb-2 text-center">🧭 בונה המסלול החכם</h2>
+          <p className="text-slate-500 text-sm text-center mb-8">ענה על כמה שאלות ונבנה לך מסלול מותאם אישית</p>
 
           {!showResult ? (
             <div>
@@ -167,20 +168,20 @@ export default function ItinerariesPage() {
                 {questions.map((_, i) => (
                   <div
                     key={i}
-                    className={`flex-1 h-1.5 rounded-full transition-colors ${i <= currentQ ? "bg-[#c9a84c]" : "bg-[#0f1923]"}`}
+                    className={`flex-1 h-1.5 rounded-full transition-colors ${i <= currentQ ? "bg-orange-500" : "bg-slate-100"}`}
                   />
                 ))}
               </div>
 
-              <p className="text-sm text-[#f5f0e8]/40 mb-2">שאלה {currentQ + 1} מתוך {questions.length}</p>
-              <h3 className="text-2xl font-bold mb-6">{questions[currentQ].question}</h3>
+              <p className="text-xs text-slate-400 mb-2">שאלה {currentQ + 1} מתוך {questions.length}</p>
+              <h3 className="text-xl font-bold text-[#1A2535] mb-6">{questions[currentQ].question}</h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {questions[currentQ].options.map((option) => (
                   <button
                     key={option}
                     onClick={() => handleAnswer(option)}
-                    className="bg-[#0f1923] border border-[#c9a84c]/20 rounded-xl p-4 text-right hover:border-[#c9a84c] hover:bg-[#c9a84c]/5 transition-all font-medium"
+                    className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-right hover:border-orange-400 hover:bg-orange-50 transition-all font-medium text-[#1A2535] text-sm"
                   >
                     {option}
                   </button>
@@ -191,28 +192,28 @@ export default function ItinerariesPage() {
             <div>
               <div className="text-center mb-8">
                 <div className="text-5xl mb-4">✈️</div>
-                <h3 className="text-3xl font-bold text-[#c9a84c] mb-2">{result.title}</h3>
-                <p className="text-[#f5f0e8]/70">{result.desc}</p>
+                <h3 className="text-2xl font-bold text-orange-500 mb-2">{result.title}</h3>
+                <p className="text-slate-600 text-sm">{result.desc}</p>
               </div>
 
-              <div className="bg-[#0f1923] rounded-xl p-6 mb-6">
-                <h4 className="font-bold mb-4 text-[#c9a84c]">📍 יעדים מומלצים:</h4>
+              <div className="bg-slate-50 rounded-xl p-6 mb-4 border border-slate-100">
+                <h4 className="font-bold text-[#1A2535] mb-4">📍 יעדים מומלצים:</h4>
                 <div className="flex flex-wrap gap-2">
                   {result.destinations.map((dest) => (
-                    <span key={dest} className="bg-[#c9a84c]/10 text-[#c9a84c] px-3 py-1 rounded-full text-sm">
+                    <span key={dest} className="bg-emerald-50 text-emerald-700 border border-emerald-100 px-3 py-1 rounded-full text-sm">
                       {dest}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-amber-900/20 border border-amber-600/30 rounded-xl p-5 mb-6">
-                <p className="text-amber-300 text-sm">💡 <strong>טיפ:</strong> {result.tip}</p>
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-6">
+                <p className="text-amber-800 text-sm">💡 <strong>טיפ:</strong> {result.tip}</p>
               </div>
 
               <button
                 onClick={reset}
-                className="w-full border border-[#c9a84c] text-[#c9a84c] py-3 rounded-full font-bold hover:bg-[#c9a84c]/10 transition-colors"
+                className="w-full border border-slate-200 text-slate-600 py-3 rounded-full font-bold hover:bg-slate-50 transition-colors text-sm"
               >
                 התחל מחדש
               </button>
@@ -221,45 +222,45 @@ export default function ItinerariesPage() {
         </div>
 
         {/* Predefined Itineraries */}
-        <h2 className="text-3xl font-bold mb-8 text-center">מסלולים מוכנים</h2>
-        <div className="flex flex-col gap-8">
+        <h2 className="text-2xl font-bold text-[#1A2535] mb-7 text-center">מסלולים מוכנים</h2>
+        <div className="flex flex-col gap-6">
           {predefinedItineraries.map((itin) => (
-            <div key={itin.id} className="bg-[#1a2535] rounded-3xl overflow-hidden border border-[#c9a84c]/10">
+            <div key={itin.id} className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm">
               <div className="p-8">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-3xl">{itin.emoji}</span>
-                      <h3 className="text-2xl font-bold">{itin.title}</h3>
+                      <h3 className="text-xl font-bold text-[#1A2535]">{itin.title}</h3>
                     </div>
-                    <p className="text-[#f5f0e8]/60">{itin.subtitle}</p>
+                    <p className="text-slate-500 text-sm">{itin.subtitle}</p>
                   </div>
                   <div className="text-left">
-                    <div className="text-[#c9a84c] font-bold">{itin.budget}</div>
-                    <div className="text-xs text-[#f5f0e8]/40">{itin.difficulty}</div>
+                    <div className="text-orange-500 font-bold text-sm">{itin.budget}</div>
+                    <div className="text-xs text-slate-400 mt-0.5">{itin.difficulty}</div>
                   </div>
                 </div>
 
                 {/* Route */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-1.5 mb-6">
                   {itin.route.map((place, i) => (
                     <div key={place} className="flex items-center gap-1">
-                      <span className="text-xs bg-[#c9a84c]/10 text-[#c9a84c] px-2 py-1 rounded-full">{place}</span>
-                      {i < itin.route.length - 1 && <span className="text-[#c9a84c]/40 text-xs">→</span>}
+                      <span className="text-xs bg-emerald-50 text-emerald-700 border border-emerald-100 px-2.5 py-1 rounded-full">{place}</span>
+                      {i < itin.route.length - 1 && <span className="text-slate-300 text-xs">→</span>}
                     </div>
                   ))}
                 </div>
 
                 {/* Days */}
-                <div className="flex flex-col gap-2 mb-6">
+                <div className="flex flex-col gap-2 mb-5">
                   {itin.days.map((day) => (
-                    <div key={day.day} className="bg-[#0f1923] rounded-xl p-4 flex gap-4">
-                      <div className="text-[#c9a84c] font-bold text-sm whitespace-nowrap min-w-16">יום {day.day}</div>
+                    <div key={day.day} className="bg-slate-50 rounded-xl p-4 flex gap-4 border border-slate-100">
+                      <div className="text-orange-500 font-bold text-sm whitespace-nowrap min-w-16">יום {day.day}</div>
                       <div>
-                        <div className="font-semibold mb-1">{day.location}</div>
+                        <div className="font-semibold text-[#1A2535] text-sm mb-1">{day.location}</div>
                         <div className="flex flex-wrap gap-1">
                           {day.activities.map((act) => (
-                            <span key={act} className="text-xs text-[#f5f0e8]/50 bg-[#1a2535] px-2 py-0.5 rounded-full">{act}</span>
+                            <span key={act} className="text-xs text-slate-500 bg-white border border-slate-100 px-2 py-0.5 rounded-full">{act}</span>
                           ))}
                         </div>
                       </div>
@@ -267,8 +268,8 @@ export default function ItinerariesPage() {
                   ))}
                 </div>
 
-                <div className="bg-[#0f1923] rounded-xl p-4">
-                  <p className="text-sm text-[#f5f0e8]/60">💡 {itin.tips}</p>
+                <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                  <p className="text-sm text-amber-800">💡 {itin.tips}</p>
                 </div>
               </div>
             </div>
