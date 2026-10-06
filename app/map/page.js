@@ -127,7 +127,7 @@ export default function MapPage() {
         </div>
 
         {/* Quick facts */}
-        <div className="mt-12 bg-slate-50 rounded-2xl p-8">
+        <div className="mt-12 bg-[#F2F1EB] border border-[#E5E4DC] rounded-2xl p-8">
           <h3 className="font-black text-xl text-slate-900 mb-5 text-center">עובדות על וייטנאם</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[

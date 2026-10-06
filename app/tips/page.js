@@ -122,7 +122,7 @@ export default function TipsPage() {
             { label: "E-Visa (כניסה אחת)", value: "$25", icon: "🛂" },
             { label: "עלות SIM לחודש", value: "$7", icon: "📱" },
           ].map((stat) => (
-            <div key={stat.label} className="bg-slate-50 rounded-xl p-5 text-center border border-slate-100 hover:border-orange-200 hover:shadow-sm transition-all">
+            <div key={stat.label} className="bg-[#F2F1EB] rounded-xl p-5 text-center border border-[#E5E4DC] hover:border-orange-200 hover:shadow-sm transition-all">
               <div className="text-2xl mb-2">{stat.icon}</div>
               <div className="text-xl font-black text-orange-500">{stat.value}</div>
               <div className="text-xs text-slate-500 mt-1">{stat.label}</div>
@@ -172,7 +172,7 @@ export default function TipsPage() {
               {/* Tip cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {cat.tips.map((tip) => (
-                  <div key={tip.title} className={`bg-white rounded-2xl p-5 border ${c.border} hover:shadow-md transition-all group`}>
+                  <div key={tip.title} className={`bg-[#F2F1EB] rounded-2xl p-5 border ${c.border} hover:shadow-md transition-all group`}>
                     <div className="flex items-start gap-3">
                       <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${c.dot}`} />
                       <div>

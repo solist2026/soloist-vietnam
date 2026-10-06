@@ -104,7 +104,7 @@ export default function BlogPage() {
           {posts.map((post, i) => (
             <div
               key={i}
-              className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all card-lift"
+              className="group bg-[#F2F1EB] border border-[#E5E4DC] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all card-lift"
             >
               <div className="relative h-44 overflow-hidden">
                 <img
@@ -132,7 +132,7 @@ export default function BlogPage() {
         </div>
 
         {/* Newsletter CTA */}
-        <div className="mt-14 bg-slate-50 rounded-2xl p-8 text-center">
+        <div className="mt-14 bg-[#F2F1EB] border border-[#E5E4DC] rounded-2xl p-8 text-center">
           <div className="text-4xl mb-4">📬</div>
           <h3 className="font-black text-2xl text-slate-900 mb-3">קבלו כתבות חדשות ישירות למייל</h3>
           <p className="text-slate-500 mb-6 text-sm max-w-md mx-auto">

@@ -95,7 +95,7 @@ export default function DestinationsPage() {
         {regions.map((region, i) => (
           <div
             key={region.id}
-            className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-lg transition-all duration-300 group"
+            className="bg-[#F2F1EB] rounded-3xl overflow-hidden shadow-sm border border-[#E5E4DC] hover:shadow-lg transition-all duration-300 group"
           >
             <div className={`flex flex-col ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
 
@@ -145,14 +145,14 @@ export default function DestinationsPage() {
 
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="flex items-center gap-2.5 bg-slate-50 border border-slate-100 rounded-xl p-3.5">
+                    <div className="flex items-center gap-2.5 bg-white border border-[#E5E4DC] rounded-xl p-3.5">
                       <span className="text-xl">⏱️</span>
                       <div>
                         <div className="text-xs text-slate-400">משך מומלץ</div>
                         <div className="text-sm font-bold text-[#1A2535]">{region.duration}</div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2.5 bg-slate-50 border border-slate-100 rounded-xl p-3.5">
+                    <div className="flex items-center gap-2.5 bg-white border border-[#E5E4DC] rounded-xl p-3.5">
                       <span className="text-xl">🌤️</span>
                       <div>
                         <div className="text-xs text-slate-400">עונה מומלצת</div>

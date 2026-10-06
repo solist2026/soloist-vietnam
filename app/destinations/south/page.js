@@ -87,7 +87,7 @@ export default function SouthVietnamPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
 
           {/* Map */}
-          <div className="lg:col-span-1 bg-white rounded-3xl p-6 border border-slate-100 shadow-sm">
+          <div className="lg:col-span-1 bg-[#F2F1EB] rounded-3xl p-6 border border-[#E5E4DC] shadow-sm">
             <h2 className="text-base font-bold text-[#1A2535] mb-4 text-center">מפת היעדים</h2>
             <VietnamMap activeRegion="south" baseHref="/destinations/south" />
             <p className="text-xs text-slate-400 text-center mt-4">לחצו על שם יעד לעמוד המלא</p>
@@ -99,7 +99,7 @@ export default function SouthVietnamPage() {
               <Link
                 key={dest.id}
                 href={`/destinations/south/${dest.id}`}
-                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md hover:border-orange-200 transition-all"
+                className="group bg-[#F2F1EB] rounded-2xl overflow-hidden border border-[#E5E4DC] shadow-sm hover:shadow-md hover:border-orange-200 transition-all"
               >
                 <div className="relative h-44 overflow-hidden">
                   <img

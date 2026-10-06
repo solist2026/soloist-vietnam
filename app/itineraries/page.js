@@ -157,7 +157,7 @@ export default function ItinerariesPage() {
 
       {/* Smart Builder */}
       <div className="max-w-3xl mx-auto px-4 pb-8">
-        <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm mb-10">
+        <div className="bg-[#F2F1EB] rounded-3xl p-8 border border-[#E5E4DC] shadow-sm mb-10">
           <h2 className="text-2xl font-bold text-[#1A2535] mb-2 text-center">🧭 בונה המסלול החכם</h2>
           <p className="text-slate-500 text-sm text-center mb-8">ענה על כמה שאלות ונבנה לך מסלול מותאם אישית</p>
 
@@ -181,7 +181,7 @@ export default function ItinerariesPage() {
                   <button
                     key={option}
                     onClick={() => handleAnswer(option)}
-                    className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-right hover:border-orange-400 hover:bg-orange-50 transition-all font-medium text-[#1A2535] text-sm"
+                    className="bg-white border border-[#E5E4DC] rounded-xl p-4 text-right hover:border-orange-400 hover:bg-orange-50 transition-all font-medium text-[#1A2535] text-sm"
                   >
                     {option}
                   </button>
@@ -196,7 +196,7 @@ export default function ItinerariesPage() {
                 <p className="text-slate-600 text-sm">{result.desc}</p>
               </div>
 
-              <div className="bg-slate-50 rounded-xl p-6 mb-4 border border-slate-100">
+              <div className="bg-white rounded-xl p-6 mb-4 border border-[#E5E4DC]">
                 <h4 className="font-bold text-[#1A2535] mb-4">📍 יעדים מומלצים:</h4>
                 <div className="flex flex-wrap gap-2">
                   {result.destinations.map((dest) => (
@@ -225,7 +225,7 @@ export default function ItinerariesPage() {
         <h2 className="text-2xl font-bold text-[#1A2535] mb-7 text-center">מסלולים מוכנים</h2>
         <div className="flex flex-col gap-6">
           {predefinedItineraries.map((itin) => (
-            <div key={itin.id} className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm">
+            <div key={itin.id} className="bg-[#F2F1EB] rounded-3xl overflow-hidden border border-[#E5E4DC] shadow-sm">
               <div className="p-8">
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -254,13 +254,13 @@ export default function ItinerariesPage() {
                 {/* Days */}
                 <div className="flex flex-col gap-2 mb-5">
                   {itin.days.map((day) => (
-                    <div key={day.day} className="bg-slate-50 rounded-xl p-4 flex gap-4 border border-slate-100">
+                    <div key={day.day} className="bg-white rounded-xl p-4 flex gap-4 border border-[#E5E4DC]">
                       <div className="text-orange-500 font-bold text-sm whitespace-nowrap min-w-16">יום {day.day}</div>
                       <div>
                         <div className="font-semibold text-[#1A2535] text-sm mb-1">{day.location}</div>
                         <div className="flex flex-wrap gap-1">
                           {day.activities.map((act) => (
-                            <span key={act} className="text-xs text-slate-500 bg-white border border-slate-100 px-2 py-0.5 rounded-full">{act}</span>
+                            <span key={act} className="text-xs text-slate-500 bg-[#F2F1EB] border border-[#E5E4DC] px-2 py-0.5 rounded-full">{act}</span>
                           ))}
                         </div>
                       </div>

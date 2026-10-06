@@ -66,7 +66,7 @@ export default function CommunityPage() {
             { label: "חברי קהילה", value: "2,000+" },
             { label: 'בתי חב"ד', value: "4+" },
           ].map((stat) => (
-            <div key={stat.label} className="bg-slate-50 rounded-xl p-5 text-center border border-slate-100">
+            <div key={stat.label} className="bg-[#F2F1EB] rounded-xl p-5 text-center border border-[#E5E4DC]">
               <div className="text-2xl font-black text-orange-500">{stat.value}</div>
               <div className="text-xs text-slate-500 mt-1">{stat.label}</div>
             </div>
@@ -77,14 +77,14 @@ export default function CommunityPage() {
       {/* FAQ */}
       <div className="max-w-5xl mx-auto px-4 py-12 flex flex-col gap-8">
         {faqs.map((cat) => (
-          <div key={cat.category} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm">
+          <div key={cat.category} className="bg-[#F2F1EB] rounded-3xl p-8 border border-[#E5E4DC] shadow-sm">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-3xl">{cat.emoji}</span>
               <h2 className="text-2xl font-bold text-[#1A2535]">{cat.category}</h2>
             </div>
             <div className="flex flex-col gap-4">
               {cat.questions.map((item) => (
-                <div key={item.q} className="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                <div key={item.q} className="bg-white rounded-xl p-6 border border-[#E5E4DC]">
                   <h3 className="font-bold text-[#1A2535] mb-3">❓ {item.q}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{item.a}</p>
                 </div>

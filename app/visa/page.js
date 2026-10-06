@@ -34,7 +34,7 @@ export default function VisaPage() {
             { label: "זמן עיבוד", value: "3-5 ימים" },
             { label: "תוקף הויזה", value: "90 יום" },
           ].map((item) => (
-            <div key={item.label} className="bg-slate-50 rounded-xl p-5 text-center border border-slate-100">
+            <div key={item.label} className="bg-[#F2F1EB] rounded-xl p-5 text-center border border-[#E5E4DC]">
               <div className="text-2xl font-black text-orange-500">{item.value}</div>
               <div className="text-xs text-slate-500 mt-1">{item.label}</div>
             </div>
@@ -70,7 +70,7 @@ export default function VisaPage() {
         </div>
 
         {/* What you need */}
-        <div className="bg-white border border-slate-100 shadow-sm rounded-3xl p-8">
+        <div className="bg-[#F2F1EB] border border-[#E5E4DC] shadow-sm rounded-3xl p-8">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-3xl">📋</span>
             <h2 className="text-2xl font-bold text-[#1A2535]">מה צריך להכין לפני הגשה</h2>
@@ -85,7 +85,7 @@ export default function VisaPage() {
               { icon: "🚪", text: "נמל כניסה, בחרו מתוך 83 אפשרויות (שדה תעופה / יבשה / ים)" },
               { icon: "💳", text: "כרטיס אשראי לתשלום ($25 או $50)" },
             ].map((item) => (
-              <div key={item.text} className="bg-slate-50 rounded-xl px-4 py-3 flex items-start gap-3 text-sm border border-slate-100">
+              <div key={item.text} className="bg-white rounded-xl px-4 py-3 flex items-start gap-3 text-sm border border-[#E5E4DC]">
                 <span className="text-lg flex-shrink-0 mt-0.5">{item.icon}</span>
                 <span className="text-slate-700">{item.text}</span>
               </div>
@@ -94,14 +94,14 @@ export default function VisaPage() {
         </div>
 
         {/* Step by step */}
-        <div className="bg-white border border-slate-100 shadow-sm rounded-3xl p-8">
+        <div className="bg-[#F2F1EB] border border-[#E5E4DC] shadow-sm rounded-3xl p-8">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-3xl">🌐</span>
             <h2 className="text-2xl font-bold text-[#1A2535]">איך מגישים E-Visa, שלב אחרי שלב</h2>
           </div>
           <div className="flex flex-col gap-3">
             {steps.map((item) => (
-              <div key={item.step} className="bg-slate-50 rounded-xl p-5 flex gap-4 border border-slate-100">
+              <div key={item.step} className="bg-white rounded-xl p-5 flex gap-4 border border-[#E5E4DC]">
                 <div className="w-9 h-9 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
                   {item.step}
                 </div>
@@ -112,7 +112,7 @@ export default function VisaPage() {
               </div>
             ))}
           </div>
-          <div className="mt-5 bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
+          <div className="mt-5 bg-white border border-[#E5E4DC] rounded-xl p-4 text-center">
             <p className="text-sm text-slate-500 mb-1">האתר הרשמי להגשה עצמאית</p>
             <p className="font-bold text-[#1A2535] text-sm">evisa.xuatnhapcanh.gov.vn</p>
           </div>
@@ -143,7 +143,7 @@ export default function VisaPage() {
         </div>
 
         {/* Visa on Arrival */}
-        <div className="bg-white border border-slate-100 shadow-sm rounded-3xl p-8">
+        <div className="bg-[#F2F1EB] border border-[#E5E4DC] shadow-sm rounded-3xl p-8">
           <div className="flex items-center gap-3 mb-5">
             <span className="text-3xl">✈️</span>
             <h2 className="text-2xl font-bold text-[#1A2535]">Visa on Arrival</h2>
@@ -174,7 +174,7 @@ export default function VisaPage() {
         </div>
 
         {/* Visa run */}
-        <div className="bg-white border border-slate-100 shadow-sm rounded-3xl p-8">
+        <div className="bg-[#F2F1EB] border border-[#E5E4DC] shadow-sm rounded-3xl p-8">
           <div className="flex items-center gap-3 mb-5">
             <span className="text-3xl">📅</span>
             <h2 className="text-2xl font-bold text-[#1A2535]">הארכת שהייה ו-Visa Run</h2>
