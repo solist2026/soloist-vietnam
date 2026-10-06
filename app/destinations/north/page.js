@@ -14,7 +14,7 @@ const destinations = [
   },
   {
     id: 'ha-giang',
-    name: "לופ הא ג'יאנג",
+    name: "הא ג'יאנג",
     subtitle: 'החוויה האולטימטיבית בצפון',
     emoji: '🏍️',
     image: '/images/ha-giang.jpg',

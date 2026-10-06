@@ -1,7 +1,7 @@
 ﻿import DestinationPage from '../../../components/DestinationPage';
 
 const data = {
-  name: "לופ הא ג'יאנג",
+  name: "הא ג'יאנג",
   subtitle: 'החוויה האולטימטיבית של הצפון',
   emoji: '🏍️',
   heroImage: '/images/ha-giang.jpg',

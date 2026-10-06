@@ -274,7 +274,7 @@ const data = {
     'WhatsApp: +84-83-872-8225 | אתר: jewishhanoi.com',
     'ארוחות שישי ושבת, חגים, מידע לתיירים',
   ],
-  nextDest: { name: "לופ הא ג'יאנג", href: '/destinations/north/ha-giang' },
+  nextDest: { name: "הא ג'יאנג", href: '/destinations/north/ha-giang' },
 };
 
 export default function HanoiPage() {
