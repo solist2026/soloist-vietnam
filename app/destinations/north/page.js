@@ -47,7 +47,7 @@ const destinations = [
     name: 'סאפה',
     subtitle: 'הרים, ערפל ושדות אורז',
     emoji: '🌾',
-    image: '/sapa-hero.jpg',
+    image: '/images/north-vietnam.jpg',
     tags: ['הרים', 'שבטים', 'טרקים'],
     days: '2-3 ימים',
     chabad: true,

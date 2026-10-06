@@ -4,7 +4,7 @@ const data = {
   name: 'סאפה',
   subtitle: 'הרים, ערפל ושדות אורז',
   emoji: '🌾',
-  heroImage: '/sapa-hero.jpg',
+  heroImage: '/images/north-vietnam.jpg',
   regionName: 'צפון וייטנאם',
   regionHref: '/destinations/north',
   tags: ['הרים', 'שבטים', 'טרקים', 'שדות אורז'],
