@@ -119,11 +119,15 @@ const services = [
 ];
 
 const gallery = [
-  { src: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&q=80", alt: "הלונג ביי, וייטנאם" },
-  { src: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=80", alt: "פו וייטנאמי" },
-  { src: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&q=80", alt: "פנסי הוי אן" },
-  { src: "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=600&q=80", alt: "שדות אורז בסאפה" },
-  { src: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=600&q=80", alt: "רחוב בוייטנאם" },
+  { src: "/images/gallery-1.jpg", alt: "סדנת קליעה מסורתית, וייטנאם" },
+  { src: "/images/gallery-2.jpg", alt: "הוי אן עם שקיעה" },
+  { src: "/images/gallery-3.jpg", alt: "רחוב הרכבת, האנוי" },
+  { src: "/images/gallery-4.jpg", alt: "קפה וייטנאמי" },
+  { src: "/images/gallery-5.jpg", alt: "קוצרי מלח בשקיעה" },
+  { src: "/images/gallery-6.jpg", alt: "שוק מקומי, וייטנאם" },
+  { src: "/images/gallery-7.jpg", alt: "אוכל רחוב, וייטנאם" },
+  { src: "/images/gallery-8.jpg", alt: "קוטפות תה, שדות תה" },
+  { src: "/images/gallery-9.jpg", alt: "אוכל רחוב הוי אן" },
 ];
 
 const blogPosts = [
@@ -682,30 +686,20 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Gallery — LEFT (second in RTL DOM) — Social Travel Gallery layout */}
-            <div className="flex-1 min-w-0">
-              <div className="flex gap-2.5 items-start">
-
-                {/* Col 1: tall portrait hero image */}
-                <div className="flex-1 group bg-white p-1.5 rounded-2xl shadow-md overflow-hidden">
-                  <img
-                    src={gallery[0].src}
-                    alt={gallery[0].alt}
-                    className="w-full object-cover rounded-xl img-zoom"
-                    style={{ aspectRatio: "3/4" }}
-                    loading="lazy"
-                  />
-                </div>
-
-                {/* Col 2: two images stacked */}
-                <div className="flex-1 flex flex-col gap-2.5">
-                  <div className="group bg-white p-1.5 rounded-2xl shadow-md overflow-hidden">
+            {/* Gallery — LEFT (second in RTL DOM) — Horizontal Scroll Carousel */}
+            <div className="flex-1 min-w-0 overflow-hidden">
+              <div
+                className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-3"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {gallery.map((img, i) => (
+                  <div key={i} className="snap-start flex-shrink-0 w-52 bg-white p-1.5 rounded-2xl shadow-md overflow-hidden">
                     <div className="overflow-hidden rounded-xl">
                       <img
-                        src={gallery[1].src}
-                        alt={gallery[1].alt}
+                        src={img.src}
+                        alt={img.alt}
                         className="w-full object-cover img-zoom"
-                        style={{ aspectRatio: "4/3" }}
+                        style={{ height: '220px' }}
                         loading="lazy"
                       />
                     </div>
@@ -715,61 +709,9 @@ export default function HomePage() {
                       </svg>
                     </div>
                   </div>
-                  <div className="group bg-white p-1.5 rounded-2xl shadow-md overflow-hidden">
-                    <div className="overflow-hidden rounded-xl">
-                      <img
-                        src={gallery[2].src}
-                        alt={gallery[2].alt}
-                        className="w-full object-cover img-zoom"
-                        style={{ aspectRatio: "4/3" }}
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="flex justify-end px-0.5 pt-1.5 pb-0.5">
-                      <svg className="w-3 h-3 text-rose-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Col 3: two images stacked, staggered down for Social Travel feel */}
-                <div className="flex-1 flex flex-col gap-2.5 mt-6">
-                  <div className="group bg-white p-1.5 rounded-2xl shadow-md overflow-hidden">
-                    <div className="overflow-hidden rounded-xl">
-                      <img
-                        src={gallery[3].src}
-                        alt={gallery[3].alt}
-                        className="w-full object-cover img-zoom"
-                        style={{ aspectRatio: "4/3" }}
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="flex justify-end px-0.5 pt-1.5 pb-0.5">
-                      <svg className="w-3 h-3 text-rose-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="group bg-white p-1.5 rounded-2xl shadow-md overflow-hidden">
-                    <div className="overflow-hidden rounded-xl">
-                      <img
-                        src={gallery[4].src}
-                        alt={gallery[4].alt}
-                        className="w-full object-cover img-zoom"
-                        style={{ aspectRatio: "4/3" }}
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="flex justify-end px-0.5 pt-1.5 pb-0.5">
-                      <svg className="w-3 h-3 text-rose-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
+                ))}
               </div>
+              <p className="text-xs text-slate-400 mt-2 text-left">← גלגלו לתמונות נוספות</p>
             </div>
 
           </div>
@@ -790,24 +732,24 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* 2-column photo grid — Social Feed style */}
-            <div className="grid grid-cols-2 gap-2">
-              <div className="col-span-2 bg-white p-1 rounded-xl shadow-sm overflow-hidden">
-                <img src={gallery[0].src} alt={gallery[0].alt} className="w-full h-44 object-cover rounded-lg" loading="lazy" />
-              </div>
-              <div className="bg-white p-1 rounded-xl shadow-sm overflow-hidden">
-                <img src={gallery[1].src} alt={gallery[1].alt} className="w-full h-32 object-cover rounded-lg" loading="lazy" />
-              </div>
-              <div className="bg-white p-1 rounded-xl shadow-sm overflow-hidden">
-                <img src={gallery[2].src} alt={gallery[2].alt} className="w-full h-36 object-cover rounded-lg" loading="lazy" />
-              </div>
-              <div className="bg-white p-1 rounded-xl shadow-sm overflow-hidden">
-                <img src={gallery[3].src} alt={gallery[3].alt} className="w-full h-36 object-cover rounded-lg" loading="lazy" />
-              </div>
-              <div className="bg-white p-1 rounded-xl shadow-sm overflow-hidden">
-                <img src={gallery[4].src} alt={gallery[4].alt} className="w-full h-32 object-cover rounded-lg" loading="lazy" />
-              </div>
+            {/* Horizontal scroll carousel */}
+            <div
+              className="flex gap-2.5 overflow-x-auto snap-x snap-mandatory pb-2 -mx-4 px-4"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {gallery.map((img, i) => (
+                <div key={i} className="snap-start flex-shrink-0 w-[72vw] bg-white p-1 rounded-xl shadow-sm overflow-hidden">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full object-cover rounded-lg"
+                    style={{ height: '200px' }}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
             </div>
+            <p className="text-xs text-slate-400 text-center mt-2">← החליקו לתמונות נוספות</p>
 
             {/* CTA block */}
             <div className="mt-8 text-center px-2">
