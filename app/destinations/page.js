@@ -63,13 +63,13 @@ const regions = [
 
 export default function DestinationsPage() {
   return (
-    <div className="inner-page min-h-screen pt-[88px]">
+    <div className="inner-page min-h-screen pt-[88px] !bg-orange-500">
 
       {/* Header */}
       <div className="py-14 md:py-20 text-center px-4">
-        <p className="text-orange-500 text-xs font-bold tracking-widest uppercase mb-3">חקור את וייטנאם</p>
+        <p className="text-white text-xs font-bold tracking-widest uppercase mb-3">חקור את וייטנאם</p>
         <h1 className="text-4xl md:text-5xl font-black text-[#1A2535] mb-4">יעדים בוייטנאם</h1>
-        <p className="text-slate-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        <p className="text-[#1A2535] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
           מצפון לדרום, כל אזור מציע חוויה שונה לחלוטין. בחר את היעד שלך וצלל לפרטים
         </p>
 
@@ -110,7 +110,7 @@ export default function DestinationsPage() {
                 <div className={`absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent`} />
                 {region.badge && (
                   <div className="absolute top-4 right-4">
-                    <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                    <span className="bg-white text-orange-500 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
                       ⭐ {region.badge}
                     </span>
                   </div>
@@ -165,7 +165,7 @@ export default function DestinationsPage() {
                 {/* CTA */}
                 <Link
                   href={`/destinations/${region.id}`}
-                  className="inline-flex items-center justify-center gap-2 bg-[#1A2535] hover:bg-orange-500 text-white px-8 py-3.5 rounded-full font-bold transition-colors text-sm group/btn"
+                  className="inline-flex items-center justify-center gap-2 bg-[#1A2535] hover:bg-orange-600 text-white px-8 py-3.5 rounded-full font-bold transition-colors text-sm group/btn"
                 >
                   <span>לכל היעדים ב{region.name}</span>
                   <span className="group-hover/btn:translate-x-[-4px] transition-transform">←</span>
