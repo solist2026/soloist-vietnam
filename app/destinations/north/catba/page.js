@@ -4,7 +4,7 @@ const data = {
   name: 'קאט בה',
   subtitle: 'האי הגדול של הלונג ביי',
   emoji: '🏝️',
-  heroImage: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=1600&q=80',
+  heroImage: '/images/catba.jpg',
   regionName: 'צפון וייטנאם',
   regionHref: '/destinations/north',
   tags: ['אי', 'טבע', 'שקט', 'Lan Ha Bay'],

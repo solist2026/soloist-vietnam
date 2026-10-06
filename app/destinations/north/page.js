@@ -37,7 +37,7 @@ const destinations = [
     name: 'קאט בה',
     subtitle: 'האי הגדול של הלונג ביי',
     emoji: '🏝️',
-    image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80',
+    image: '/images/catba.jpg',
     tags: ['אי', 'טבע', 'שקט'],
     days: '1-2 ימים',
     chabad: false,
