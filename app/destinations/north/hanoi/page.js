@@ -76,7 +76,7 @@ const data = {
       mapLink: 'https://www.google.com/maps/search/Ha+Long+Bay+Vietnam',
     },
     {
-      name: 'ניין בינה (Ninh Binh)',
+      name: 'נין בין (Ninh Binh)',
       distance: 'כ-95 ק"מ מהאנוי',
       duration: '2 שעות נסיעה',
       price: '$8–15 אוטובוס / $5–8 Grab',
@@ -173,8 +173,8 @@ const data = {
     { from: 'שדה התעופה (Noi Bai)', method: 'Grab בלבד, אל תיכנסו למונית רגילה!', time: '40–60 דקות', icon: '✈️', price: '~250,000 VND', flight: false },
     { from: 'הלונג ביי', method: 'אוטובוס / מיניבוס', time: '3.5 שעות', icon: '🚌', price: '$5–10', flight: false },
     { from: 'סאפה', method: 'אוטובוס לילה / רכבת', time: '5–6 שעות', icon: '🚌', price: '$10–20', flight: false },
-    { from: 'ניין בינה', method: 'אוטובוס / מונית', time: '2 שעות', icon: '🚌', price: '$5–8', flight: false },
-    { from: 'הא גיאנג', method: 'אוטובוס לילה (Vexere)', time: '6–7 שעות', icon: '🚌', price: '$8–12', flight: false },
+    { from: 'נין בין', method: 'אוטובוס / מונית', time: '2 שעות', icon: '🚌', price: '$5–8', flight: false },
+    { from: "הא ג'יאנג", method: 'אוטובוס לילה (Vexere)', time: '6–7 שעות', icon: '🚌', price: '$8–12', flight: false },
     { from: 'דה נאנג', method: 'טיסה פנימית', time: '1:15 שעות', icon: '✈️', price: '$25–60', flight: true },
     { from: 'הו צ\'י מין', method: 'טיסה פנימית', time: '2 שעות', icon: '✈️', price: '$30–70', flight: true },
     { from: 'הוי אן', method: 'טיסה לדה נאנג + מונית', time: '1:45 שעות', icon: '✈️', price: '$30–65', flight: true },
@@ -274,7 +274,7 @@ const data = {
     'WhatsApp: +84-83-872-8225 | אתר: jewishhanoi.com',
     'ארוחות שישי ושבת, חגים, מידע לתיירים',
   ],
-  nextDest: { name: 'לופ הא גיאנג', href: '/destinations/north/ha-giang' },
+  nextDest: { name: "לופ הא ג'יאנג", href: '/destinations/north/ha-giang' },
 };
 
 export default function HanoiPage() {

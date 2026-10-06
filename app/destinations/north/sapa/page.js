@@ -98,7 +98,7 @@ const data = {
   gettingThere: [
     { from: 'האנוי', method: 'אוטובוס לילה Limousine / Sleeper', time: '5–6 שעות', icon: '🚌', price: '$10–25' },
     { from: 'האנוי', method: 'רכבת לילה לLao Cai + מיניבוס לסאפה', time: '8–9 שעות', icon: '🚂', price: '$15–30' },
-    { from: 'הא גיאנג', method: 'אוטובוס / מיניבוס', time: '8–9 שעות', icon: '🚌', price: '$15–25' },
+    { from: "הא ג'יאנג", method: 'אוטובוס / מיניבוס', time: '8–9 שעות', icon: '🚌', price: '$15–25' },
     { from: 'מאי צ\'או', method: 'אוטובוס / מוניות', time: '4–5 שעות', icon: '🚌', price: '~800K VND מונית' },
   ],
   localTransport: [
@@ -125,7 +125,7 @@ const data = {
     'ארוחות שישי ושבת, שבתות וחגים',
     'צרו קשר דרך WhatsApp לפרטים עדכניים',
   ],
-  nextDest: { name: 'ניין בינה', href: '/destinations/north/ninh-binh' },
+  nextDest: { name: 'נין בין', href: '/destinations/north/ninh-binh' },
 };
 
 export default function SapaPage() {

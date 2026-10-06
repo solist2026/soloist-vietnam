@@ -93,7 +93,7 @@ const data = {
   gettingThere: [
     { from: 'האנוי', method: 'אוטובוס + מעבורת (דרך Cat Ba) / ישיר ל-Ha Long City', time: '3.5 שעות', icon: '🚌', price: '$5–15' },
     { from: 'האנוי', method: 'טיסה לשדה Vân Đồn (VDO)', time: '1 שעה', icon: '✈️', price: '$30–60', flight: true },
-    { from: 'ניין בינה', method: 'אוטובוס', time: '4 שעות', icon: '🚌', price: '$5–10' },
+    { from: 'נין בין', method: 'אוטובוס', time: '4 שעות', icon: '🚌', price: '$5–10' },
     { from: 'קאט בה', method: 'מעבורת', time: '45 דקות', icon: '⛵', price: '$3–8' },
   ],
   localTransport: [

@@ -16,7 +16,7 @@ const regions = [
       { name: "האנוי", href: "/destinations/north/hanoi", desc: "עיר הבירה ההיסטורית" },
       { name: "סאפה", href: "/destinations/north/sapa", desc: "שדות אורז מדורגים" },
       { name: "הלונג ביי", href: "/destinations/north/halong", desc: "מפרץ הנסיכות" },
-      { name: "הא גיאנג", href: "/destinations/north", desc: "הפינה הנסתרת של הצפון" },
+      { name: "הא ג'יאנג", href: "/destinations/north", desc: "הפינה הנסתרת של הצפון" },
       { name: "ניין בין", href: "/destinations/north", desc: "הלונג ביי של היבשה" },
       { name: "קאט בא", href: "/destinations/north", desc: "האי הגדול בהלונג" },
     ],

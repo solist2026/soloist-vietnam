@@ -6,13 +6,13 @@ const toY = (lat) => ((24 - lat) / 16) * 520;
 
 const allDestinations = [
   // North
-  { id: 'ha-giang',  name: 'הא גיאנג',  region: 'north',  lon: 104.98, lat: 22.82, color: '#22c55e', ta: 'start', dx: 7,  dy: 3 },
+  { id: 'ha-giang',  name: "הא ג'יאנג",  region: 'north',  lon: 104.98, lat: 22.82, color: '#22c55e', ta: 'start', dx: 7,  dy: 3 },
   { id: 'sapa',      name: 'סאפה',        region: 'north',  lon: 103.84, lat: 22.34, color: '#a855f7', ta: 'end',   dx: -7, dy: 3 },
   { id: 'hanoi',     name: 'האנוי',       region: 'north',  lon: 105.85, lat: 21.03, color: '#3b82f6', ta: 'start', dx: 7,  dy: 3 },
   { id: 'mai-chau',  name: "מאי צ'או",    region: 'north',  lon: 105.00, lat: 20.90, color: '#84cc16', ta: 'end',   dx: -7, dy: 3 },
   { id: 'halong',    name: 'הלונג ביי',  region: 'north',  lon: 107.12, lat: 20.91, color: '#06b6d4', ta: 'start', dx: 7,  dy: 3 },
   { id: 'catba',     name: 'קאט בה',      region: 'north',  lon: 107.05, lat: 20.75, color: '#0ea5e9', ta: 'end',   dx: -7, dy: 12 },
-  { id: 'ninh-binh', name: 'ניין בינה',   region: 'north',  lon: 105.97, lat: 20.25, color: '#14b8a6', ta: 'end',   dx: -7, dy: 3 },
+  { id: 'ninh-binh', name: 'נין בין',   region: 'north',  lon: 105.97, lat: 20.25, color: '#14b8a6', ta: 'end',   dx: -7, dy: 3 },
   { id: 'bac-son',   name: 'באק סון',     region: 'north',  lon: 106.35, lat: 21.88, color: '#eab308', ta: 'end',   dx: -7, dy: 3 },
   // Center
   { id: 'hue',       name: 'הואה',        region: 'center', lon: 107.59, lat: 16.46, color: '#f59e0b', ta: 'end',   dx: -7, dy: 3 },

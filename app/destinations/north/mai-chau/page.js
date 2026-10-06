@@ -104,7 +104,7 @@ const data = {
     { from: 'האנוי (My Dinh Bus Terminal)', method: 'אוטובוס ישיר', time: '3.5 שעות', icon: '🚌', price: '100,000–150,000 VND', flight: false },
     { from: 'האנוי', method: 'מוטוטקסי / שכירת אופנוע', time: '3–4 שעות', icon: '🏍️', price: '$20–40', flight: false },
     { from: 'האנוי', method: 'טיול מאורגן יומי', time: 'יום שלם', icon: '🚐', price: '$20–35 כולל הכל', flight: false },
-    { from: 'ניין בינה', method: 'אוטובוס / מונית משותפת', time: '2.5 שעות', icon: '🚌', price: '$8–15', flight: false },
+    { from: 'נין בין', method: 'אוטובוס / מונית משותפת', time: '2.5 שעות', icon: '🚌', price: '$8–15', flight: false },
   ],
   localTransport: [
     "אופניים, האפשרות הטובה ביותר לחקור את העמק. השכרה מהמארחים ~30,000 VND/שעה",
@@ -121,10 +121,10 @@ const data = {
     "הזמינו הומסטיי מראש בסוף שבוע, מתמלאים",
     "קחו מזומן, אין ATM באזורים המרוחקים. מלאו בהאנוי",
     "עמק האורז הכי יפה: מאי–ספטמבר (ירוק), ספטמבר–אוקטובר (זהוב לפני קציר)",
-    "טורחים יכולים לשלב עם ניין בינה ביום אחד ממאי צ'או בחזרה להאנוי",
+    "טורחים יכולים לשלב עם נין בין ביום אחד ממאי צ'או בחזרה להאנוי",
     "בדקו את מזג האוויר, אזור ערפלי בחורף",
   ],
-  nextDest: { name: 'ניין בינה', href: '/destinations/north/ninh-binh' },
+  nextDest: { name: 'נין בין', href: '/destinations/north/ninh-binh' },
 };
 
 export default function MaiChauPage() {
