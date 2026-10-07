@@ -20,28 +20,33 @@ const data = {
   attractions: [
     {
       name: 'חוף Bai Xep',
+      href: '/destinations/center/quy-nhon/bai-xep',
       desc: "חוף סודי קטן ומוסתר שנמצא על ידי מטיילים לפני כמה שנים, עדיין שקט יחסית. מים שקופים, סלעים, ודייגים בבוקר. 10 ק\"מ מדרום לעיר.",
       image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80',
       tip: 'הגיעו עם Grab, אין תחבורה ציבורית. בוקר מוקדם לפני הקיטור',
     },
     {
       name: 'מגדלי Cham, Bánh Ít',
+      href: '/destinations/center/quy-nhon/banh-it',
       desc: 'אחד המקדשים הכי יפים של ה-Cham בוייטנאם, ארבעה מגדלים שנבנו במאה ה-11 על גבעה ירוקה. מרחק 20 ק"מ מהעיר. הרבה פחות עמוס ממי שון.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
       tip: 'כניסה חינם! תצפית מהגבעה על הנוף הסביב שווה לבד',
     },
     {
       name: 'שוק קוי נהון',
+      href: '/destinations/center/quy-nhon/market',
       desc: 'שוק בוקר עמוס ואותנטי שכמעט אין בו תיירים. דוכני פירות ים טריים, בגדים מקומיים ואוכל רחוב. כניסה לחיים האמיתיים של הוייטנאמים.',
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
     },
     {
       name: 'חוף Quy Nhon הראשי',
+      href: '/destinations/center/quy-nhon/main-beach',
       desc: "חוף עירוני בגובה 4 ק\"מ עם מים שקופים ופרומנדה נקייה. פחות פראי מ-Bai Xep אבל קרוב יותר למסעדות ולמלונות. מתאים למשפחות.",
       image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80',
     },
     {
       name: "מגדלי Cham, Tháp Đôi",
+      href: '/destinations/center/quy-nhon/thap-doi',
       desc: 'שני מגדלים של ה-Cham במרכז העיר עצמה, קל להגיע. מהמאה ה-12. נמוכים יותר מ-Bánh Ít אבל נגישים ומרשימים.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
       tip: 'כניסה: 10,000 VND. 5 דקות הליכה מרובע המסעדות',

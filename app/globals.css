@@ -58,7 +58,12 @@ html {
 
 /* ── Inner pages (all except homepage) ── */
 .inner-page {
-  background-color: #FAFAF7;
+  background-image: url('/images/page-bg.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #FDFCF8;
   color: #1e293b;
 }
 

@@ -20,23 +20,27 @@ const data = {
   attractions: [
     {
       name: 'גשר הדרקון (Dragon Bridge)',
+      href: '/destinations/center/danang/dragon-bridge',
       desc: 'גשר בצורת דרקון שנמתח על נהר Han, 666 מ\' ארוך עם 15,000 נורות LED. בשישי ושבת ב-21:00 הדרקון מנשפא אש ומים. ייחודי.',
       image: 'https://plus.unsplash.com/premium_photo-1690960644375-6f2399a08ebc?w=600&q=80',
       tip: 'תפסו מקום ב-21:00 בשישי/שבת, אש ומים מהפה 10 דקות',
     },
     {
       name: 'Ba Na Hills',
+      href: '/destinations/center/danang/ba-na-hills',
       desc: 'פארק שעשועים הררי עם גשר הידיים המפורסם (Golden Bridge) מעל העננים בגובה 1,400 מ\'. רכבל ארוך, בית קפה צרפתי מוזנח ופארק שעשועים. תיירותי מאוד אבל ציורי.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
       tip: 'אוטובוס Futa כתום מדה נאנג: 30,000 VND לכל כיוון. חיפוש "Danabus" בגוגל',
     },
     {
       name: 'My Khe Beach',
+      href: '/destinations/center/danang/my-khe-beach',
       desc: 'אחד החופים הארוכים ביותר בוייטנאם, 30 ק"מ של חול לבן. גלים מצוינים לגלישה (surfing). נקי ורחב, פחות עמוס מחופים דרומיים.',
       image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80',
     },
     {
       name: 'Marble Mountains',
+      href: '/destinations/center/danang/marble-mountains',
       desc: 'חמישה הרי שיש עם שמות של מרכיבי הטבע (מים, אוויר, אש, מתכת, אדמה), מלאים במקדשים ומערות מפתיעות. Huyen Khong Cave, מרשימה במיוחד.',
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
       tip: '15 ק"מ דרומית לדה נאנג. כניסה: 40,000 VND. עלייה ברגל לנוף',

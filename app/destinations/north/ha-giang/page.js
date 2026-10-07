@@ -20,28 +20,33 @@ const data = {
   attractions: [
     {
       name: 'Ma Pi Leng Pass',
+      href: '/destinations/north/ha-giang/ma-pi-leng',
       desc: 'הרכס הנופי הדרמטי ביותר בוייטנאם, כביש מפותל על שפת הצוק מעל עמק Nho Que הכחול-ירוק. נחשב לאחד הכבישים היפים בעולם. עצרו לצלם ב-Lung Tao Viewpoint.',
       image: '/images/ha-giang.jpg',
       tip: 'הגיעו בשעות הבוקר לפני הערפל. נהרת Nho Que מלמטה, ירוק-כחול מרהיב',
     },
     {
       name: 'Dong Van Old Quarter',
+      href: '/destinations/north/ha-giang/dong-van',
       desc: 'עיירה עתיקה עם בנייה פרנקו-סינית ייחודית מהמאה ה-19. שוק הבוקר של שבטי ה-Hmong בצבעים מרהיבים. מגדל דגל Lung Cu, הנקודה הצפונית ביותר של וייטנאם.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
       tip: 'שוק Dong Van, ראשון בשבוע. שוק Meo Vac, יום שני',
     },
     {
       name: 'Meo Vac, נקודת תצפית',
+      href: '/destinations/north/ha-giang/meo-vac',
       desc: 'הנקודה הנמוכה ביותר בלופ, נוף מדהים מהקצה על Ma Pi Leng ועמק הנהר. כל הלופ מגיע לשיאו כאן. בלתי נשכח.',
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
     },
     {
       name: 'כפרי שבטי Hmong',
+      href: '/destinations/north/ha-giang/hmong-villages',
       desc: 'Black Hmong, Flower Hmong, Lo Lo, כפרים מרוחקים בגובה 1,500–2,000 מ\' עם בתי אבן מסורתיים, שדות אורז מדורגים ותרבות ייחודית. הנהג יעצור בנקודות מרכזיות.',
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
     },
     {
       name: 'לופ קאו בנג\' (Cao Bang), משולב',
+      href: '/destinations/north/ha-giang/cao-bang',
       desc: "ניתן לשלב עם לופ הא ג'יאנג ל-5 ימים, מפל Ban Gioc (אחד היפים בדרום-מזרח אסיה), מערת Nguom Ngao, נופים לא פחות מרהיבים עם פחות תיירים.",
       image: 'https://images.unsplash.com/photo-1533497394934-b33cd9695ba9?w=600&q=80',
       tip: 'מחסומי משטרה בקאו בנג\', חייב רישיון בינלאומי אם רוכבים עצמאית',

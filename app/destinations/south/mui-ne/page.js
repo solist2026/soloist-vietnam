@@ -20,30 +20,35 @@ const data = {
   attractions: [
     {
       name: 'Red Sand Dunes',
+      href: '/destinations/south/mui-ne/red-dunes',
       desc: "דיונות חול אדום ייחודיות, גובה 20-30 מטר. שקיעה עליהן היא חוויה. ילדים מקומיים משכירים מזחלות פלסטיק לגלוש בחול.",
       image: 'https://images.unsplash.com/photo-1776929525042-d4055664a008?w=600&q=80',
       tip: "5 דקות מהכפר. Grab: ~30,000 VND. הגיעו ב-17:00 לשקיעה. מזחלת: 20,000 VND",
     },
     {
       name: 'White Sand Dunes',
+      href: '/destinations/south/mui-ne/white-dunes',
       desc: "דיונות חול לבן ענקיות, 30 ק\"מ מהכפר. Jeep 4x4 לשם. לשקיעה/זריחה. אגם שקט מאחורי הדיונות. נוף שנראה כמו ספרה.",
       image: 'https://images.unsplash.com/photo-1714271511582-3483dcf0eb71?w=600&q=80',
       tip: 'Jeep שיתופי: ~150,000 VND. סיור לזריחה (04:30) או לשקיעה. קחו מים',
     },
     {
       name: 'Kitesurfing & Windsurfing',
+      href: '/destinations/south/mui-ne/kitesurfing',
       desc: "מוי נה היא בירת גלישת הרוח בדרום-מזרח אסיה, רוח עקבית ב-100 ימים בשנה. סדנאות למתחילים ולמתקדמים. Water Sports Center בשפע.",
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
       tip: 'שיעור Kite ראשון (4 שעות): $80-120. Windsurf: $30-50/שעה',
     },
     {
       name: 'Fairy Stream (Suoi Tien)',
+      href: '/destinations/south/mui-ne/fairy-stream',
       desc: "נחל אדום ייחודי שנובע דרך מצוקי חול אדום ותצורות גיר, הליכה ברגל (יחפים) בתוך הנחל. 30 דקות הלוך-חזור. ציורי ומפתיע.",
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
       tip: 'כניסה: 10,000-20,000 VND. מרתחים נעלים. הנחל קר ומרענן',
     },
     {
       name: "Fishing Village & Poshanu Cham Towers",
+      href: '/destinations/south/mui-ne/fishing-village',
       desc: "כפר הדייגים של מוי נה, סירות עגולות מסורתיות (coracle boats), ריח מלוח ואוירה מקומית. לידו: מגדלי Cham עתיקים מהמאה ה-9.",
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
     },

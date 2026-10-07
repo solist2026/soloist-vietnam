@@ -20,29 +20,34 @@ const data = {
   attractions: [
     {
       name: 'Sao Beach (Bai Sao)',
+      href: '/destinations/south/phu-quoc/sao-beach',
       desc: "החוף הכי יפה באי, חול לבן ורך כמו טלק, מים שקופים ורדודים. עצי קוקוס, כמה מסעדות דגים. שקט ושמור יחסית. פחות עמוס מהחופים בצפון.",
       image: 'https://images.unsplash.com/photo-1746292448726-9e75b5f1067d?w=600&q=80',
       tip: '25 ק"מ מהעיר. שכרו אופנוע או Grab לשם. הגיעו לפני 10:00',
     },
     {
       name: 'שנורקלינג ואיי הדרום',
+      href: '/destinations/south/phu-quoc/snorkeling',
       desc: "סיורי שנורקלינג ל-3 איים בדרום האי (Hon Thom, Hon Roi, Hon May Rut), שוניות אלמוג, דגים צבעוניים, צלילה חינמית. חצי יום מרענן.",
       image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80',
       tip: 'סיור ב-$20-30 כולל הסעה, ציוד וארוחת צהריים. הזמינו מהאכסניה',
     },
     {
       name: 'Sunset Sanato Beach Club',
+      href: '/destinations/south/phu-quoc/sunset',
       desc: "בר חוף על חוף Long Beach לצפייה בשקיעה, הסאנסט הכי יפה באי. קוקטיילים, מוזיקה, אווירה. מגיעים שעה לפני השקיעה.",
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
       tip: 'כניסה בחינם עם רכישה. Drink: 100,000-200,000 VND. שקיעה: ~17:30-18:00',
     },
     {
       name: 'Phu Quoc Night Market',
+      href: '/destinations/south/phu-quoc/night-market',
       desc: 'שוק הלילה של Duong Dong, דגים טריים, אוכל ים, מנות וייטנאמיות ושוק מזכרות. אווירה תוססת ומקומית.',
       image: 'https://images.unsplash.com/photo-1533497394934-b33cd9695ba9?w=600&q=80',
     },
     {
       name: "Hon Thom Cable Car",
+      href: '/destinations/south/phu-quoc/cable-car',
       desc: "רכבל ים ארוך מהעולם (7.9 ק\"מ) המחבר בין האי הראשי ל-Hon Thom, נוף מעל הים. Aquatopia Water Park בתחתית. חוויה ייחודית.",
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
       tip: 'כרטיס: 650,000-900,000 VND. כולל כניסה לפארק מים',

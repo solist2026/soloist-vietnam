@@ -20,28 +20,33 @@ const data = {
   attractions: [
     {
       name: 'שייט בין האיים',
+      href: '/destinations/north/halong/kayaking',
       desc: 'החוויה המרכזית, שייט בסיריק קטן (kayak) או סירה בין אי הגיר הזוקפים. בוקר מוקדם = ערפל על המים ואורות מהפנטים. הצלילים: רק מי הים ועופות.',
       image: 'https://images.unsplash.com/photo-1643029891412-92f9a81a8c16?w=600&q=80',
       tip: 'קחו קאיאק ב-06:00–07:00 לפני שאר הספינות מתעוררות',
     },
     {
       name: 'מערת Sung Sot (Surprise Cave)',
+      href: '/destinations/north/halong/sung-sot',
       desc: 'המערה הגדולה והמרשימה ביותר בהלונג ביי, 3 אולמות ענק עם תצורות אבן מרהיבות. מוארת בצבעים, קצת תיירותית אבל שווה.',
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
       tip: 'כניסה: 40,000 VND. כלולה ברוב חבילות השייט',
     },
     {
       name: 'Ti Top Island',
+      href: '/destinations/north/halong/ti-top',
       desc: 'אי קטן עם חוף חול לבן ו-400 מדרגות לנקודת תצפית פנורמית. נוף לרוחב הרוחב של כל הביי. לא מפספסים.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
     },
     {
       name: 'כפרי דייגים צפים',
+      href: '/destinations/north/halong/floating-villages',
       desc: 'קהילות שחיות על הים בבתים צפים, Cua Van (הגדולה), Vung Vieng. ביקור בסירה. ילדים, כלבים ומשפחות שלמות על המים.',
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
     },
     {
       name: 'Lan Ha Bay',
+      href: '/destinations/north/halong/lan-ha-bay',
       desc: 'הביי הסמוך ל-Cat Ba, פחות תיירותי, שקט יותר, עם חופי חול נסתרים. ניתן לשלב עם ביקור ב-Cat Ba Island.',
       image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80',
       tip: 'שאלו את ספק הסיור על Lan Ha Bay, פחות ידוע ויפה לא פחות',

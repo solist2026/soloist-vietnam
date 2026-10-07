@@ -20,28 +20,33 @@ const data = {
   attractions: [
     {
       name: 'שייט Tam Coc',
+      href: '/destinations/north/ninh-binh/tam-coc',
       desc: 'שייט בסירה שחותרת בידיים (ולפעמים ברגליים!) לאורך נהר Ngo Dong בין הרי גיר ושדות אורז. 3 מנהרות אבן בדרך. קסום ושקט, אחד הנופים הכי יפים בוייטנאם.',
       image: '/images/ninh-binh.jpg',
       tip: 'בוקר מוקדם (07:00–08:00) = פחות תיירים ואור מושלם לצילום',
     },
     {
       name: 'Trang An, אתר UNESCO',
+      href: '/destinations/north/ninh-binh/trang-an',
       desc: 'שמורת טבע ענקית עם מסלולי שייט ארוכים יותר מ-Tam Coc, מערות, מקדשים ויערות. מצוין לחצי יום. כרטיס: 250,000 VND (כולל סירה).',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
     },
     {
       name: 'Mua Cave, נקודת תצפית',
+      href: '/destinations/north/ninh-binh/mua-cave',
       desc: '500 מדרגות מפותלות בצד הר גיר, הנוף מלמעלה על Tam Coc ועמק נין בין הוא תמונת הפרסומת של וייטנאם. כניסה: 100,000 VND.',
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
       tip: 'עלייה: 20 דקות. שמאל לנקודת הנחש, ימין לנקודה הטובה יותר',
     },
     {
       name: 'Bich Dong Pagoda',
+      href: '/destinations/north/ninh-binh/bich-dong',
       desc: 'מקדש בתוך מערה בצד הר, 3 רמות של מקדשים חצובים בסלע. 15 דקות מ-Tam Coc. כניסה חינם.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
     },
     {
       name: 'Hoa Lu, בירת וייטנאם העתיקה',
+      href: '/destinations/north/ninh-binh/hoa-lu',
       desc: 'הבירה הראשונה של וייטנאם מהמאה ה-10, שני מקדשים מרשימים לקיסרים Dinh Tien Hoang ו-Le Dai Hanh. 12 ק"מ מ-Tam Coc.',
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
     },

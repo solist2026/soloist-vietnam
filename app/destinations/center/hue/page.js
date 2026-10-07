@@ -20,29 +20,34 @@ const data = {
   attractions: [
     {
       name: 'Hue Imperial Citadel',
+      href: '/destinations/center/hue/citadel',
       desc: 'המצודה הקיסרית העצומה, 10 קמ"ר מוקפים חומות ומבצר. בתוכה: 100+ בניינים, ארמונות, מקדשים וגנים. נזקי המלחמה נראים עדיין. אתר UNESCO מרשים.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
       tip: 'כניסה: 200,000 VND. קחו 3–4 שעות. השכירו אופנוע לשאר האטרקציות',
     },
     {
       name: 'קבר הקיסר Tu Duc',
+      href: '/destinations/center/hue/tu-duc',
       desc: 'הקבר המפורסם והיפה ביותר, בריכות, ביתן ורומנטיקה. הקיסר בנה אותו לעצמו בחייו כמקום מנוחה וכתיבת שירה.',
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
       tip: '7 ק"מ מהמרכז. כניסה: 150,000 VND. הכי שווה מבין הקברים',
     },
     {
       name: 'Thien Mu Pagoda',
+      href: '/destinations/center/hue/thien-mu',
       desc: 'מגדל פגודה 7 קומות על גדת נהר Perfume, הסמל של הואה. נוף מרהיב לנהר. מוזיאון עם המכונית שנשא הנזיר שהצית את עצמו ב-1963 בסייגון.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
     },
     {
       name: 'שייט בנהר Perfume',
+      href: '/destinations/center/hue/perfume-river',
       desc: 'שייט בסירת תפנוקים (dragon boat) לאורך נהר Perfume, עובר ליד הפגודה, הקברים ונופי כפר. חצי יום מנחם ויפה.',
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
       tip: 'הזמינו מהגסטהאוס: $15–20 לסירה פרטית לחצי יום',
     },
     {
       name: 'Dong Ba Market',
+      href: '/destinations/center/hue/dong-ba',
       desc: 'השוק הגדול של הואה, קומה תחתונה: אוכל. קומה עליונה: בגדים וסחורות. אווירה מקומית אמיתית לצד הנהר.',
       image: 'https://images.unsplash.com/photo-1533497394934-b33cd9695ba9?w=600&q=80',
     },

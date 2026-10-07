@@ -20,35 +20,41 @@ const data = {
   attractions: [
     {
       name: 'War Remnants Museum',
+      href: '/destinations/south/hcmc/war-museum',
       desc: "מוזיאון ייחודי ומרגש על מלחמת וייטנאם מהצד הוייטנאמי, תמונות נאפלם, כלי נשק, עדויות. לא קל לצפייה אבל חובה. מהמוזיאונים החשובים בדרום-מזרח אסיה.",
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
       tip: 'כניסה: 40,000 VND. פתוח 07:30-18:00. קחו שעתיים לפחות',
     },
     {
       name: 'Cu Chi Tunnels',
+      href: '/destinations/south/hcmc/cu-chi',
       desc: "מנהרות המחתרת של גרילה Viet Cong, 250 ק\"מ של מנהרות מתחת לאדמה שאפשרו לוחמים לחיות, לאכול ולהילחם מתחת לאמריקאים. אפשר לזחול בתוכן.",
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
       tip: '40 ק"מ מהמרכז. סיור מאורגן: $15-25 כולל הסעה. Ben Dinh Section, פחות תיירותי',
     },
     {
       name: 'Notre-Dame Cathedral & Central Post Office',
+      href: '/destinations/south/hcmc/cathedral',
       desc: 'שני אייקונים צרפתיים במרכז District 1, הקתדרלה האדומה (1880) ובית הדואר המפואר. ממחישים את תקופת השלטון הצרפתי. צילומים מצוינים.',
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
     },
     {
       name: 'Ben Thanh Market',
+      href: '/destinations/south/hcmc/ben-thanh',
       desc: 'שוק המסורת הגדול של סייגון, מזכרות, בגדים, אוכל רחוב. קמעונאי בפנים, שוק לילה בחוץ אחרי 18:00. תיירותי אבל אטמוספרי.',
       image: 'https://images.unsplash.com/photo-1533497394934-b33cd9695ba9?w=600&q=80',
       tip: 'מיקוח חובה. מחירים ראשוניים מנופחים פי 3. קנו מזכרות כאן',
     },
     {
       name: 'District 1 Rooftop Bars',
+      href: '/destinations/south/hcmc/rooftop-bars',
       desc: "ברים על גגות ביל 29, 51, ו-Chill Skybar, נוף פנורמי לסייגון הלילית. Bui Vien Walking Street, רחוב הבירה של תיירים. אנרגיה עצומה בלילה.",
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
       tip: 'Chill Skybar ב-AB Tower, מומלץ. Drink prices: 120,000-250,000 VND',
     },
     {
       name: 'Jade Emperor Pagoda',
+      href: '/destinations/south/hcmc/jade-pagoda',
       desc: 'הפגודה הסינית הכי יפה בסייגון, מלאה בפסלים, עשן קטורת ואמינות דתית עמוקה. פחות תיירותי מאטרקציות אחרות, אבל מרשים יותר.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
     },

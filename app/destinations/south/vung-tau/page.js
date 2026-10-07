@@ -20,29 +20,34 @@ const data = {
   attractions: [
     {
       name: 'פסל ישו (Tượng Chúa Kitô Vua)',
+      href: '/destinations/south/vung-tau/jesus-statue',
       desc: 'פסל ישו ענק בגובה 32 מטר (48 עם הגבעה) המשקיף על הים, גדול מזה שבריו דה ז\'נרו. עלייה ב-848 מדרגות, אבל ניתן לעלות גם ברכב עד הפסגה. הנוף לעיר ולמפרץ מהמם.',
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
       tip: 'הגיעו בבוקר מוקדם, צילום עם אור טוב ופחות ביקור',
     },
     {
       name: 'Front Beach (חוף קדמי)',
+      href: '/destinations/south/vung-tau/front-beach',
       desc: 'החוף המרכזי של העיר, ארוך, נקי יחסית, עם מסעדות ומלונות לצידו. לא כחול-שקוף כמו פו קווק אבל נעים. עמוס בסופי שבוע.',
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
     },
     {
       name: 'Back Beach (חוף אחורי)',
+      href: '/destinations/south/vung-tau/back-beach',
       desc: 'הצד השני של חצי האי, גלים גדולים יותר, פחות עמוס. מועדף על ידי צעירים ומושלם לגלישה בגלים הקטנים.',
       image: 'https://images.unsplash.com/photo-1714271511582-3483dcf0eb71?w=600&q=80',
       tip: 'הצד הזה עמוס יותר בסופי שבוע, בואו ביום חול',
     },
     {
       name: "בית מנטה (Villa Blanche)",
+      href: '/destinations/south/vung-tau/villa-blanche',
       desc: 'הבית של הנשיא הצרפתי Paul Doumer מהתקופה הקולוניאלית, שוחזר והפך למוזיאון קטן. ארכיטקטורה צרפתית נאה בתוך גן ירוק.',
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
       tip: 'כניסה: 10,000 VND. מעניין אם אתם אוהבי ההיסטוריה הקולוניאלית',
     },
     {
       name: 'מפרץ Mulberry, שוק דיגים',
+      href: '/destinations/south/vung-tau/mulberry-market',
       desc: 'הנמל הדגה המקומי, בבוקר מוקדם (05:00–07:00) מגיעות סירות הדיגה עם לכידה טרייה. השוק מלא בפירות ים שנלכדו שעות קודם.',
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
     },

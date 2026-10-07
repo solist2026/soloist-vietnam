@@ -20,23 +20,27 @@ const data = {
   attractions: [
     {
       name: 'שייט בתעלות המקונג',
+      href: '/destinations/south/mekong/canal-tour',
       desc: "שייט בסירות עץ צרות דרך תעלות מוצלות בעצי קוקוס ובננה, הלב של חוויית המקונג. נכנסים לכפרים, עוצרים במפעלי ממתקי קוקוס ואורגים מסורתיים.",
       image: 'https://images.unsplash.com/photo-1543411789-1a67a2ac05c6?w=600&q=80',
       tip: 'הזמינו דרך הגסטהאוס ב-My Tho או Ben Tre, $15-25 לחצי יום עם מדריך',
     },
     {
       name: 'Cai Rang Floating Market',
+      href: '/destinations/south/mekong/floating-market',
       desc: "שוק צף על הנהר ב-Can Tho, סירות עמוסות פירות, ירקות ומוצרים שנוגעות זו בזו. אקשן אמיתי בשעות הבוקר המוקדמות. השוק הצף הכי מרשים בדלתא.",
       image: 'https://images.unsplash.com/photo-1677552926138-f7dbb71b226f?w=600&q=80',
       tip: 'הגיעו ב-06:00-08:00, השוק מסתיים לפני הצהריים. סיור מהעיר: $10-20',
     },
     {
       name: 'Ben Tre Island',
+      href: '/destinations/south/mekong/ben-tre',
       desc: "האי הירוק ביותר בדלתא, יערות קוקוס, מפעלי ממתקים מסורתיים, סלי קש וסירות עץ בנויות ביד. אווירה מקומית אותנטית ושקטה.",
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
     },
     {
       name: 'Vinh Long & Can Tho',
+      href: '/destinations/south/mekong/vinh-long',
       desc: "שני המרכזים של הדלתא, Can Tho הוא העיר הגדולה עם השוק הצף. Vinh Long, נקודת מוצא לאיים קטנים עם לינה בבתים מקומיים (Homestay).",
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
       tip: 'Homestay באיים של Vinh Long, חוויה מרגשת ואמיתית. הזמינו מראש',

@@ -20,35 +20,41 @@ const data = {
   attractions: [
     {
       name: 'העיר העתיקה בלילה',
+      href: '/destinations/center/hoi-an/old-town-night',
       desc: 'הפנסים הצבעוניים מואירים את הרחובות הצרים והנהר, חוויה שלא תשכחו לעולם. בלילה מלא, לנות ירח, משגרים פנסים על הנהר.',
       image: 'https://images.unsplash.com/photo-1664650440553-ab53804814b3?w=600&q=80',
       tip: 'הגיעו בסביבות 18:00 לפני ההמונים. יום 14 ו-1 בלוח הירח, פסטיבל הפנסים המלא',
     },
     {
       name: 'Japanese Covered Bridge',
+      href: '/destinations/center/hoi-an/japanese-bridge',
       desc: 'גשר מקורה מהמאה ה-16 שבנו סוחרים יפניים, הסמל של הוי אן. קצר אבל ציורי. כרטיס העיר העתיקה ($3) כולל כניסה לחמישה אתרים.',
       image: 'https://images.unsplash.com/photo-1569271532956-3fb81a207115?w=600&q=80',
     },
     {
       name: 'חוף An Bang',
+      href: '/destinations/center/hoi-an/an-bang-beach',
       desc: 'חוף 10 דקות מהעיר העתיקה, חול לבן, מים שקופים ופחות עמוס מחוף My Khe. בר על החוף, מסעדות דגים. שקט ומושלם.',
       image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80',
       tip: 'שכרו אופניים מהעיר העתיקה, 10 דקות ו-40,000 VND/יום',
     },
     {
       name: 'סדנאות בישול',
+      href: '/destinations/center/hoi-an/cooking-class',
       desc: 'הוי אן ידועה בסדנאות הבישול שלה, הכי טובות בוייטנאם. ביקור בשוק, בישול White Rose + Cao Lau + Banh Mi. חוויה מומלצת מאוד.',
       image: 'https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=600&q=80',
       tip: 'לפרטים: +84 121 396 6059. מחיר: $25–35 לאדם. הזמינו יום מראש',
     },
     {
       name: 'חיטוט אצל חיישן (Tailor)',
+      href: '/destinations/center/hoi-an/tailor',
       desc: 'הוי אן מפורסמת בתפירה מותאמת אישית תוך 24–48 שעות, שמלות, חליפות, שרוולים. מחירים מצוינים ואיכות גבוהה.',
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
       tip: 'Noom ב-Eli Tailor 2, מומלצת חם ע"י מטיילים ישראלים. מקצועית ובמחירים הוגנים',
     },
     {
       name: 'My Son Sanctuary',
+      href: '/destinations/center/hoi-an/my-son',
       desc: 'מקדשים הינדואיסטיים עתיקים של ממלכת Cham מהמאות ה-4–14, 40 ק"מ מהוי אן. אתר יונסקו. פחות מרשים מאנגקור אבל ייחודי.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
       tip: 'הגיעו ב-06:00, לפני החום ולפני הסיורים המאורגנים',

@@ -20,29 +20,34 @@ const data = {
   attractions: [
     {
       name: 'כפרי Thai הלבן, הומסטיי',
+      href: '/destinations/north/mai-chau/homestay',
       desc: "הומסטיי בבית על עמודים של משפחת Thai הלבן, אחת החוויות האותנטיות ביותר בוייטנאם. ישנים על מזרנים על הרצפה, ארוחות עם המשפחה ואלכוהול אורז ביתי. לילה שלא ישכח.",
       image: 'https://plus.unsplash.com/premium_photo-1661917179706-33e305a4ee45?w=600&q=80',
       tip: 'הזמינו מראש, הומסטיי מתמלאים מהר בסוף שבוע. מנהל האזור: Hoa Binh Tourism',
     },
     {
       name: "אופניים בעמק מאי צ'או",
+      href: '/destinations/north/mai-chau/cycling',
       desc: 'המסלול הקלאסי: לשכור אופניים (~30,000 VND/שעה) ולרכוב דרך כפר Lac, שדות אורז ירוקים ונחלים. שטוח יחסית ומתאים לכולם. הנוף בכל פנייה מהמם.',
       image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80',
       tip: 'הבוקר המוקדם עם הערפל על שדות האורז, רגע קסום שכדאי לא לפספס',
     },
     {
       name: "כפר Lac, המרכז האתני",
+      href: '/destinations/north/mai-chau/lac-village',
       desc: 'הכפר הגדול והמפורסם של האזור, מגורי שבט Thai הלבן. אפשר ללכת ברגל בין הבתים על עמודים, לקנות בדים צבעוניים ולצפות בריקוד מסורתי בערב. אותנטי אבל מכוון-תיירים.',
       image: 'https://plus.unsplash.com/premium_photo-1661917179706-33e305a4ee45?w=600&q=80',
       tip: 'ריקוד מסורתי בערב בהומסטיי מרכזי, כלול לעיתים במחיר הלינה',
     },
     {
       name: 'שדות האורז המדורגים',
+      href: '/destinations/north/mai-chau/rice-fields',
       desc: "שדות האורז של מאי צ'או מפורסמים בגוון הירוק העמוק בעונת הגידול (מאי–ספטמבר) והצהוב-זהב בעונת הקציר (ספטמבר–אוקטובר). הנוף שווה ביקור בכל עונה.",
       image: 'https://plus.unsplash.com/premium_photo-1661917179706-33e305a4ee45?w=600&q=80',
     },
     {
       name: "Thung Khe Pass, מעבר ההרים",
+      href: '/destinations/north/mai-chau/mountain-pass',
       desc: "בדרך מהאנוי למאי צ'או עוברים מעבר הרים ציורי עם תצפית על ענן לבן (Cloud Pass), עצירה חובה לצילום. גובה כ-1,000 מ'.",
       image: 'https://images.unsplash.com/photo-1663571908808-87fc73defa2a?w=600&q=80',
       tip: 'כוסית אלכוהול אורז בדוכן מקומי בפסגה, הטקס המקומי',

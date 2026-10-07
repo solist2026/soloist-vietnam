@@ -20,22 +20,26 @@ const data = {
   attractions: [
     {
       name: 'Lan Ha Bay',
+      href: '/destinations/north/catba/lan-ha',
       desc: 'הביי הסמוך לקאט בה, 300 איים פחות מוכרים, שקטים יותר מהלונג הראשי, עם חופי חול סמויים שניתן להגיע אליהם רק בסירה. קאיאקינג מדהים.',
       image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80',
       tip: 'שייט חצי יום + קאיאק = $20–30. הזמינו מה-guesthouse שלכם',
     },
     {
       name: 'Cat Ba National Park',
+      href: '/destinations/north/catba/national-park',
       desc: 'פארק לאומי מוכרז עם יערות טרופיים, קופי Cat Ba Langur (מאוים בהכחדה, רק 70 נותרו), מסלולי טיול ונוף פנורמי. כניסה: 40,000 VND.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
     },
     {
       name: 'Hospital Cave',
+      href: '/destinations/north/catba/hospital-cave',
       desc: 'מערת בית חולים סודית שנחצבה בסלע במלחמת וייטנאם, 3 קומות עם חדרי ניתוח, בית קולנוע ובריכה. היסטוריה מרתקת.',
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
     },
     {
       name: 'חוף Cat Co 1, 2, 3',
+      href: '/destinations/north/catba/cat-co',
       desc: 'שלושה חופי חול מרהיבים בקצה הדרומי של העיירה, נגישים בהליכה קצרה או בסירה. Cat Co 3, השקט ביותר.',
       image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80',
     },

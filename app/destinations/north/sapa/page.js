@@ -20,29 +20,34 @@ const data = {
   attractions: [
     {
       name: 'שדות אורז מדורגים',
+      href: '/destinations/north/sapa/rice-terraces',
       desc: 'הנוף האייקוני של סאפה, שדות מדורגים ירוקים/זהובים שנבנו ידנית על ידי שבטי ה-Hmong. הכי יפים בספטמבר-אוקטובר (קציר) ויוני-יולי (ירוק עז). מסלולי טיול בין הכפרים.',
       image: 'https://plus.unsplash.com/premium_photo-1661917179706-33e305a4ee45?w=600&q=80',
       tip: 'Muong Hoa Valley, המסלול הכי יפה לטיול יומי',
     },
     {
       name: 'פנסיפן (Fansipan)',
+      href: '/destinations/north/sapa/fansipan',
       desc: '"גג אינדוצ\'ינה", ההר הגבוה ביותר בוייטנאם (3,143 מ\'). עלייה רגלית: 2 ימים קשים. רכבל: 15 דקות ו-750,000 VND. נוף מעל העננים.',
       image: 'https://images.unsplash.com/photo-1665905905591-fb66b0496481?w=600&q=80',
       tip: 'רכבל מומלץ, החוויה היא הנוף ולא הסבל. בדקו בהירות לפני עלייה',
     },
     {
       name: 'כפרי שבטים',
+      href: '/destinations/north/sapa/tribal-villages',
       desc: 'Black Hmong (סאפה), Red Dao (Ta Phin), Tay (Cat Cat Village), כל שבט עם תרבות, בגדים ומסורת ייחודית. Cat Cat Village, 20 דקות הליכה ממרכז סאפה.',
       image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&q=80',
       tip: 'Cat Cat, 60,000 VND כניסה. קצת תיירותי אבל נגיש ויפה',
     },
     {
       name: 'Silver Waterfall & Love Waterfall',
+      href: '/destinations/north/sapa/waterfalls',
       desc: 'שני מפלים מרהיבים 12 ק"מ מסאפה לכיוון Ma Cai. Silver Waterfall, מרשים וגבוה. Love Waterfall, קסום וירוק, בתוך יער.',
       image: 'https://images.unsplash.com/photo-1553851919-596510268b99?w=600&q=80',
     },
     {
       name: 'שוק סאפה',
+      href: '/destinations/north/sapa/market',
       desc: 'שוק שבועי צבעוני עם בגדי שבטים, כסף ותכשיטים, ירקות הרריים ותוצרת מקומית. שבת בבוקר מוקדם, הכי עמוס ואותנטי.',
       image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
     },
