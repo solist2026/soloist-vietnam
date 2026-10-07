@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import VietnamMap from '../../components/VietnamMap';
 
 const destinations = [
   {
@@ -73,18 +72,23 @@ export default function CenterVietnamPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 pb-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      {/* Map */}
+      <div className="max-w-5xl mx-auto px-4 pb-8">
+        <div className="bg-[#F2F1EB] rounded-3xl p-4 md:p-6 border border-[#E5E4DC] shadow-sm">
+          <h2 className="text-base font-bold text-[#1A2535] mb-4 text-center">מפת היעדים</h2>
+          <img
+            src="/images/map-center.jpg"
+            alt="מפת יעדים מרכז וייטנאם"
+            className="w-full h-auto rounded-2xl"
+            style={{ maxHeight: '600px', objectFit: 'contain' }}
+          />
+        </div>
+      </div>
 
-          {/* Map */}
-          <div className="lg:col-span-1 bg-[#F2F1EB] rounded-3xl p-6 border border-[#E5E4DC] shadow-sm">
-            <h2 className="text-base font-bold text-[#1A2535] mb-4 text-center">מפת היעדים</h2>
-            <VietnamMap activeRegion="center" baseHref="/destinations/center" />
-            <p className="text-xs text-slate-400 text-center mt-4">לחצו על שם יעד לעמוד המלא</p>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 pb-12">
 
           {/* Destination cards */}
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {destinations.map((dest) => (
               <Link
                 key={dest.id}
@@ -123,7 +127,6 @@ export default function CenterVietnamPage() {
               </Link>
             ))}
           </div>
-        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 pb-10 flex justify-between text-sm">
