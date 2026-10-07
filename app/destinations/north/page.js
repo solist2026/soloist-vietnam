@@ -5,80 +5,104 @@ const destinations = [
   {
     id: 'hanoi',
     name: 'האנוי',
-    subtitle: 'עיר הבירה המסתורית',
+    desc: [
+      'עיר הבירה התוססת של וייטנאם, המשלבת היסטוריה, תרבות ואוכל רחוב מעולה.',
+      'העיר העתיקה, אגם הואן קיאם, שווקים, בתי קפה וחיי לילה.',
+      'נקודת פתיחה מצוינת לטיול בצפון וייטנאם.',
+    ],
     emoji: '🏛️',
     image: '/images/hanoi.jpg',
-    tags: ['עיר', 'תרבות', 'אוכל'],
     days: '2-3 ימים',
     chabad: true,
   },
   {
     id: 'ha-giang',
     name: "הא ג'יאנג",
-    subtitle: 'החוויה האולטימטיבית בצפון',
+    desc: [
+      'אחד האזורים המרשימים והמיוחדים ביותר בצפון וייטנאם.',
+      'כבישי הרים מפותלים, פסגות דרמטיות, עמקים וכפרים מקומיים.',
+      'מפורסם במיוחד בזכות Ha Giang Loop – מסלול אייקוני של מספר ימים.',
+    ],
     emoji: '🏍️',
     image: '/images/ha-giang.jpg',
-    tags: ['הרים', 'אופנועים', 'הרפתקה'],
     days: '3-5 ימים',
     chabad: false,
   },
   {
     id: 'halong',
     name: 'הלונג ביי',
-    subtitle: 'פלא הטבע של וייטנאם',
+    desc: [
+      'אחד מסמלי הטבע המפורסמים ביותר של וייטנאם, עם מאות איים וצוקי גיר מרשימים.',
+      'שייט בין האיים, מערות, קיאקים ונקודות תצפית מרהיבות.',
+      'מומלץ במיוחד לשלב שייט של לילה או יומיים.',
+    ],
     emoji: '⛵',
     image: '/images/halong.jpg',
-    tags: ['טבע', 'שייט', 'אי'],
     days: '1-2 לילות שייט',
     chabad: false,
   },
   {
     id: 'catba',
     name: 'קאט בה',
-    subtitle: 'האי הגדול של הלונג ביי',
+    desc: [
+      'אי ירוק ויפהפה המציע שילוב של טבע, חופים ואווירה רגועה.',
+      'פארק לאומי, מסלולי הליכה, מפרצים, מערות ושייט בקיאקים.',
+      'בחירה מצוינת למי שרוצה לחוות את אזור הלונג ביי בצורה רגועה יותר.',
+    ],
     emoji: '🏝️',
     image: '/images/catba.jpg',
-    tags: ['אי', 'טבע', 'שקט'],
     days: '1-2 ימים',
     chabad: false,
   },
   {
     id: 'sapa',
     name: 'סאפה',
-    subtitle: 'הרים, ערפל ושדות אורז',
+    desc: [
+      'עיירת הרים מוקפת בנופי טרסות אורז, הרים וכפרים מסורתיים.',
+      'מקום מצוין לטרקים, תצפיות והיכרות עם שבטי ההרים המקומיים.',
+      'מכאן ניתן להגיע גם להר פנסיפן – הפסגה הגבוהה בווייטנאם.',
+    ],
     emoji: '🌾',
     image: '/images/north-vietnam.jpg',
-    tags: ['הרים', 'שבטים', 'טרקים'],
     days: '2-3 ימים',
     chabad: true,
   },
   {
     id: 'ninh-binh',
     name: 'נין בין',
-    subtitle: 'הלונג ביי של היבשה',
+    desc: [
+      'אזור המכונה לעיתים "הלונג ביי היבשתית", בזכות צוקי הגיר והנהרות החוצים את הנוף.',
+      'שייט בסירות בין מערות, שדות אורז והרים ירוקים.',
+      'כדאי לבקר בטאם קוק, טראנג אן ובתצפית Hang Mua.',
+    ],
     emoji: '🗻',
     image: '/images/ninh-binh.jpg',
-    tags: ['טבע', 'שייט', 'נופים'],
     days: '1-2 ימים',
     chabad: false,
   },
   {
     id: 'mai-chau',
     name: "מאי צ'או",
-    subtitle: 'עמק האורז של שבטי ה-Thai הלבן',
+    desc: [
+      'עמק ירוק ושליו המוקף בהרים ובשדות אורז.',
+      'מקום מצוין לרכיבה על אופניים, טיולים קלים והיכרות עם החיים בכפרים המקומיים.',
+      'מתאים למי שמחפש חוויה רגועה ואותנטית הרחק מהעומס.',
+    ],
     emoji: '🌿',
     image: '/images/mai-chau.jpg',
-    tags: ['עמק', 'שבטים', 'הומסטיי', 'אופניים'],
     days: '1-2 ימים',
     chabad: false,
   },
   {
     id: 'bac-son',
     name: 'עמק באק סון',
-    subtitle: 'ים האורז הירוק של צפון וייטנאם',
+    desc: [
+      'אזור כפרי ירוק ופחות מוכר, המציע נופים של הרים, עמקים ושדות אורז.',
+      'מתאים לטיולים בטבע, רכיבה על אופניים ומפגש עם החיים המקומיים.',
+      'בחירה נהדרת למטיילים שרוצים לגלות צד שקט ופחות מתויר של צפון וייטנאם.',
+    ],
     emoji: '🌾',
     image: '/images/bac-son.jpg',
-    tags: ['עמק', 'שדות אורז', 'טבע', 'צילום'],
     days: '1-2 ימים',
     chabad: false,
   },
@@ -139,12 +163,11 @@ export default function NorthVietnamPage() {
                 </div>
                 <div className="p-4">
                   <h3 className="text-lg font-black text-[#1A2535] group-hover:text-orange-500 transition-colors">{dest.name}</h3>
-                  <p className="text-slate-500 text-xs mt-0.5">{dest.subtitle}</p>
-                  <div className="flex flex-wrap gap-1.5 mt-3">
-                    {dest.tags.map((tag) => (
-                      <span key={tag} className="text-xs bg-emerald-50 text-emerald-700 border border-emerald-100 px-2 py-0.5 rounded-full">{tag}</span>
+                  <ul className="mt-2 space-y-0.5">
+                    {dest.desc.map((line, i) => (
+                      <li key={i} className="text-slate-500 text-xs leading-relaxed">{line}</li>
                     ))}
-                  </div>
+                  </ul>
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
                     <span className="text-xs text-slate-400">⏱️ {dest.days}</span>
                     <span className="text-xs text-orange-500 font-semibold group-hover:underline">פרטים מלאים ←</span>
