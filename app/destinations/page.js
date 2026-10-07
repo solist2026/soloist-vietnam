@@ -190,7 +190,9 @@ export default function DestinationsPage() {
               {/* Content */}
               <div className="flex-1 p-7 md:p-10 flex flex-col justify-between gap-5">
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-black text-[#1A2535] mb-3">{region.name}</h2>
+                  <Link href={`/destinations/${region.id}`} className="group">
+                    <h2 className="text-2xl md:text-3xl font-black text-[#1A2535] mb-3 group-hover:text-orange-500 transition-colors">{region.name}</h2>
+                  </Link>
                   <p className="text-slate-600 leading-relaxed mb-5 text-sm md:text-base">{region.description}</p>
 
                   {/* Destination chips */}
