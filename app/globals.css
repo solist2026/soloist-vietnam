@@ -58,7 +58,7 @@ html {
 
 /* ── Inner pages (all except homepage) ── */
 .inner-page {
-  background-image: url('/images/page-bg.jpg');
+  background-image: url('/images/page-bg.png');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
