@@ -52,7 +52,7 @@ const groups = [
 
 export default function WhatsAppPage() {
   return (
-    <div className="bg-white text-slate-800 min-h-screen pt-[88px]">
+    <div className="inner-page min-h-screen pt-[88px]">
 
       {/* Header */}
       <div className="bg-[#075E54] text-white py-16 text-center">

@@ -7,7 +7,7 @@ export default function AttractionPage({ data }) {
   const destHref = data.destHref || '/destinations/north/hanoi';
 
   return (
-    <div className="inner-page min-h-screen pt-[88px]">
+    <div className="min-h-screen pt-[88px]" style={{ color: "#1e293b", backgroundColor: "#FDFCF8" }}>
       {/* Hero */}
       <div className="relative h-[50vh] min-h-[350px]">
         <img src={data.image} alt={data.name} className="w-full h-full object-cover" />
@@ -24,6 +24,8 @@ export default function AttractionPage({ data }) {
           {data.subtitle && <p className="text-orange-300 text-lg">{data.subtitle}</p>}
         </div>
       </div>
+
+      <div style={{ backgroundImage: "url('/images/page-bg.png')", backgroundSize: "cover", backgroundPosition: "top center", backgroundRepeat: "no-repeat", backgroundColor: "#FDFCF8" }}>
 
       {/* Quick Info Bar */}
       {data.quickInfo && data.quickInfo.length > 0 && (
@@ -113,6 +115,7 @@ export default function AttractionPage({ data }) {
         <Link href={destHref} className="text-orange-500 hover:underline text-sm font-medium">
           ← חזרה ל{destName}
         </Link>
+      </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import Accordion from './Accordion';
 
 export default function DestinationPage({ dest }) {
   return (
-    <div className="inner-page min-h-screen pt-[88px]">
+    <div className="min-h-screen pt-[88px]" style={{ color: "#1e293b", backgroundColor: "#FDFCF8" }}>
 
       {/* Hero */}
       <div className="relative h-[60vh] min-h-[420px]">
@@ -49,6 +49,8 @@ export default function DestinationPage({ dest }) {
           </div>
         </div>
       </div>
+
+      <div style={{ backgroundImage: "url('/images/page-bg.png')", backgroundSize: "cover", backgroundPosition: "top center", backgroundRepeat: "no-repeat", backgroundColor: "#FDFCF8" }}>
 
       {/* Quick Stats — visual icons */}
       {dest.quickStats?.length > 0 && (
@@ -361,6 +363,7 @@ export default function DestinationPage({ dest }) {
             </Link>
           )}
         </div>
+      </div>
       </div>
     </div>
   );
