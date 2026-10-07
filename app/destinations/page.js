@@ -92,8 +92,8 @@ export default function DestinationsPage() {
         >
           <div className="max-w-7xl mx-auto w-full px-5 md:px-10 py-10 md:py-16">
 
-            {/* Desktop: right-aligned block */}
-            <div className="hidden md:flex justify-end">
+            {/* Desktop: right-aligned block (justify-start = visual right in RTL) */}
+            <div className="hidden md:flex justify-start">
               <div className="max-w-[500px] text-right">
                 <p className="text-orange-400 text-xs font-bold tracking-widest uppercase mb-3">
                   חקור את וייטנאם
@@ -104,7 +104,7 @@ export default function DestinationsPage() {
                 <p className="text-white/85 text-lg leading-relaxed mb-8">
                   מצפון לדרום, כל אזור מציע חוויה שונה לחלוטין. בחר את היעד שלך וצלל לפרטים
                 </p>
-                <div className="flex items-center justify-end gap-0">
+                <div className="flex items-center justify-start gap-0">
                   {["🏔️ צפון", "🏯 מרכז", "🌴 דרום"].map((label, i) => (
                     <div key={label} className="flex items-center">
                       <div className="bg-white/20 backdrop-blur-sm border border-white/40 rounded-full px-4 py-2 text-sm font-bold text-white whitespace-nowrap">
@@ -117,7 +117,7 @@ export default function DestinationsPage() {
               </div>
             </div>
 
-            {/* Mobile: right-aligned block */}
+            {/* Mobile: text right, pills centered */}
             <div className="md:hidden text-right">
               <p className="text-orange-400 text-xs font-bold tracking-widest uppercase mb-2">
                 חקור את וייטנאם
@@ -128,7 +128,7 @@ export default function DestinationsPage() {
               <p className="text-white/80 text-sm leading-relaxed mb-5">
                 מצפון לדרום, כל אזור מציע חוויה שונה לחלוטין. בחר את היעד שלך וצלל לפרטים
               </p>
-              <div className="flex items-center justify-end gap-0">
+              <div className="flex items-center justify-center gap-0">
                 {["🏔️ צפון", "🏯 מרכז", "🌴 דרום"].map((label, i) => (
                   <div key={label} className="flex items-center">
                     <div className="bg-white/20 backdrop-blur-sm border border-white/40 rounded-full px-3 py-1.5 text-xs font-bold text-white whitespace-nowrap">
