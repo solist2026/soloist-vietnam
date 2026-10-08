@@ -6,7 +6,8 @@ const regions = [
     name: "צפון וייטנאם",
     emoji: "🏔️",
     badge: "הכי פופולרי",
-    description: "הרים מרהיבים, שדות אורז מדורגים, עיר הבירה האנוי והנס הטבעי הלונג ביי",
+    description: "נופי הרים, טרסות אורז וכפרים, לצד עיר הבירה האנוי והמפרצים של הלונג ביי וקאט בה. הצפון מתאים במיוחד לטיולי טבע, הליכות והיכרות עם החיים המקומיים.",
+    cta: "לכל היעדים בצפון",
     highlights: [
       { name: "האנוי",         href: "/destinations/north/hanoi" },
       { name: "הלונג ביי",   href: "/destinations/north/halong" },
@@ -26,7 +27,8 @@ const regions = [
     name: "מרכז וייטנאם",
     emoji: "🏯",
     badge: null,
-    description: "עיירות עתיקות, ארמונות מלכותיים, חופים עוצרי נשימה ואוכל מהטעים בוייטנאם",
+    description: "העיר העתיקה של הוי אן, אתרי המורשת של הואה והחופים של דה נאנג וקוי נהון. המרכז מציע שילוב של תרבות, היסטוריה וחופשת חוף, עם אפשרויות רבות לטיולי יום.",
+    cta: "לכל היעדים במרכז",
     highlights: [
       { name: "הוי אן",   href: "/destinations/center/hoi-an" },
       { name: "דה נאנג",  href: "/destinations/center/danang" },
@@ -43,7 +45,8 @@ const regions = [
     name: "דרום וייטנאם",
     emoji: "🌴",
     badge: null,
-    description: "עיר תוססת ועצומה, דלתת מקונג מופלאה ואיים טרופיים עם חופים בתוליים",
+    description: "הו צ'י מין היא נקודת מוצא לטיול בדרום, שממשיך אל הנהרות והיישובים של דלתת המקונג, החופים של מוי נה והאיים פו קווק וקון דאו. אפשר לשלב בין טיול עירוני, ביקור במקונג וכמה ימים ליד הים.",
+    cta: "לכל היעדים בדרום",
     highlights: [
       { name: "הו צ'י מין",   href: "/destinations/south/hcmc" },
       { name: "דלתת מקונג",   href: "/destinations/south/mekong" },
@@ -99,10 +102,10 @@ export default function DestinationsPage() {
                   חקור את וייטנאם
                 </p>
                 <h1 className="text-5xl xl:text-6xl font-black text-white leading-tight mb-4">
-                  יעדים בוייטנאם
+                  יעדים בווייטנאם
                 </h1>
                 <p className="text-white/85 text-lg leading-relaxed mb-8">
-                  מצפון לדרום, כל אזור מציע חוויה שונה לחלוטין. בחר את היעד שלך וצלל לפרטים
+                  מההרים בצפון ועד האיים בדרום, וייטנאם מציעה הרבה אפשרויות לטיול. כאן תמצאו את היעדים בכל אזור, מה כדאי לראות ומידע שיעזור לכם לתכנן את הדרך.
                 </p>
                 <div className="flex items-center justify-start gap-0">
                   {["🏔️ צפון", "🏯 מרכז", "🌴 דרום"].map((label, i) => (
@@ -123,10 +126,10 @@ export default function DestinationsPage() {
                 חקור את וייטנאם
               </p>
               <h1 className="text-3xl font-black text-white leading-tight mb-3">
-                יעדים בוייטנאם
+                יעדים בווייטנאם
               </h1>
               <p className="text-white/80 text-sm leading-relaxed mb-5">
-                מצפון לדרום, כל אזור מציע חוויה שונה לחלוטין. בחר את היעד שלך וצלל לפרטים
+                מההרים בצפון ועד האיים בדרום, וייטנאם מציעה הרבה אפשרויות לטיול. כאן תמצאו את היעדים בכל אזור, מה כדאי לראות ומידע שיעזור לכם לתכנן את הדרך.
               </p>
               <div className="flex items-center justify-center gap-0">
                 {["🏔️ צפון", "🏯 מרכז", "🌴 דרום"].map((label, i) => (
@@ -232,7 +235,7 @@ export default function DestinationsPage() {
                   href={`/destinations/${region.id}`}
                   className="inline-flex items-center justify-center gap-2 bg-[#1A2535] hover:bg-emerald-800 text-white w-full md:w-auto md:self-start px-8 py-3.5 rounded-2xl font-bold transition-colors text-sm"
                 >
-                  <span>לכל היעדים ב{region.name}</span>
+                  <span>{region.cta || `לכל היעדים ב${region.name}`}</span>
                   <span>←</span>
                 </Link>
               </div>
@@ -243,15 +246,15 @@ export default function DestinationsPage() {
         {/* Bottom CTA */}
         <div className="max-w-6xl mx-auto px-4 pb-16 md:pb-20">
           <div className="bg-[#1A2535] rounded-3xl p-10 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">לא בטוחים מאיפה להתחיל?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">צריכים עזרה בתכנון המסלול?</h2>
             <p className="text-white/60 text-sm mb-6 max-w-md mx-auto">
-              בונה המסלול החכם שלנו ישאל אתכם כמה שאלות ויבנה מסלול שמותאם בדיוק לסגנון ולזמן שלכם
+              בחרו את משך הטיול ואת תחומי העניין שלכם, וקבלו הצעה למסלול שתוכלו להתאים להעדפות שלכם.
             </p>
             <Link
               href="/itineraries"
               className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3.5 rounded-full font-bold transition-colors text-sm"
             >
-              קבל מסלול מותאם אישית ←
+              בנו מסלול אישי
             </Link>
           </div>
         </div>
