@@ -134,6 +134,13 @@ export default function NorthVietnamPage() {
 
       <div style={{ backgroundImage: "url('/images/page-bg.png')", backgroundSize: "cover", backgroundPosition: "top center", backgroundRepeat: "no-repeat", backgroundColor: "#FDFCF8" }}>
 
+      {/* Intro */}
+      <div className="max-w-5xl mx-auto px-4 pt-10 pb-2">
+        <p className="text-slate-700 text-base md:text-lg leading-relaxed">
+          צפון וייטנאם עשיר בנופים ובתרבות מקומית. האנוי מציעה חיי עיר ושווקים, סאפה והא ג'יאנג נופי הרים וטרסות אורז, נין בין שיט בין מצוקי גיר, מאי צ'או ועמק באק סון כפרים ושדות, והלונג ביי וקאט בה מפרצים ואיים.
+        </p>
+      </div>
+
       {/* Map */}
       <div className="max-w-5xl mx-auto px-4 pb-8">
         <div className="bg-[#F2F1EB] rounded-3xl p-4 md:p-6 border border-[#E5E4DC] shadow-sm">
