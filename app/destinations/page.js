@@ -108,11 +108,15 @@ export default function DestinationsPage() {
                   מההרים בצפון ועד האיים בדרום, וייטנאם מציעה הרבה אפשרויות לטיול. כאן תמצאו את היעדים בכל אזור, מה כדאי לראות ומידע שיעזור לכם לתכנן את הדרך.
                 </p>
                 <div className="flex items-center justify-start gap-0">
-                  {["🏔️ צפון", "🏯 מרכז", "🌴 דרום"].map((label, i) => (
+                  {[
+                    { label: "🏔️ צפון", href: "/destinations/north" },
+                    { label: "🏯 מרכז", href: "/destinations/center" },
+                    { label: "🌴 דרום", href: "/destinations/south" },
+                  ].map(({ label, href }, i) => (
                     <div key={label} className="flex items-center">
-                      <div className="bg-white/20 backdrop-blur-sm border border-white/40 rounded-full px-4 py-2 text-sm font-bold text-white whitespace-nowrap">
+                      <Link href={href} className="bg-white/20 backdrop-blur-sm border border-white/40 rounded-full px-4 py-2 text-sm font-bold text-white whitespace-nowrap hover:bg-white/35 transition-colors">
                         {label}
-                      </div>
+                      </Link>
                       {i < 2 && <div className="w-6 h-px bg-white/40 mx-1.5 flex-shrink-0" />}
                     </div>
                   ))}
@@ -132,11 +136,15 @@ export default function DestinationsPage() {
                 מההרים בצפון ועד האיים בדרום, וייטנאם מציעה הרבה אפשרויות לטיול. כאן תמצאו את היעדים בכל אזור, מה כדאי לראות ומידע שיעזור לכם לתכנן את הדרך.
               </p>
               <div className="flex items-center justify-center gap-0">
-                {["🏔️ צפון", "🏯 מרכז", "🌴 דרום"].map((label, i) => (
+                {[
+                  { label: "🏔️ צפון", href: "/destinations/north" },
+                  { label: "🏯 מרכז", href: "/destinations/center" },
+                  { label: "🌴 דרום", href: "/destinations/south" },
+                ].map(({ label, href }, i) => (
                   <div key={label} className="flex items-center">
-                    <div className="bg-white/20 backdrop-blur-sm border border-white/40 rounded-full px-3 py-1.5 text-xs font-bold text-white whitespace-nowrap">
+                    <Link href={href} className="bg-white/20 backdrop-blur-sm border border-white/40 rounded-full px-3 py-1.5 text-xs font-bold text-white whitespace-nowrap hover:bg-white/35 transition-colors">
                       {label}
-                    </div>
+                    </Link>
                     {i < 2 && <div className="w-4 h-px bg-white/40 mx-1 flex-shrink-0" />}
                   </div>
                 ))}
