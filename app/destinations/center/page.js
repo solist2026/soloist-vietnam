@@ -55,22 +55,30 @@ const destinations = [
 
 export default function CenterVietnamPage() {
   return (
-    <div className="inner-page min-h-screen pt-[88px]">
+    <div className="min-h-screen pt-[88px]" style={{ color: "#1e293b", backgroundColor: "#FDFCF8" }}>
 
-      {/* Header */}
-      <div className="py-12 md:py-16 text-center px-4">
-        <Link href="/destinations" className="text-orange-500 hover:text-orange-600 text-sm font-medium mb-4 inline-block">
-          ← כל האזורים
-        </Link>
-        <h1 className="text-4xl md:text-5xl font-black text-[#1A2535] mb-3">🏯 מרכז וייטנאם</h1>
-        <p className="text-slate-500 text-base md:text-lg max-w-2xl mx-auto">
-          עיירות עתיקות, ארמונות מלכותיים וחופים עוצרי נשימה
-        </p>
-        <div className="flex justify-center flex-wrap gap-4 mt-5 text-sm text-slate-400">
-          <span>🗓️ עונה מומלצת: פברואר–אוגוסט</span>
-          <span>⏱️ זמן מומלץ: 4–6 ימים</span>
+      {/* Hero */}
+      <div className="relative h-[55vh] min-h-[380px]">
+        <img
+          src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1200&q=80"
+          alt="מרכז וייטנאם"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-transparent" />
+        <div className="absolute bottom-0 right-0 left-0 p-6 md:p-10 max-w-7xl mx-auto">
+          <Link href="/destinations" className="text-white/60 hover:text-white/90 text-sm font-medium mb-3 inline-block transition-colors">
+            ← כל האזורים
+          </Link>
+          <h1 className="text-4xl md:text-5xl font-black text-white mb-2">🏯 מרכז וייטנאם</h1>
+          <p className="text-white/80 text-base md:text-lg">עיירות עתיקות, ארמונות מלכותיים וחופים עוצרי נשימה</p>
+          <div className="flex flex-wrap gap-4 mt-3 text-sm text-white/70">
+            <span>🗓️ עונה מומלצת: פברואר–אוגוסט</span>
+            <span>⏱️ זמן מומלץ: 4–6 ימים</span>
+          </div>
         </div>
       </div>
+
+      <div style={{ backgroundImage: "url('/images/page-bg.png')", backgroundSize: "cover", backgroundPosition: "top center", backgroundRepeat: "no-repeat", backgroundColor: "#FDFCF8" }}>
 
       {/* Map */}
       <div className="max-w-5xl mx-auto px-4 pb-8">
@@ -132,6 +140,7 @@ export default function CenterVietnamPage() {
       <div className="max-w-7xl mx-auto px-4 pb-10 flex justify-between text-sm">
         <Link href="/destinations/north" className="text-orange-500 hover:underline font-medium">← צפון וייטנאם</Link>
         <Link href="/destinations/south" className="text-orange-500 hover:underline font-medium">דרום וייטנאם ←</Link>
+      </div>
       </div>
     </div>
   );
