@@ -64,6 +64,40 @@ const data = {
       desc: 'השוק הגדול והוותיק ביותר של האנוי, שלוש קומות עמוסות בסחורה, בגדים, ירקות וחפצי בית. האטמוספרה המקומית האמיתית, רחוק מהמסלול התיירותי. מיקוח, חובה.',
       image: '/images/hanoi/dong-xuan.jpg',
     },
+    {
+      name: 'מוזיאון ההיסטוריה הצבאית',
+      href: '/destinations/north/hanoi/military-museum',
+      desc: 'המוזיאון הצבאי החדש ביותר והגדול בדרום-מזרח אסיה, נפתח בנובמבר 2024. 4 קומות, 12 גלריות, מטוסים וטנקים בחוץ. מקיף, מרשים ושונה מכל מה שראיתם.',
+      image: '/images/hanoi/military-museum.png',
+      tip: 'ב-Nam Tu Liem, 20 דקות Grab מ-Old Quarter',
+    },
+    {
+      name: 'שכונת הרכבת',
+      href: '/destinations/north/hanoi/train-street',
+      desc: 'סמטה צרה שמסילת ברזל פעילה עוברת בה ממש בין הבתים — 20 סנטימטר בין הרכבת לחלון. כשהרכבת מגיעה, כולם נצמדים לקיר ומצלמים. תמונה שאי-אפשר לשכוח.',
+      image: '/images/hanoi/train-street.jpg',
+      tip: 'הרכבת עוברת בערך ב-15:20 וב-19:35, הגיעו 30 דקות מראש',
+    },
+    {
+      name: "מוזיאון הו צ'י מין",
+      href: '/destinations/north/hanoi/hcm-museum',
+      desc: "3 קומות על חיי אבי האומה הוייטנאמי — מהגלות הצרפתית ועד הניצחון. עיצוב סוריאליסטי מפתיע, מסמכים מקוריים ותמונות נדירות. ממש ליד המאוזוליאום.",
+      image: '/images/hanoi/hcm-museum.jpg',
+    },
+    {
+      name: 'סיור אוכל מודרך',
+      href: '/destinations/north/hanoi/food-tour',
+      desc: '3–4 שעות, 8–10 עצירות, מדריך מקומי שמכיר כל פינה ב-Old Quarter. בון צ\'ה, פה, קפה ביצה, ביה הוי ועוד. הדרך הכי טובה להבין את האנוי דרך הקיבה.',
+      image: '/images/hanoi/food-tour.jpg',
+      tip: '$25–45, יוצאים בדרך כלל 17:30–18:00. הזמינו מראש',
+    },
+    {
+      name: 'VinWonders Wave Park',
+      href: '/destinations/north/hanoi/vinwonders',
+      desc: 'פארק המים הגדול בצפון וייטנאם — בריכת גלים של 1.5 מטר, מגלשות, נהר עצלן ואזור ילדים. 20 דקות Grab מהמרכז. מושלם ליום שחם.',
+      image: '/images/hanoi/vinwonders.jpg',
+      tip: 'כניסה: ~400,000 VND. ימי חול הרבה יותר שקט מסופי שבוע',
+    },
   ],
   dayTrips: [
     {
