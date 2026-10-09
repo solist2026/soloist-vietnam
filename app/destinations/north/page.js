@@ -13,6 +13,7 @@ const destinations = [
     image: '/images/hanoi.jpg',
     days: '2-3 ימים',
     chabad: true,
+    popular: true,
   },
   {
     id: 'ha-giang',
@@ -23,6 +24,7 @@ const destinations = [
       'מפורסם במיוחד בזכות Ha Giang Loop – מסלול אייקוני של מספר ימים.',
     ],
     emoji: '🏍️',
+    popular: true,
     image: '/images/ha-giang.jpg',
     days: '3-5 ימים',
     chabad: false,
@@ -65,6 +67,7 @@ const destinations = [
     image: '/images/north-vietnam.jpg',
     days: '2-3 ימים',
     chabad: true,
+    popular: true,
   },
   {
     id: 'ninh-binh',
@@ -184,8 +187,13 @@ export default function NorthVietnamPage() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                  {dest.chabad && (
+                  {dest.popular && (
                     <div className="absolute top-3 right-3">
+                      <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">⭐ יעד פופולרי</span>
+                    </div>
+                  )}
+                  {dest.chabad && (
+                    <div className="absolute top-3 left-3">
                       <span className="bg-blue-600/90 text-white text-xs px-2 py-0.5 rounded-full">✡️</span>
                     </div>
                   )}
