@@ -17,6 +17,7 @@ const regions = [
       { name: "הא ג'יאנג",    href: "/destinations/north/ha-giang" },
       { name: "עמק באק סון", href: "/destinations/north/bac-son" },
       { name: "קאט בה",       href: "/destinations/north/catba" },
+      { name: "קאו בנג",      href: "/destinations/north/cao-bang" },
     ],
     duration: "7–14 ימים",
     best_time: "אוקטובר–אפריל",

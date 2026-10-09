@@ -105,6 +105,19 @@ const destinations = [
     days: '1-2 ימים',
     chabad: false,
   },
+  {
+    id: 'cao-bang',
+    name: 'קאו בנג',
+    desc: [
+      "מחוז גבולי על גבול סין, ביתו של מפל בן ג'וק — המפל הגדול בוייטנאם.",
+      'מערת נגוום נגאו, אתר פאק בו ההיסטורי של הו צ\'י מין, ושווקי שבטי הר.',
+      'יעד פחות מוכר עם נופים עוצרי נשימה וכמעט ללא תיירים זרים.',
+    ],
+    emoji: '🌊',
+    image: '/images/cao-bang.jpg',
+    days: '2-3 ימים',
+    chabad: false,
+  },
 ];
 
 export default function NorthVietnamPage() {
