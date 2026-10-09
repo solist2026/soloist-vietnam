@@ -58,6 +58,7 @@ const regions = [
       { name: "ניין בינה", href: "/destinations/north/ninh-binh" },
       { name: "מאי צ'או", href: "/destinations/north/mai-chau" },
       { name: "עמק באק סון", href: "/destinations/north/bac-son" },
+      { name: "קאו בנג", href: "/destinations/north/cao-bang" },
     ],
   },
   {
