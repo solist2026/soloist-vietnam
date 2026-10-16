@@ -55,13 +55,17 @@ export default function DestinationPage({ dest }) {
 
       {/* Quick Stats — visual icons */}
       {dest.quickStats?.length > 0 && (
-        <div className="bg-white border-b border-slate-100 shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 py-5 grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100 rtl:divide-x-reverse">
-            {dest.quickStats.map((s, i) => (
-              <div key={s.label} className="text-center px-4 first:pr-0 last:pl-0">
-                {s.icon && <div className="text-2xl mb-1">{s.icon}</div>}
-                <div className="text-lg md:text-xl font-black text-orange-500">{s.value}</div>
-                <div className="text-xs text-slate-500 mt-0.5">{s.label}</div>
+        <div style={{ background: 'linear-gradient(135deg, #1A2535 0%, #243347 100%)' }}>
+          <div className="max-w-7xl mx-auto px-4 py-5 grid grid-cols-2 md:grid-cols-4 gap-3">
+            {dest.quickStats.map((s) => (
+              <div
+                key={s.label}
+                className="rounded-2xl text-center px-3 py-4"
+                style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.10)' }}
+              >
+                {s.icon && <div className="text-2xl mb-1.5">{s.icon}</div>}
+                <div className="text-lg md:text-xl font-black text-orange-400 leading-tight">{s.value}</div>
+                <div className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.55)' }}>{s.label}</div>
               </div>
             ))}
           </div>
