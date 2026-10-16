@@ -29,12 +29,16 @@ export default function AttractionPage({ data }) {
 
       {/* Quick Info Bar */}
       {data.quickInfo && data.quickInfo.length > 0 && (
-        <div className="bg-white/80 backdrop-blur-sm border-b border-stone-200/60">
-          <div className="max-w-5xl mx-auto px-4 py-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div style={{ background: '#F2F1EB', borderBottom: '1px solid #E5E4DC' }}>
+          <div className="max-w-5xl mx-auto px-4 py-5 grid grid-cols-2 md:grid-cols-4 gap-3">
             {data.quickInfo.map((info) => (
-              <div key={info.label} className="text-center">
-                <div className="text-lg font-bold text-orange-500">{info.value}</div>
-                <div className="text-xs text-slate-500 mt-0.5">{info.label}</div>
+              <div
+                key={info.label}
+                className="rounded-2xl text-center px-3 py-4"
+                style={{ background: '#FDFCF8', border: '1px solid #E5E4DC', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}
+              >
+                <div className="text-lg font-bold text-orange-500 leading-tight">{info.value}</div>
+                <div className="text-xs text-slate-500 mt-1">{info.label}</div>
               </div>
             ))}
           </div>
