@@ -55,17 +55,17 @@ export default function DestinationPage({ dest }) {
 
       {/* Quick Stats — visual icons */}
       {dest.quickStats?.length > 0 && (
-        <div style={{ background: 'linear-gradient(135deg, #1A2535 0%, #243347 100%)' }}>
+        <div style={{ background: '#F2F1EB', borderBottom: '1px solid #E5E4DC' }}>
           <div className="max-w-7xl mx-auto px-4 py-5 grid grid-cols-2 md:grid-cols-4 gap-3">
             {dest.quickStats.map((s) => (
               <div
                 key={s.label}
                 className="rounded-2xl text-center px-3 py-4"
-                style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.10)' }}
+                style={{ background: '#FDFCF8', border: '1px solid #E5E4DC', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}
               >
                 {s.icon && <div className="text-2xl mb-1.5">{s.icon}</div>}
-                <div className="text-lg md:text-xl font-black text-orange-400 leading-tight">{s.value}</div>
-                <div className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.55)' }}>{s.label}</div>
+                <div className="text-lg md:text-xl font-black text-orange-500 leading-tight">{s.value}</div>
+                <div className="text-xs mt-1 text-slate-500">{s.label}</div>
               </div>
             ))}
           </div>
