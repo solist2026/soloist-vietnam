@@ -112,7 +112,7 @@ export default function CenterVietnamPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                   {dest.chabad && (
                     <div className="absolute top-3 right-3">
-                      <span className="bg-blue-600/90 text-white text-xs px-2 py-0.5 rounded-full">✡️</span>
+                      <img src="/images/chabad-logo.png" alt='בית חב"ד' className="h-7 w-auto drop-shadow-sm" />
                     </div>
                   )}
                   <div className="absolute bottom-3 right-3">

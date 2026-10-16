@@ -31,9 +31,10 @@ export default function DestinationPage({ dest }) {
             {dest.chabad && (
               <a
                 href="#community"
-                className="bg-blue-600/80 text-white text-xs px-3 py-1.5 rounded-full font-semibold backdrop-blur hover:bg-blue-600 transition-colors"
+                className="bg-blue-600/80 text-white text-xs px-3 py-1.5 rounded-full font-semibold backdrop-blur hover:bg-blue-600 transition-colors flex items-center gap-1.5"
               >
-                ✡️ בית חב"ד
+                <img src="/images/chabad-logo.png" alt='חב"ד' className="h-4 w-auto" />
+                בית חב"ד
               </a>
             )}
             {dest.tags?.map((tag) => {
@@ -337,7 +338,7 @@ export default function DestinationPage({ dest }) {
 
         {/* Chabad */}
         {dest.chabad && dest.chabadInfo && (
-          <Accordion id="community" title='קהילה ישראלית' emoji="✡️">
+          <Accordion id="community" title='קהילה ישראלית' emoji={<img src="/images/chabad-logo.png" alt='חב"ד' className="h-5 w-auto" />}>
             <div className="bg-blue-50 border border-blue-100 rounded-xl p-5">
               <ul className="flex flex-col gap-2.5">
                 {dest.chabadInfo.map((c, i) => (
