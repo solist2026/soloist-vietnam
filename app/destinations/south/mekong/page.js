@@ -110,9 +110,9 @@ const data = {
   tips: [
     "יום אחד מספיק לטעימה, My Tho + Ben Tre. לחוויה עמוקה: 2 לילות ב-Can Tho",
     "עונה מומלצת: דצמבר-מאי (עונה יבשה). יוני-נובמבר, גשמים ושיטפונות אפשריים",
-    "שוק צף Cai Rang, הגיעו ב-06:00 לפחות. הלכלוך גמור עד 09:00",
+    "שוק צף Cai Rang, הגיעו ב-06:00 לפחות. השוק מסתיים עד 09:00",
     "Homestay, הזמינו לפחות יום מראש. אפשר דרך Booking.com",
-    "מהו צ'י מין: Ben Thanh Bus Station לMy Tho, 80K VND, שעה וחצי",
+    "מהו צ'י מין: Mien Tay Bus Station (Ben Xe Mien Tay) לMy Tho, 80K VND, שעה וחצי",
     "קמבודיה קרובה, Giant Ibis מCan Tho לפנום פן: $15-25, 5 שעות",
   ],
   nextDest: { name: "הו צ'י מין", href: '/destinations/south/hcmc' },

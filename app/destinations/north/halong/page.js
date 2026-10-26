@@ -59,8 +59,8 @@ const data = {
       image: 'https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=400&q=80',
     },
     {
-      name: 'Banh Cuon (מלפפות אורז)',
-      desc: 'ארוחת בוקר קלאסית שמוגשת על הספינות, מלפופי אורז אדים עם בשר ועשבים. עדין וקל.',
+      name: 'Banh Cuon (מאפות אורז מאודות)',
+      desc: 'ארוחת בוקר קלאסית שמוגשת על הספינות, מעטפות אורז אדות עם בשר ועשבים. עדינות וקלות.',
       image: 'https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=400&q=80',
     },
     {
