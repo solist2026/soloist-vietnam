@@ -139,7 +139,7 @@ export default function DestinationPage({ dest }) {
         <div className="max-w-7xl mx-auto px-4 pb-16 flex flex-col gap-3">
 
           {/* 1. אטרקציות */}
-          <Accordion id="attractions" title="אטרקציות" emoji="🎯" defaultOpen={true}>
+          <Accordion id="attractions" title="אטרקציות" emoji="🎯" image="/images/sections/attractions.jpg" defaultOpen={true}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {dest.attractions?.map((a) => {
                 const inner = (
@@ -196,7 +196,7 @@ export default function DestinationPage({ dest }) {
           </Accordion>
 
           {/* 2. שדות תעופה, הגעה ותחבורה */}
-          <Accordion id="getting-there" title="שדות תעופה, הגעה ותחבורה" emoji="🚌">
+          <Accordion id="getting-there" title="שדות תעופה, הגעה ותחבורה" emoji="🚌" image="/images/sections/transport.jpg">
             <div className="flex flex-col gap-3">
               {dest.gettingThere?.map((g) => (
                 <div key={g.from} className="bg-white rounded-xl p-4 border border-slate-100 flex items-center justify-between gap-4 hover:border-slate-200 transition-all">
@@ -232,7 +232,7 @@ export default function DestinationPage({ dest }) {
           </Accordion>
 
           {/* 3. אזורי לינה מומלצים */}
-          <Accordion id="accommodation" title="אזורי לינה מומלצים" emoji="🏨">
+          <Accordion id="accommodation" title="אזורי לינה מומלצים" emoji="🏨" image="/images/sections/accommodation.jpg">
             {dest.areas?.length > 0 && (
               <div className="mb-5">
                 <div className="text-sm font-bold text-slate-600 mb-3">📍 היכן לישון</div>
@@ -287,7 +287,7 @@ export default function DestinationPage({ dest }) {
           </Accordion>
 
           {/* 4. מתי לבקר */}
-          <Accordion id="seasons" title="מתי לבקר" emoji="📅">
+          <Accordion id="seasons" title="מתי לבקר" emoji="📅" image="/images/sections/seasons.jpg">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {seasonsData.map((s) => (
                 <div key={s.months} className={`bg-white rounded-xl p-5 border transition-all ${s.best ? 'border-orange-200 shadow-sm' : 'border-slate-100'}`}>
@@ -304,7 +304,7 @@ export default function DestinationPage({ dest }) {
 
           {/* 5. טיול יום */}
           {dest.dayTrips && (
-            <Accordion id="daytrips" title="טיול יום" emoji="🗺️">
+            <Accordion id="daytrips" title="טיול יום" emoji="🗺️" image="/images/sections/day-trip.jpg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {dest.dayTrips.map((trip) => (
                   <div key={trip.name} className="bg-white rounded-xl p-5 border border-slate-100 hover:border-orange-200 hover:shadow-sm transition-all">
@@ -333,7 +333,7 @@ export default function DestinationPage({ dest }) {
           )}
 
           {/* 6. מסעדות ובתי קפה */}
-          <Accordion id="food" title="מסעדות ובתי קפה" emoji="🍜">
+          <Accordion id="food" title="מסעדות ובתי קפה" emoji="🍜" image="/images/sections/food.jpg">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {dest.food?.map((f) => (
                 <div key={f.name} className="bg-white rounded-xl overflow-hidden border border-slate-100 hover:shadow-sm transition-all">
@@ -366,7 +366,7 @@ export default function DestinationPage({ dest }) {
           </Accordion>
 
           {/* 7. המרת כספים */}
-          <Accordion id="currency" title="המרת כספים" emoji="💰">
+          <Accordion id="currency" title="המרת כספים" emoji="💰" image="/images/sections/currency.jpg">
             <div className="flex flex-col gap-2.5">
               {(dest.currencyExchange || genericCurrency).map((item, i) => (
                 <div key={i} className="flex gap-2.5 text-sm text-slate-700">
@@ -378,7 +378,7 @@ export default function DestinationPage({ dest }) {
           </Accordion>
 
           {/* 8. שופינג, שווקים וקניות */}
-          <Accordion id="shopping" title="שופינג, שווקים וקניות" emoji="🛍️">
+          <Accordion id="shopping" title="שופינג, שווקים וקניות" emoji="🛍️" image="/images/sections/shopping.jpg">
             <div className="flex flex-col gap-2.5">
               {(dest.shopping || genericShopping).map((item, i) => (
                 <div key={i} className="flex gap-2.5 text-sm text-slate-700">
@@ -393,6 +393,7 @@ export default function DestinationPage({ dest }) {
           <Accordion
             id="community"
             title="כשרות והקהילה הישראלית"
+            image="/images/sections/community.jpg"
             emoji={dest.chabad
               ? <img src="/images/chabad-logo.png" alt='חב"ד' className="h-5 w-auto" />
               : '🕍'
