@@ -15,7 +15,7 @@ const data = {
     { label: 'ימים מומלצים', value: '1–2' },
     { label: 'למי מתאים', value: 'כולם' },
     { label: 'עונה מומלצת', value: 'מרץ–ספט' },
-    { label: 'תיירים ישראלים', value: 'בינוני' },
+    { label: 'כמות תיירים ישראלים', value: 'בינוני' },
   ],
   attractions: [
     {

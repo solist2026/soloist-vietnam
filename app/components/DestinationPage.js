@@ -112,8 +112,8 @@ export default function DestinationPage({ dest }) {
                   style={{ background: '#FDFCF8', border: '1px solid #E5E4DC', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}
                 >
                   {s.icon && <div className="text-2xl mb-1.5">{s.icon}</div>}
+                  <div className="text-xs text-slate-500 mb-1">{s.label}</div>
                   <div className="text-lg md:text-xl font-black text-orange-500 leading-tight">{s.value}</div>
-                  <div className="text-xs mt-1 text-slate-500">{s.label}</div>
                 </div>
               ))}
             </div>

@@ -15,7 +15,7 @@ const data = {
     { label: 'ימים מומלצים', value: 'יום אחד' },
     { label: 'למי מתאים', value: 'יום מ-HCMC' },
     { label: 'עונה מומלצת', value: 'נוב–אפר' },
-    { label: 'תיירים ישראלים', value: 'מעטים' },
+    { label: 'כמות תיירים ישראלים', value: 'מעטים' },
   ],
   attractions: [
     {

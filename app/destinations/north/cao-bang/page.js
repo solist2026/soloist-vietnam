@@ -1,4 +1,4 @@
-import DestinationPage from '../../../components/DestinationPage';
+﻿import DestinationPage from '../../../components/DestinationPage';
 
 const data = {
   name: 'קאו בנג',
@@ -15,7 +15,7 @@ const data = {
     { label: 'ימים מומלצים', value: '2–3' },
     { label: 'למי מתאים', value: 'חובבי הרפתקאות' },
     { label: 'עונה מומלצת', value: 'ספט–נוב' },
-    { label: 'תיירים ישראלים', value: 'מעטים' },
+    { label: 'כמות תיירים ישראלים', value: 'מעטים' },
   ],
   attractions: [
     {
